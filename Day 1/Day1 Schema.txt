@@ -1,0 +1,133 @@
+SAMPLE CASE
+
+Create a plan for the database(Tables and columns) for the following requirement
+It is for a shop that takes orders for custom tailoring
+It allows people to place order with measurement and gives a delivery date for the order
+The fabric will be picked up from the customer's place
+The pick-up date will be specified by the application
+Once the order is billed, we can see the billing details
+Bills have to be maintained
+Once fabric is picked up no cancellation is accepted( before that customer can cancel the order)
+
+CUSTOMERS
+
+	customer_id
+	name
+	email
+	mobile
+	address
+	date_of_registration
+
+ORDERS
+
+	order_id
+	cusotmer_id
+	cancellation_id
+	measurement_id
+	pickup_id
+	order_date
+	pickup_date
+	
+
+MEASUREMENTS
+
+	measurement_id
+	order_id
+	type - shirt, tshirt, jeans, pant
+	size
+	
+
+FABRIC PICKUP
+
+	pickup_id
+	order_id
+	pickup_date
+	pickup_status - true/false
+	pickup_person
+
+
+BILLING 
+	
+	billing_id
+	order_id
+	total_amount
+	billling_date
+	payment_status - paid/unpaid
+	payment_method - upi/card/cash
+
+
+CANCELLATION
+
+	cancelltaion_id
+	order_id
+	cutomer_id
+	cancel_date
+	reason
+	approved - True/False
+
+CASE -1
+
+•	A video store rents movies to members.
+•	Each movie in the store has a title and is identified by a unique movie number.
+•	A movie can be in VHS, VCD, or DVD format.
+•	Each movie belongs to one of a given set of categories (action, adventure, comedy, ... )
+•	The store has a name and a (unique) phone number for each member.
+•	Each member may provide a favorite movie category (used for marketing purposes).
+•	There are two types of members: 
+	o	Golden Members:
+	o	Bronze Members:
+•	Using  their credit cards gold members can rent one or more movies and bronze members max. of one movie.  
+•	A member may have a number of dependents (with known names).
+•	Each dependent is allowed to rent one (1) movie at a time.
+
+
+MOVIE MASTER
+
+	movie_id
+	title
+	video_format like VHS, VCD, DVD
+	category_id
+
+CATEGORY MASTER
+
+	category_id
+	category_name like Action, Comedy, Adventure
+
+MEMBERS
+
+	member_id
+	member_name
+	phone
+	membership_type_id (GOlden,Bronze)
+	favourite_category_id
+	credit_card_number
+
+MEMBERSHIP TYPE MASTER
+
+	membership_type_id
+	membership_type
+	max_rentals
+
+DEPENDENT
+
+	dependent_id
+	dependent_name
+	member_id
+
+RENTAL
+
+	rental_id
+	movie_id
+	renter_type (member,dependent)
+	renter_id (member_id/dependent_id)
+	rental_date
+	return_date
+
+RENTAL STATUS MASTER
+	
+	rental_Status_id
+	rental_Status	(rented/returned)
+
+
+
+			
