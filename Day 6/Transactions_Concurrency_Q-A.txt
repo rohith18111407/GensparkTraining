@@ -1,0 +1,111 @@
+Transactions and Concurrency
+
+
+1️. Question:
+In a transaction, if I perform multiple updates and an error happens in the third statement, but I have not used SAVEPOINT, what will happen if I issue a ROLLBACK?
+Will my first two updates persist?
+
+- No, all updates in the transaction will be undone.
+A transaction follows the "all-or-nothing" principle. 
+- If any statement fails and you ROLLBACK, then all preceding changes in that transaction are discarded, even if some succeeded earlier.
+BEGIN;
+UPDATE ... -- success
+UPDATE ... -- success
+UPDATE ... -- fails
+ROLLBACK; -- everything above is undone
+
+- If you wanted partial recovery, you'd need SAVEPOINTs.
+
+
+
+2️. Question:
+Suppose Transaction A updates Alice’s balance but does not commit. Can Transaction B read the new balance if the isolation level is set to READ COMMITTED?
+
+- No, Transaction B cannot read the uncommitted update.
+- The READ COMMITTED isolation level (default in PostgreSQL) only sees data committed at the moment the query starts. 
+- Uncommitted changes from other transactions are invisible.
+
+
+
+3️. Question:
+What will happen if two concurrent transactions both execute:
+UPDATE tbl_bank_accounts SET balance = balance - 100 WHERE account_name = 'Alice';
+at the same time? Will one overwrite the other?
+
+- No, PostgreSQL uses row-level locking, so one transaction will wait for the other to finish.
+- When the first transaction updates Alice’s row, it locks it. 
+- The second transaction has to wait until the first commits or rolls back. 
+- So no overwriting happens — it’s a safe, serialized update.
+
+
+
+4️. Question:
+If I issue ROLLBACK TO SAVEPOINT after_alice;, will it only undo changes made after the savepoint or everything?
+
+- It will only undo changes made after the savepoint.
+- SAVEPOINTs mark intermediate states in a transaction. 
+- Rolling back to a savepoint reverts changes after that point, but earlier changes are kept:
+
+BEGIN;
+UPDATE A ...;
+SAVEPOINT after_alice;
+UPDATE B ...; -- this gets undone
+ROLLBACK TO after_alice;
+COMMIT; -- only UPDATE A remains
+
+
+
+5️. Question:
+Which isolation level in PostgreSQL prevents phantom reads?
+
+- SERIALIZABLE.
+- Phantom reads occur when a query returns different rows in two executions within the same transaction.
+- SERIALIZABLE ensures repeatable results, by treating transactions as if they occurred one at a time.
+- It uses predicate locking to block new rows from being added by others if they would affect your query.
+
+
+
+
+6️. Question:
+Can Postgres perform a dirty read (reading uncommitted data from another transaction)?
+
+- No, PostgreSQL never allows dirty reads.
+- Even under the lowest isolation level (READ COMMITTED), PostgreSQL ensures that only committed data is visible to a transaction.
+- Dirty reads are allowed in some databases with READ UNCOMMITTED (e.g., SQL Server, MySQL), but PostgreSQL does not support this.
+
+
+
+7️. Question:
+If autocommit is ON (default in Postgres), and I execute an UPDATE, is it safe to assume the change is immediately committed?
+
+- Yes, the change is immediately committed.
+- With autocommit enabled (which is the default), each individual SQL statement is automatically wrapped in its own transaction and committed right after it executes.
+
+UPDATE ...; -- is auto-committed
+
+- You don’t need COMMIT unless you've explicitly started a transaction with BEGIN.
+
+
+
+8️. Question:
+If I do this:
+
+BEGIN;
+UPDATE accounts SET balance = balance - 500 WHERE id = 1;
+-- (No COMMIT yet)
+And from another session, I run:
+
+SELECT balance FROM accounts WHERE id = 1;
+Will the second session see the deducted balance?
+
+
+- No, the second session will see the original balance.
+- Until the first session commits, its changes are not visible to other sessions — regardless of the isolation level (unless using something like READ UNCOMMITTED, which Postgres doesn't support).
+- So the second session sees only the last committed state of the data.
+
+
+
+
+
+
+

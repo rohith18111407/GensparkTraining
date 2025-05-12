@@ -1,0 +1,227 @@
+
+Transaction: 
+
+A transaction in SQL is a sequence of one or more operations (like INSERT, UPDATE, or DELETE) that are executed as a single logical unit of work.
+
+Key Properties of Transactions — ACID:
+
+1. Atomicity
+All operations in the transaction succeed as a group, or they all fail. There's no partial update.
+
+2. Consistency
+The database remains in a consistent state before and after the transaction.
+
+3. Isolation
+Transactions don't interfere with each other — changes made by one transaction are not visible to others until committed.
+
+4. Durability
+Once a transaction is committed, the changes are permanent — even in the event of a crash.
+
+
+Reasons Why Transactions Are Important:
+
+1. Data Integrity
+They ensure that a group of operations either all succeed or none happen at all. This prevents situations like:
+
+Money deducted from one account but not credited to the other.
+
+2. Error Recovery
+If something goes wrong (power failure, error, crash), a transaction can be rolled back to restore the original state — as if nothing happened.
+
+3. Concurrency Control
+In multi-user environments, transactions prevent interference between operations happening at the same time. For example:
+
+Two users trying to book the last seat — only one should succeed.
+
+4. Consistent State
+A transaction makes sure that the database moves from one valid state to another. Even during complex operations, the rules (constraints, relationships) of the database are maintained.
+
+5. Auditing and Control
+With transactions, it's easier to track changes, and group them logically. You can also decide to commit or roll back based on business logic or triggers.
+
+
+E-commerce scenario:
+
+Think of a transaction like placing an order online:
+
+You add items to the cart.
+
+Provide shipping info.
+
+Enter payment details.
+
+Click "Confirm Order".
+
+Only when all steps succeed, the order is confirmed. If payment fails, everything is cancelled — this is a transaction.
+
+
+Common Transaction Commands
+
+1. BEGIN		Starts a transaction
+2. COMMIT		Saves all changes made during the transaction
+3. ROLLBACK		Undoes all changes made during the transaction
+4. SAVEPOINT name	Creates a point you can roll back to
+5. ROLLBACK TO name	Rolls back to a specific savepoint
+
+Note:
+
+1. In PSQL, autocommit is ON by default.
+Unless you explicitly BEGIN; or START TRANSACTION; which requires COMMIT; for permanent changes in database.
+
+2. MYSQL:
+	To enable autocommit:
+		SET AUTOCOMMIT=1;
+	TO disable autocommit:
+		SET AUTOCOMMIT=0;
+
+    PLSQL:
+	To enable autocommit:
+		SET AUTOCOMMIT=ON;
+	TO disable autocommit:
+		SET AUTOCOMMIT=OFF;
+
+
+Best Practices for Transactions:
+
+1. Keep Transactions short -> improve concurrency and reduce locking
+2. Use savepoints for complex flows -> safer partial rollbacks
+3. Log failed trans for audits -> Traceability and debugging
+4. Avoid user inputs during trans -> Prevent long trans
+5. In production code, always wrap db ops inside try-catch with explicit commit and rollback.
+	
+
+
+Concurrency
+
+
+PostgreSQL handles concurrency using:
+1. MVCC (Multi Version Concurrency Control)
+MVCC allows multiple versions of the same data (rows) to exist temporarily,
+so readers and writers don't block each other.
+
+
+MVCC is ACID compliant
+
+Examples:
+
+1. 
+User A: Reads
+User B: Updates
+
+2.
+1000 users check balance (reads)
+10 users perform withdrawals (writes)
+
+
+Read Committed
+-- Trans A 
+BEGIN;
+UPDATE products
+SET price = 500
+WHERE id = 1;
+
+-- Trans B
+BEGIN;
+SELECT price
+FROM products
+WHERE id = 1;
+
+
+Repeatable Read
+-- Trans A
+BEGIN ISOLATION LEVEL REPEATABLE READ;
+SELECT price FROM products
+WHERE id = 1; -- 450
+
+-- Trans B
+BEGIN;
+UPDATE products
+SET price = 500 WHERE id = 1;
+COMMIT;
+
+-- Trans A
+SELECT price FROM products
+WHERE id = 1; -- 450
+COMMIT;
+
+
+
+
+2. Isolation Levels
+	1. READ UNCOMMITTED -> PSQL not supported
+	2. READ COMMITTED -> Default
+	3. Repeatable Read -> Ensures repeatable reads
+		1. Dirty Reads
+		2. Phantom Reads
+	4. Serializeable -> Full Isolation (Safe but slow, no dirt read, no lost updates, no repeatable read, no phantom read)  
+
+Problems without proper concurrency control:
+
+1. Inconsisiten Reads / Dirty Reads: Reading uncommitted data from another transaction, which might later disappear
+	
+	Transaction A updates a row but doesn't commit yet.
+	Transaction B reads the updated row.
+	Transaction A rolls back the updated row.
+	Now transaction B has read the data that never officially existed - that's a dirty read.
+
+
+
+Why Dirty Reads happen:
+	They occur in databases running at low isolation levels, particularly:
+		Read Uncommitted isolation level -> allow dirty reads.
+		Higher isolation levels like Read Committed, Repeatable Read, or Serializeable
+		prevent dirty reads but come with performance trade-offs (like more locks or slower concurrency).
+
+
+2. Lost Update
+
+	Trans A reads a record
+	Trans B reads the same record
+	Trans A updates and writes it back
+	Trans B (still holding the old value) writes back its version, overwriting A's changes.
+
+Solutions to Avoid Lost Updates:
+
+1. Pessimistic Locking (Explicit Locks)
+Lock the Record when someone reads it, so no one else can read or write it until the lock is released.
+Example: SELECT.... FOR UPDATE in SQL.
+
+Prevents concurrency but can reduce performance due to blocking.
+
+2. Optimistic Locking (Versioning).
+Common and scalable solution.
+Each record has a version or timestamp.
+
+When Updating, you check that version hasn't changed since you read it.
+If it is changed, you reject the update (user must retry).
+Example:
+
+UPDATE products
+SET price=100, version = version + 1
+WHERE id=1 AND version = 3;
+
+3. Serializable Isolation level
+
+In database transactions, using the highest isolation level (SERIALIZEABLE) can prevent lost updates.
+But it's heavier and can cause performance issues (due to more locks or transaction retries).
+
+
+Which solution is Best?
+For webApps and APIs: Optimistic locking is often the best balance (fast reads + safe writes).
+For critical financial systems: Pessimistic locking may be safer.
+
+
+Inconsisten Reads / read anomalies:
+
+1. Dirty Read
+2. Non-Repeatable Read
+	Trans A reads a row -- 100
+	Trans B updates and commits the row, then --90
+	Trans A reads the row again and sees different data.
+
+
+
+Phantom Reads
+-- Trans A: SELECT * FROM orders WHERE amount > 1000; RETURNS 5 ROWS
+-- Another Trans inserts a new order with amount 1200 and commits - now re-running the query returns 6 rows.
+
