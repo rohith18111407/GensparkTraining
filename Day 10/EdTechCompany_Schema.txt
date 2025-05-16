@@ -1,0 +1,86 @@
+You are tasked with building a PostgreSQL-backed database for an EdTech company that manages online training and certification programs for individuals across various technologies.
+
+The goal is to:
+
+Design a normalized schema
+
+Support querying of training data
+
+Ensure secure access
+
+Maintain data integrity and control over transactional updates
+
+Database planning (Nomalized till 3NF)
+
+A student can enroll in multiple courses
+
+Each course is led by one trainer
+
+Students can receive a certificate after passing
+
+Each certificate has a unique serial number
+
+Trainers may teach multiple courses
+
+
+
+
+students
+---------
+student_id (PK)
+s_first_name
+s_last_name
+s_email (U)
+s_phone_number (U)
+dob
+registration_date
+
+
+trainers
+---------
+trainer_id (PK)
+t_first_name
+t_last_name
+t_email (U)
+expertise_id (FK -> expertise areas)
+
+expertise areas
+----------------
+expertise_id (PK)
+expertise_course
+
+
+courses
+---------
+course_id (PK)
+course_name
+description
+duration_weeks
+trainer_id (FK → trainers)
+
+
+enrollments
+-----------
+student_id (FK → students) [Composite key]
+course_id (FK → courses) [Composite Key]
+enrollment_date
+status_id (FK -> status)  
+
+
+status
+-------
+status_id (PK)
+description ('enrolled','completed','failed')
+
+certificates
+------------
+certificate_id (PK)
+enrollment_id (U, FK → enrollments)
+serial_number (U)
+issue_date
+score_id (FK -> score)
+
+score
+-------
+score_id (PK)
+grade (O,A+,A,B+,B,C+,C)
