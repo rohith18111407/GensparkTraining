@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "10.SudokuRow/1.0.0": {
+        "runtime": {
+          "10.SudokuRow.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "10.SudokuRow/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

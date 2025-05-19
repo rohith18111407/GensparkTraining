@@ -1,0 +1,14 @@
+C:\GenSpark Training\Day 11\6.FrequencyCount\obj\Debug\net9.0\6.FrequencyCount.GeneratedMSBuildEditorConfig.editorconfig
+C:\GenSpark Training\Day 11\6.FrequencyCount\obj\Debug\net9.0\6.FrequencyCount.AssemblyInfoInputs.cache
+C:\GenSpark Training\Day 11\6.FrequencyCount\obj\Debug\net9.0\6.FrequencyCount.AssemblyInfo.cs
+C:\GenSpark Training\Day 11\6.FrequencyCount\obj\Debug\net9.0\6.FrequencyCount.csproj.CoreCompileInputs.cache
+C:\GenSpark Training\Day 11\6.FrequencyCount\bin\Debug\net9.0\6.FrequencyCount.exe
+C:\GenSpark Training\Day 11\6.FrequencyCount\bin\Debug\net9.0\6.FrequencyCount.deps.json
+C:\GenSpark Training\Day 11\6.FrequencyCount\bin\Debug\net9.0\6.FrequencyCount.runtimeconfig.json
+C:\GenSpark Training\Day 11\6.FrequencyCount\bin\Debug\net9.0\6.FrequencyCount.dll
+C:\GenSpark Training\Day 11\6.FrequencyCount\bin\Debug\net9.0\6.FrequencyCount.pdb
+C:\GenSpark Training\Day 11\6.FrequencyCount\obj\Debug\net9.0\6.FrequencyCount.dll
+C:\GenSpark Training\Day 11\6.FrequencyCount\obj\Debug\net9.0\refint\6.FrequencyCount.dll
+C:\GenSpark Training\Day 11\6.FrequencyCount\obj\Debug\net9.0\6.FrequencyCount.pdb
+C:\GenSpark Training\Day 11\6.FrequencyCount\obj\Debug\net9.0\6.FrequencyCount.genruntimeconfig.cache
+C:\GenSpark Training\Day 11\6.FrequencyCount\obj\Debug\net9.0\ref\6.FrequencyCount.dll

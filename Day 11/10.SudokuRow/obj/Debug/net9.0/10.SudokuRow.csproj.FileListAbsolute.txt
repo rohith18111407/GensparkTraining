@@ -1,0 +1,14 @@
+C:\GenSpark Training\Day 11\10.SudokuRow\bin\Debug\net9.0\10.SudokuRow.exe
+C:\GenSpark Training\Day 11\10.SudokuRow\bin\Debug\net9.0\10.SudokuRow.deps.json
+C:\GenSpark Training\Day 11\10.SudokuRow\bin\Debug\net9.0\10.SudokuRow.runtimeconfig.json
+C:\GenSpark Training\Day 11\10.SudokuRow\bin\Debug\net9.0\10.SudokuRow.dll
+C:\GenSpark Training\Day 11\10.SudokuRow\bin\Debug\net9.0\10.SudokuRow.pdb
+C:\GenSpark Training\Day 11\10.SudokuRow\obj\Debug\net9.0\10.SudokuRow.GeneratedMSBuildEditorConfig.editorconfig
+C:\GenSpark Training\Day 11\10.SudokuRow\obj\Debug\net9.0\10.SudokuRow.AssemblyInfoInputs.cache
+C:\GenSpark Training\Day 11\10.SudokuRow\obj\Debug\net9.0\10.SudokuRow.AssemblyInfo.cs
+C:\GenSpark Training\Day 11\10.SudokuRow\obj\Debug\net9.0\10.SudokuRow.csproj.CoreCompileInputs.cache
+C:\GenSpark Training\Day 11\10.SudokuRow\obj\Debug\net9.0\10.SudokuRow.dll
+C:\GenSpark Training\Day 11\10.SudokuRow\obj\Debug\net9.0\refint\10.SudokuRow.dll
+C:\GenSpark Training\Day 11\10.SudokuRow\obj\Debug\net9.0\10.SudokuRow.pdb
+C:\GenSpark Training\Day 11\10.SudokuRow\obj\Debug\net9.0\10.SudokuRow.genruntimeconfig.cache
+C:\GenSpark Training\Day 11\10.SudokuRow\obj\Debug\net9.0\ref\10.SudokuRow.dll

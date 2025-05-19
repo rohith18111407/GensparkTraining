@@ -1,0 +1,14 @@
+C:\GenSpark Training\Day 11\7.MergeArrays]\obj\Debug\net9.0\7.MergeArrays].GeneratedMSBuildEditorConfig.editorconfig
+C:\GenSpark Training\Day 11\7.MergeArrays]\obj\Debug\net9.0\7.MergeArrays].AssemblyInfoInputs.cache
+C:\GenSpark Training\Day 11\7.MergeArrays]\obj\Debug\net9.0\7.MergeArrays].AssemblyInfo.cs
+C:\GenSpark Training\Day 11\7.MergeArrays]\obj\Debug\net9.0\7.MergeArrays].csproj.CoreCompileInputs.cache
+C:\GenSpark Training\Day 11\7.MergeArrays]\bin\Debug\net9.0\7.MergeArrays].exe
+C:\GenSpark Training\Day 11\7.MergeArrays]\bin\Debug\net9.0\7.MergeArrays].deps.json
+C:\GenSpark Training\Day 11\7.MergeArrays]\bin\Debug\net9.0\7.MergeArrays].runtimeconfig.json
+C:\GenSpark Training\Day 11\7.MergeArrays]\bin\Debug\net9.0\7.MergeArrays].dll
+C:\GenSpark Training\Day 11\7.MergeArrays]\bin\Debug\net9.0\7.MergeArrays].pdb
+C:\GenSpark Training\Day 11\7.MergeArrays]\obj\Debug\net9.0\7.MergeArrays].dll
+C:\GenSpark Training\Day 11\7.MergeArrays]\obj\Debug\net9.0\refint\7.MergeArrays].dll
+C:\GenSpark Training\Day 11\7.MergeArrays]\obj\Debug\net9.0\7.MergeArrays].pdb
+C:\GenSpark Training\Day 11\7.MergeArrays]\obj\Debug\net9.0\7.MergeArrays].genruntimeconfig.cache
+C:\GenSpark Training\Day 11\7.MergeArrays]\obj\Debug\net9.0\ref\7.MergeArrays].dll

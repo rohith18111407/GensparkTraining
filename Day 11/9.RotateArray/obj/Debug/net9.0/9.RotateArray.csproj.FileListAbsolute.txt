@@ -1,0 +1,14 @@
+C:\GenSpark Training\Day 11\9.RotateArray\obj\Debug\net9.0\9.RotateArray.GeneratedMSBuildEditorConfig.editorconfig
+C:\GenSpark Training\Day 11\9.RotateArray\obj\Debug\net9.0\9.RotateArray.AssemblyInfoInputs.cache
+C:\GenSpark Training\Day 11\9.RotateArray\obj\Debug\net9.0\9.RotateArray.AssemblyInfo.cs
+C:\GenSpark Training\Day 11\9.RotateArray\obj\Debug\net9.0\9.RotateArray.csproj.CoreCompileInputs.cache
+C:\GenSpark Training\Day 11\9.RotateArray\bin\Debug\net9.0\9.RotateArray.exe
+C:\GenSpark Training\Day 11\9.RotateArray\bin\Debug\net9.0\9.RotateArray.deps.json
+C:\GenSpark Training\Day 11\9.RotateArray\bin\Debug\net9.0\9.RotateArray.runtimeconfig.json
+C:\GenSpark Training\Day 11\9.RotateArray\bin\Debug\net9.0\9.RotateArray.dll
+C:\GenSpark Training\Day 11\9.RotateArray\bin\Debug\net9.0\9.RotateArray.pdb
+C:\GenSpark Training\Day 11\9.RotateArray\obj\Debug\net9.0\9.RotateArray.dll
+C:\GenSpark Training\Day 11\9.RotateArray\obj\Debug\net9.0\refint\9.RotateArray.dll
+C:\GenSpark Training\Day 11\9.RotateArray\obj\Debug\net9.0\9.RotateArray.pdb
+C:\GenSpark Training\Day 11\9.RotateArray\obj\Debug\net9.0\9.RotateArray.genruntimeconfig.cache
+C:\GenSpark Training\Day 11\9.RotateArray\obj\Debug\net9.0\ref\9.RotateArray.dll

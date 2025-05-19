@@ -1,0 +1,14 @@
+C:\GenSpark Training\Day 11\GreetApp\bin\Debug\net9.0\GreetApp.exe
+C:\GenSpark Training\Day 11\GreetApp\bin\Debug\net9.0\GreetApp.deps.json
+C:\GenSpark Training\Day 11\GreetApp\bin\Debug\net9.0\GreetApp.runtimeconfig.json
+C:\GenSpark Training\Day 11\GreetApp\bin\Debug\net9.0\GreetApp.dll
+C:\GenSpark Training\Day 11\GreetApp\bin\Debug\net9.0\GreetApp.pdb
+C:\GenSpark Training\Day 11\GreetApp\obj\Debug\net9.0\GreetApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\GenSpark Training\Day 11\GreetApp\obj\Debug\net9.0\GreetApp.AssemblyInfoInputs.cache
+C:\GenSpark Training\Day 11\GreetApp\obj\Debug\net9.0\GreetApp.AssemblyInfo.cs
+C:\GenSpark Training\Day 11\GreetApp\obj\Debug\net9.0\GreetApp.csproj.CoreCompileInputs.cache
+C:\GenSpark Training\Day 11\GreetApp\obj\Debug\net9.0\GreetApp.dll
+C:\GenSpark Training\Day 11\GreetApp\obj\Debug\net9.0\refint\GreetApp.dll
+C:\GenSpark Training\Day 11\GreetApp\obj\Debug\net9.0\GreetApp.pdb
+C:\GenSpark Training\Day 11\GreetApp\obj\Debug\net9.0\GreetApp.genruntimeconfig.cache
+C:\GenSpark Training\Day 11\GreetApp\obj\Debug\net9.0\ref\GreetApp.dll

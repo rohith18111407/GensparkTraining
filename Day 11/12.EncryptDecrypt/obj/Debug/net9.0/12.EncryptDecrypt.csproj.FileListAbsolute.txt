@@ -1,0 +1,14 @@
+C:\GenSpark Training\Day 11\12.EncryptDecrypt\bin\Debug\net9.0\12.EncryptDecrypt.exe
+C:\GenSpark Training\Day 11\12.EncryptDecrypt\bin\Debug\net9.0\12.EncryptDecrypt.deps.json
+C:\GenSpark Training\Day 11\12.EncryptDecrypt\bin\Debug\net9.0\12.EncryptDecrypt.runtimeconfig.json
+C:\GenSpark Training\Day 11\12.EncryptDecrypt\bin\Debug\net9.0\12.EncryptDecrypt.dll
+C:\GenSpark Training\Day 11\12.EncryptDecrypt\bin\Debug\net9.0\12.EncryptDecrypt.pdb
+C:\GenSpark Training\Day 11\12.EncryptDecrypt\obj\Debug\net9.0\12.EncryptDecrypt.GeneratedMSBuildEditorConfig.editorconfig
+C:\GenSpark Training\Day 11\12.EncryptDecrypt\obj\Debug\net9.0\12.EncryptDecrypt.AssemblyInfoInputs.cache
+C:\GenSpark Training\Day 11\12.EncryptDecrypt\obj\Debug\net9.0\12.EncryptDecrypt.AssemblyInfo.cs
+C:\GenSpark Training\Day 11\12.EncryptDecrypt\obj\Debug\net9.0\12.EncryptDecrypt.csproj.CoreCompileInputs.cache
+C:\GenSpark Training\Day 11\12.EncryptDecrypt\obj\Debug\net9.0\12.EncryptDecrypt.dll
+C:\GenSpark Training\Day 11\12.EncryptDecrypt\obj\Debug\net9.0\refint\12.EncryptDecrypt.dll
+C:\GenSpark Training\Day 11\12.EncryptDecrypt\obj\Debug\net9.0\12.EncryptDecrypt.pdb
+C:\GenSpark Training\Day 11\12.EncryptDecrypt\obj\Debug\net9.0\12.EncryptDecrypt.genruntimeconfig.cache
+C:\GenSpark Training\Day 11\12.EncryptDecrypt\obj\Debug\net9.0\ref\12.EncryptDecrypt.dll

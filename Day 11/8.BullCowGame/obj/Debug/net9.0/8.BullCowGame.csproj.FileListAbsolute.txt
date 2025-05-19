@@ -1,0 +1,14 @@
+C:\GenSpark Training\Day 11\8.BullCowGame\bin\Debug\net9.0\8.BullCowGame.exe
+C:\GenSpark Training\Day 11\8.BullCowGame\bin\Debug\net9.0\8.BullCowGame.deps.json
+C:\GenSpark Training\Day 11\8.BullCowGame\bin\Debug\net9.0\8.BullCowGame.runtimeconfig.json
+C:\GenSpark Training\Day 11\8.BullCowGame\bin\Debug\net9.0\8.BullCowGame.dll
+C:\GenSpark Training\Day 11\8.BullCowGame\bin\Debug\net9.0\8.BullCowGame.pdb
+C:\GenSpark Training\Day 11\8.BullCowGame\obj\Debug\net9.0\8.BullCowGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\GenSpark Training\Day 11\8.BullCowGame\obj\Debug\net9.0\8.BullCowGame.AssemblyInfoInputs.cache
+C:\GenSpark Training\Day 11\8.BullCowGame\obj\Debug\net9.0\8.BullCowGame.AssemblyInfo.cs
+C:\GenSpark Training\Day 11\8.BullCowGame\obj\Debug\net9.0\8.BullCowGame.csproj.CoreCompileInputs.cache
+C:\GenSpark Training\Day 11\8.BullCowGame\obj\Debug\net9.0\8.BullCowGame.dll
+C:\GenSpark Training\Day 11\8.BullCowGame\obj\Debug\net9.0\refint\8.BullCowGame.dll
+C:\GenSpark Training\Day 11\8.BullCowGame\obj\Debug\net9.0\8.BullCowGame.pdb
+C:\GenSpark Training\Day 11\8.BullCowGame\obj\Debug\net9.0\8.BullCowGame.genruntimeconfig.cache
+C:\GenSpark Training\Day 11\8.BullCowGame\obj\Debug\net9.0\ref\8.BullCowGame.dll

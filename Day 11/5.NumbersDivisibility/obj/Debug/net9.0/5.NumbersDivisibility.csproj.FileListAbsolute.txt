@@ -1,0 +1,14 @@
+C:\GenSpark Training\Day 11\5.NumbersDivisibility\bin\Debug\net9.0\5.NumbersDivisibility.exe
+C:\GenSpark Training\Day 11\5.NumbersDivisibility\bin\Debug\net9.0\5.NumbersDivisibility.deps.json
+C:\GenSpark Training\Day 11\5.NumbersDivisibility\bin\Debug\net9.0\5.NumbersDivisibility.runtimeconfig.json
+C:\GenSpark Training\Day 11\5.NumbersDivisibility\bin\Debug\net9.0\5.NumbersDivisibility.dll
+C:\GenSpark Training\Day 11\5.NumbersDivisibility\bin\Debug\net9.0\5.NumbersDivisibility.pdb
+C:\GenSpark Training\Day 11\5.NumbersDivisibility\obj\Debug\net9.0\5.NumbersDivisibility.GeneratedMSBuildEditorConfig.editorconfig
+C:\GenSpark Training\Day 11\5.NumbersDivisibility\obj\Debug\net9.0\5.NumbersDivisibility.AssemblyInfoInputs.cache
+C:\GenSpark Training\Day 11\5.NumbersDivisibility\obj\Debug\net9.0\5.NumbersDivisibility.AssemblyInfo.cs
+C:\GenSpark Training\Day 11\5.NumbersDivisibility\obj\Debug\net9.0\5.NumbersDivisibility.csproj.CoreCompileInputs.cache
+C:\GenSpark Training\Day 11\5.NumbersDivisibility\obj\Debug\net9.0\5.NumbersDivisibility.dll
+C:\GenSpark Training\Day 11\5.NumbersDivisibility\obj\Debug\net9.0\refint\5.NumbersDivisibility.dll
+C:\GenSpark Training\Day 11\5.NumbersDivisibility\obj\Debug\net9.0\5.NumbersDivisibility.pdb
+C:\GenSpark Training\Day 11\5.NumbersDivisibility\obj\Debug\net9.0\5.NumbersDivisibility.genruntimeconfig.cache
+C:\GenSpark Training\Day 11\5.NumbersDivisibility\obj\Debug\net9.0\ref\5.NumbersDivisibility.dll

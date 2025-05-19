@@ -1,0 +1,14 @@
+C:\GenSpark Training\Day 11\TryParse\bin\Debug\net9.0\TryParse.exe
+C:\GenSpark Training\Day 11\TryParse\bin\Debug\net9.0\TryParse.deps.json
+C:\GenSpark Training\Day 11\TryParse\bin\Debug\net9.0\TryParse.runtimeconfig.json
+C:\GenSpark Training\Day 11\TryParse\bin\Debug\net9.0\TryParse.dll
+C:\GenSpark Training\Day 11\TryParse\bin\Debug\net9.0\TryParse.pdb
+C:\GenSpark Training\Day 11\TryParse\obj\Debug\net9.0\TryParse.GeneratedMSBuildEditorConfig.editorconfig
+C:\GenSpark Training\Day 11\TryParse\obj\Debug\net9.0\TryParse.AssemblyInfoInputs.cache
+C:\GenSpark Training\Day 11\TryParse\obj\Debug\net9.0\TryParse.AssemblyInfo.cs
+C:\GenSpark Training\Day 11\TryParse\obj\Debug\net9.0\TryParse.csproj.CoreCompileInputs.cache
+C:\GenSpark Training\Day 11\TryParse\obj\Debug\net9.0\TryParse.dll
+C:\GenSpark Training\Day 11\TryParse\obj\Debug\net9.0\refint\TryParse.dll
+C:\GenSpark Training\Day 11\TryParse\obj\Debug\net9.0\TryParse.pdb
+C:\GenSpark Training\Day 11\TryParse\obj\Debug\net9.0\TryParse.genruntimeconfig.cache
+C:\GenSpark Training\Day 11\TryParse\obj\Debug\net9.0\ref\TryParse.dll
