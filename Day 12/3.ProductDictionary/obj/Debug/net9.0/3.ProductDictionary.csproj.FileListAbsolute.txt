@@ -1,0 +1,15 @@
+C:\GensparkTraining\Day 12\3.ProductDictionary\bin\Debug\net9.0\3.ProductDictionary.exe
+C:\GensparkTraining\Day 12\3.ProductDictionary\bin\Debug\net9.0\3.ProductDictionary.deps.json
+C:\GensparkTraining\Day 12\3.ProductDictionary\bin\Debug\net9.0\3.ProductDictionary.runtimeconfig.json
+C:\GensparkTraining\Day 12\3.ProductDictionary\bin\Debug\net9.0\3.ProductDictionary.dll
+C:\GensparkTraining\Day 12\3.ProductDictionary\bin\Debug\net9.0\3.ProductDictionary.pdb
+C:\GensparkTraining\Day 12\3.ProductDictionary\obj\Debug\net9.0\3.ProductDictionary.GeneratedMSBuildEditorConfig.editorconfig
+C:\GensparkTraining\Day 12\3.ProductDictionary\obj\Debug\net9.0\3.ProductDictionary.AssemblyInfoInputs.cache
+C:\GensparkTraining\Day 12\3.ProductDictionary\obj\Debug\net9.0\3.ProductDictionary.AssemblyInfo.cs
+C:\GensparkTraining\Day 12\3.ProductDictionary\obj\Debug\net9.0\3.ProductDictionary.csproj.CoreCompileInputs.cache
+C:\GensparkTraining\Day 12\3.ProductDictionary\obj\Debug\net9.0\3.ProductDictionary.sourcelink.json
+C:\GensparkTraining\Day 12\3.ProductDictionary\obj\Debug\net9.0\3.ProductDictionary.dll
+C:\GensparkTraining\Day 12\3.ProductDictionary\obj\Debug\net9.0\refint\3.ProductDictionary.dll
+C:\GensparkTraining\Day 12\3.ProductDictionary\obj\Debug\net9.0\3.ProductDictionary.pdb
+C:\GensparkTraining\Day 12\3.ProductDictionary\obj\Debug\net9.0\3.ProductDictionary.genruntimeconfig.cache
+C:\GensparkTraining\Day 12\3.ProductDictionary\obj\Debug\net9.0\ref\3.ProductDictionary.dll

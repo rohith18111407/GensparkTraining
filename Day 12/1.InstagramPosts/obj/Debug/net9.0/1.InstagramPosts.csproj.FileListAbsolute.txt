@@ -1,0 +1,15 @@
+C:\GensparkTraining\Day 12\1.InstagramPosts\obj\Debug\net9.0\1.InstagramPosts.GeneratedMSBuildEditorConfig.editorconfig
+C:\GensparkTraining\Day 12\1.InstagramPosts\obj\Debug\net9.0\1.InstagramPosts.AssemblyInfoInputs.cache
+C:\GensparkTraining\Day 12\1.InstagramPosts\obj\Debug\net9.0\1.InstagramPosts.AssemblyInfo.cs
+C:\GensparkTraining\Day 12\1.InstagramPosts\obj\Debug\net9.0\1.InstagramPosts.csproj.CoreCompileInputs.cache
+C:\GensparkTraining\Day 12\1.InstagramPosts\obj\Debug\net9.0\1.InstagramPosts.sourcelink.json
+C:\GensparkTraining\Day 12\1.InstagramPosts\bin\Debug\net9.0\1.InstagramPosts.exe
+C:\GensparkTraining\Day 12\1.InstagramPosts\bin\Debug\net9.0\1.InstagramPosts.deps.json
+C:\GensparkTraining\Day 12\1.InstagramPosts\bin\Debug\net9.0\1.InstagramPosts.runtimeconfig.json
+C:\GensparkTraining\Day 12\1.InstagramPosts\bin\Debug\net9.0\1.InstagramPosts.dll
+C:\GensparkTraining\Day 12\1.InstagramPosts\bin\Debug\net9.0\1.InstagramPosts.pdb
+C:\GensparkTraining\Day 12\1.InstagramPosts\obj\Debug\net9.0\1.InstagramPosts.dll
+C:\GensparkTraining\Day 12\1.InstagramPosts\obj\Debug\net9.0\refint\1.InstagramPosts.dll
+C:\GensparkTraining\Day 12\1.InstagramPosts\obj\Debug\net9.0\1.InstagramPosts.pdb
+C:\GensparkTraining\Day 12\1.InstagramPosts\obj\Debug\net9.0\1.InstagramPosts.genruntimeconfig.cache
+C:\GensparkTraining\Day 12\1.InstagramPosts\obj\Debug\net9.0\ref\1.InstagramPosts.dll

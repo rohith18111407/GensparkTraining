@@ -1,0 +1,15 @@
+C:\GensparkTraining\Day 12\2.EmployeeApp\bin\Debug\net9.0\2.EmployeeApp.exe
+C:\GensparkTraining\Day 12\2.EmployeeApp\bin\Debug\net9.0\2.EmployeeApp.deps.json
+C:\GensparkTraining\Day 12\2.EmployeeApp\bin\Debug\net9.0\2.EmployeeApp.runtimeconfig.json
+C:\GensparkTraining\Day 12\2.EmployeeApp\bin\Debug\net9.0\2.EmployeeApp.dll
+C:\GensparkTraining\Day 12\2.EmployeeApp\bin\Debug\net9.0\2.EmployeeApp.pdb
+C:\GensparkTraining\Day 12\2.EmployeeApp\obj\Debug\net9.0\2.EmployeeApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\GensparkTraining\Day 12\2.EmployeeApp\obj\Debug\net9.0\2.EmployeeApp.AssemblyInfoInputs.cache
+C:\GensparkTraining\Day 12\2.EmployeeApp\obj\Debug\net9.0\2.EmployeeApp.AssemblyInfo.cs
+C:\GensparkTraining\Day 12\2.EmployeeApp\obj\Debug\net9.0\2.EmployeeApp.csproj.CoreCompileInputs.cache
+C:\GensparkTraining\Day 12\2.EmployeeApp\obj\Debug\net9.0\2.EmployeeApp.sourcelink.json
+C:\GensparkTraining\Day 12\2.EmployeeApp\obj\Debug\net9.0\2.EmployeeApp.dll
+C:\GensparkTraining\Day 12\2.EmployeeApp\obj\Debug\net9.0\refint\2.EmployeeApp.dll
+C:\GensparkTraining\Day 12\2.EmployeeApp\obj\Debug\net9.0\2.EmployeeApp.pdb
+C:\GensparkTraining\Day 12\2.EmployeeApp\obj\Debug\net9.0\2.EmployeeApp.genruntimeconfig.cache
+C:\GensparkTraining\Day 12\2.EmployeeApp\obj\Debug\net9.0\ref\2.EmployeeApp.dll
