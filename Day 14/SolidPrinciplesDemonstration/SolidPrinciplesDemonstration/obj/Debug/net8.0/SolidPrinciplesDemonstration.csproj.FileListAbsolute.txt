@@ -1,0 +1,15 @@
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\obj\Debug\net8.0\SolidPrinciplesDemonstration.GeneratedMSBuildEditorConfig.editorconfig
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\obj\Debug\net8.0\SolidPrinciplesDemonstration.AssemblyInfoInputs.cache
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\obj\Debug\net8.0\SolidPrinciplesDemonstration.AssemblyInfo.cs
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\obj\Debug\net8.0\SolidPrinciplesDemonstration.csproj.CoreCompileInputs.cache
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\obj\Debug\net8.0\SolidPrinciplesDemonstration.sourcelink.json
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\bin\Debug\net8.0\SolidPrinciplesDemonstration.exe
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\bin\Debug\net8.0\SolidPrinciplesDemonstration.deps.json
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\bin\Debug\net8.0\SolidPrinciplesDemonstration.runtimeconfig.json
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\bin\Debug\net8.0\SolidPrinciplesDemonstration.dll
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\bin\Debug\net8.0\SolidPrinciplesDemonstration.pdb
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\obj\Debug\net8.0\SolidPrinciplesDemonstration.dll
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\obj\Debug\net8.0\refint\SolidPrinciplesDemonstration.dll
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\obj\Debug\net8.0\SolidPrinciplesDemonstration.pdb
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\obj\Debug\net8.0\SolidPrinciplesDemonstration.genruntimeconfig.cache
+C:\GensparkTraining\Day 14\SolidPrinciplesDemonstration\SolidPrinciplesDemonstration\obj\Debug\net8.0\ref\SolidPrinciplesDemonstration.dll

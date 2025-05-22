@@ -1,0 +1,207 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|c:\\gensparktraining\\day 14\\solidprinciplesdemonstration\\solidprinciplesdemonstration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|solutionrelative:solidprinciplesdemonstration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|c:\\gensparktraining\\day 14\\solidprinciplesdemonstration\\solidprinciplesdemonstration\\dependencyinversionprinciple\\diprefactored.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|solutionrelative:solidprinciplesdemonstration\\dependencyinversionprinciple\\diprefactored.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|c:\\gensparktraining\\day 14\\solidprinciplesdemonstration\\solidprinciplesdemonstration\\dependencyinversionprinciple\\dipviolation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|solutionrelative:solidprinciplesdemonstration\\dependencyinversionprinciple\\dipviolation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|c:\\gensparktraining\\day 14\\solidprinciplesdemonstration\\solidprinciplesdemonstration\\interfacesegregationprinciple\\isprefactored.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|solutionrelative:solidprinciplesdemonstration\\interfacesegregationprinciple\\isprefactored.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|c:\\gensparktraining\\day 14\\solidprinciplesdemonstration\\solidprinciplesdemonstration\\interfacesegregationprinciple\\ispviolation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|solutionrelative:solidprinciplesdemonstration\\interfacesegregationprinciple\\ispviolation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|c:\\gensparktraining\\day 14\\solidprinciplesdemonstration\\solidprinciplesdemonstration\\liskovsubstitutionprinciple\\lsprefactored.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|solutionrelative:solidprinciplesdemonstration\\liskovsubstitutionprinciple\\lsprefactored.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|c:\\gensparktraining\\day 14\\solidprinciplesdemonstration\\solidprinciplesdemonstration\\liskovsubstitutionprinciple\\lspviolation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|solutionrelative:solidprinciplesdemonstration\\liskovsubstitutionprinciple\\lspviolation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|c:\\gensparktraining\\day 14\\solidprinciplesdemonstration\\solidprinciplesdemonstration\\openclosedprinciple\\ocprefactored.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|solutionrelative:solidprinciplesdemonstration\\openclosedprinciple\\ocprefactored.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|c:\\gensparktraining\\day 14\\solidprinciplesdemonstration\\solidprinciplesdemonstration\\openclosedprinciple\\ocpviolation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|solutionrelative:solidprinciplesdemonstration\\openclosedprinciple\\ocpviolation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|c:\\gensparktraining\\day 14\\solidprinciplesdemonstration\\solidprinciplesdemonstration\\singleresponsibilityprinciple\\srpviolation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|solutionrelative:solidprinciplesdemonstration\\singleresponsibilityprinciple\\srpviolation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|c:\\gensparktraining\\day 14\\solidprinciplesdemonstration\\solidprinciplesdemonstration\\singleresponsibilityprinciple\\srprefactored.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78D72963-7AD2-4795-AAC6-CF7B6D193F28}|SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration.csproj|solutionrelative:solidprinciplesdemonstration\\singleresponsibilityprinciple\\srprefactored.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LSPRefactored.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\LiskovSubstitutionPrinciple\\LSPRefactored.cs",
+              "RelativeDocumentMoniker": "SolidPrinciplesDemonstration\\LiskovSubstitutionPrinciple\\LSPRefactored.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\LiskovSubstitutionPrinciple\\LSPRefactored.cs",
+              "RelativeToolTip": "SolidPrinciplesDemonstration\\LiskovSubstitutionPrinciple\\LSPRefactored.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T09:43:07.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ISPViolation.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\InterfaceSegregationPrinciple\\ISPViolation.cs",
+              "RelativeDocumentMoniker": "SolidPrinciplesDemonstration\\InterfaceSegregationPrinciple\\ISPViolation.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\InterfaceSegregationPrinciple\\ISPViolation.cs",
+              "RelativeToolTip": "SolidPrinciplesDemonstration\\InterfaceSegregationPrinciple\\ISPViolation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T09:43:56.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ISPRefactored.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\InterfaceSegregationPrinciple\\ISPRefactored.cs",
+              "RelativeDocumentMoniker": "SolidPrinciplesDemonstration\\InterfaceSegregationPrinciple\\ISPRefactored.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\InterfaceSegregationPrinciple\\ISPRefactored.cs",
+              "RelativeToolTip": "SolidPrinciplesDemonstration\\InterfaceSegregationPrinciple\\ISPRefactored.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T09:44:21.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DIPViolation.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\DependencyInversionPrinciple\\DIPViolation.cs",
+              "RelativeDocumentMoniker": "SolidPrinciplesDemonstration\\DependencyInversionPrinciple\\DIPViolation.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\DependencyInversionPrinciple\\DIPViolation.cs",
+              "RelativeToolTip": "SolidPrinciplesDemonstration\\DependencyInversionPrinciple\\DIPViolation.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T09:44:59.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DIPRefactored.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\DependencyInversionPrinciple\\DIPRefactored.cs",
+              "RelativeDocumentMoniker": "SolidPrinciplesDemonstration\\DependencyInversionPrinciple\\DIPRefactored.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\DependencyInversionPrinciple\\DIPRefactored.cs",
+              "RelativeToolTip": "SolidPrinciplesDemonstration\\DependencyInversionPrinciple\\DIPRefactored.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA4wBQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T09:45:26.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\Program.cs",
+              "RelativeDocumentMoniker": "SolidPrinciplesDemonstration\\Program.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\Program.cs",
+              "RelativeToolTip": "SolidPrinciplesDemonstration\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T09:33:49.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LSPViolation.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\LiskovSubstitutionPrinciple\\LSPViolation.cs",
+              "RelativeDocumentMoniker": "SolidPrinciplesDemonstration\\LiskovSubstitutionPrinciple\\LSPViolation.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\LiskovSubstitutionPrinciple\\LSPViolation.cs",
+              "RelativeToolTip": "SolidPrinciplesDemonstration\\LiskovSubstitutionPrinciple\\LSPViolation.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T09:42:51.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OCPRefactored.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\OpenClosedPrinciple\\OCPRefactored.cs",
+              "RelativeDocumentMoniker": "SolidPrinciplesDemonstration\\OpenClosedPrinciple\\OCPRefactored.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\OpenClosedPrinciple\\OCPRefactored.cs",
+              "RelativeToolTip": "SolidPrinciplesDemonstration\\OpenClosedPrinciple\\OCPRefactored.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwBkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T09:41:14.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OCPViolation.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\OpenClosedPrinciple\\OCPViolation.cs",
+              "RelativeDocumentMoniker": "SolidPrinciplesDemonstration\\OpenClosedPrinciple\\OCPViolation.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\OpenClosedPrinciple\\OCPViolation.cs",
+              "RelativeToolTip": "SolidPrinciplesDemonstration\\OpenClosedPrinciple\\OCPViolation.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T09:40:32.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SRPViolation.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\SingleResponsibilityPrinciple\\SRPViolation.cs",
+              "RelativeDocumentMoniker": "SolidPrinciplesDemonstration\\SingleResponsibilityPrinciple\\SRPViolation.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\SingleResponsibilityPrinciple\\SRPViolation.cs",
+              "RelativeToolTip": "SolidPrinciplesDemonstration\\SingleResponsibilityPrinciple\\SRPViolation.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T09:36:54.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SRPRefactored.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\SingleResponsibilityPrinciple\\SRPRefactored.cs",
+              "RelativeDocumentMoniker": "SolidPrinciplesDemonstration\\SingleResponsibilityPrinciple\\SRPRefactored.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 14\\SolidPrinciplesDemonstration\\SolidPrinciplesDemonstration\\SingleResponsibilityPrinciple\\SRPRefactored.cs",
+              "RelativeToolTip": "SolidPrinciplesDemonstration\\SingleResponsibilityPrinciple\\SRPRefactored.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T09:38:26.869Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
