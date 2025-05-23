@@ -1,0 +1,15 @@
+C:\GensparkTraining\Day 15\AdapterPattern\bin\Debug\net9.0\AdapterPattern.exe
+C:\GensparkTraining\Day 15\AdapterPattern\bin\Debug\net9.0\AdapterPattern.deps.json
+C:\GensparkTraining\Day 15\AdapterPattern\bin\Debug\net9.0\AdapterPattern.runtimeconfig.json
+C:\GensparkTraining\Day 15\AdapterPattern\bin\Debug\net9.0\AdapterPattern.dll
+C:\GensparkTraining\Day 15\AdapterPattern\bin\Debug\net9.0\AdapterPattern.pdb
+C:\GensparkTraining\Day 15\AdapterPattern\obj\Debug\net9.0\AdapterPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\GensparkTraining\Day 15\AdapterPattern\obj\Debug\net9.0\AdapterPattern.AssemblyInfoInputs.cache
+C:\GensparkTraining\Day 15\AdapterPattern\obj\Debug\net9.0\AdapterPattern.AssemblyInfo.cs
+C:\GensparkTraining\Day 15\AdapterPattern\obj\Debug\net9.0\AdapterPattern.csproj.CoreCompileInputs.cache
+C:\GensparkTraining\Day 15\AdapterPattern\obj\Debug\net9.0\AdapterPattern.sourcelink.json
+C:\GensparkTraining\Day 15\AdapterPattern\obj\Debug\net9.0\AdapterPattern.dll
+C:\GensparkTraining\Day 15\AdapterPattern\obj\Debug\net9.0\refint\AdapterPattern.dll
+C:\GensparkTraining\Day 15\AdapterPattern\obj\Debug\net9.0\AdapterPattern.pdb
+C:\GensparkTraining\Day 15\AdapterPattern\obj\Debug\net9.0\AdapterPattern.genruntimeconfig.cache
+C:\GensparkTraining\Day 15\AdapterPattern\obj\Debug\net9.0\ref\AdapterPattern.dll

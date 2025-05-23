@@ -1,0 +1,4 @@
+Abstract Factory Pattern Line 1
+Abstract Factory Pattern Line 2
+Abstract Factory Pattern Line 1
+Abstract Factory Pattern Line 2

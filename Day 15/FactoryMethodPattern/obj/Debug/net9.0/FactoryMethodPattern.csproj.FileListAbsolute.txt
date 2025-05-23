@@ -1,0 +1,15 @@
+C:\GensparkTraining\Day 15\FactoryMethodPattern\bin\Debug\net9.0\FactoryMethodPattern.exe
+C:\GensparkTraining\Day 15\FactoryMethodPattern\bin\Debug\net9.0\FactoryMethodPattern.deps.json
+C:\GensparkTraining\Day 15\FactoryMethodPattern\bin\Debug\net9.0\FactoryMethodPattern.runtimeconfig.json
+C:\GensparkTraining\Day 15\FactoryMethodPattern\bin\Debug\net9.0\FactoryMethodPattern.dll
+C:\GensparkTraining\Day 15\FactoryMethodPattern\bin\Debug\net9.0\FactoryMethodPattern.pdb
+C:\GensparkTraining\Day 15\FactoryMethodPattern\obj\Debug\net9.0\FactoryMethodPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\GensparkTraining\Day 15\FactoryMethodPattern\obj\Debug\net9.0\FactoryMethodPattern.AssemblyInfoInputs.cache
+C:\GensparkTraining\Day 15\FactoryMethodPattern\obj\Debug\net9.0\FactoryMethodPattern.AssemblyInfo.cs
+C:\GensparkTraining\Day 15\FactoryMethodPattern\obj\Debug\net9.0\FactoryMethodPattern.csproj.CoreCompileInputs.cache
+C:\GensparkTraining\Day 15\FactoryMethodPattern\obj\Debug\net9.0\FactoryMethodPattern.sourcelink.json
+C:\GensparkTraining\Day 15\FactoryMethodPattern\obj\Debug\net9.0\FactoryMethodPattern.dll
+C:\GensparkTraining\Day 15\FactoryMethodPattern\obj\Debug\net9.0\refint\FactoryMethodPattern.dll
+C:\GensparkTraining\Day 15\FactoryMethodPattern\obj\Debug\net9.0\FactoryMethodPattern.pdb
+C:\GensparkTraining\Day 15\FactoryMethodPattern\obj\Debug\net9.0\FactoryMethodPattern.genruntimeconfig.cache
+C:\GensparkTraining\Day 15\FactoryMethodPattern\obj\Debug\net9.0\ref\FactoryMethodPattern.dll

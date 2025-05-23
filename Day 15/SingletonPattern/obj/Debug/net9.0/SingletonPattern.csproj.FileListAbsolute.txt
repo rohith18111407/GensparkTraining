@@ -1,0 +1,15 @@
+C:\GensparkTraining\Day 15\SingletonPattern\bin\Debug\net9.0\SingletonPattern.exe
+C:\GensparkTraining\Day 15\SingletonPattern\bin\Debug\net9.0\SingletonPattern.deps.json
+C:\GensparkTraining\Day 15\SingletonPattern\bin\Debug\net9.0\SingletonPattern.runtimeconfig.json
+C:\GensparkTraining\Day 15\SingletonPattern\bin\Debug\net9.0\SingletonPattern.dll
+C:\GensparkTraining\Day 15\SingletonPattern\bin\Debug\net9.0\SingletonPattern.pdb
+C:\GensparkTraining\Day 15\SingletonPattern\obj\Debug\net9.0\SingletonPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\GensparkTraining\Day 15\SingletonPattern\obj\Debug\net9.0\SingletonPattern.AssemblyInfoInputs.cache
+C:\GensparkTraining\Day 15\SingletonPattern\obj\Debug\net9.0\SingletonPattern.AssemblyInfo.cs
+C:\GensparkTraining\Day 15\SingletonPattern\obj\Debug\net9.0\SingletonPattern.csproj.CoreCompileInputs.cache
+C:\GensparkTraining\Day 15\SingletonPattern\obj\Debug\net9.0\SingletonPattern.sourcelink.json
+C:\GensparkTraining\Day 15\SingletonPattern\obj\Debug\net9.0\SingletonPattern.dll
+C:\GensparkTraining\Day 15\SingletonPattern\obj\Debug\net9.0\refint\SingletonPattern.dll
+C:\GensparkTraining\Day 15\SingletonPattern\obj\Debug\net9.0\SingletonPattern.pdb
+C:\GensparkTraining\Day 15\SingletonPattern\obj\Debug\net9.0\SingletonPattern.genruntimeconfig.cache
+C:\GensparkTraining\Day 15\SingletonPattern\obj\Debug\net9.0\ref\SingletonPattern.dll
