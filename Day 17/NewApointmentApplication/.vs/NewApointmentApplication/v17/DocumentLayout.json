@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\GensparkTraining\\Day 17\\NewApointmentApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B0FBB685-D6C2-44F5-BCD3-82C5AB0C4EAD}|NewApointmentApplication\\NewApointmentApplication.csproj|c:\\gensparktraining\\day 17\\newapointmentapplication\\newapointmentapplication\\models\\speciality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0FBB685-D6C2-44F5-BCD3-82C5AB0C4EAD}|NewApointmentApplication\\NewApointmentApplication.csproj|solutionrelative:newapointmentapplication\\models\\speciality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0FBB685-D6C2-44F5-BCD3-82C5AB0C4EAD}|NewApointmentApplication\\NewApointmentApplication.csproj|c:\\gensparktraining\\day 17\\newapointmentapplication\\newapointmentapplication\\models\\doctorspeciality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0FBB685-D6C2-44F5-BCD3-82C5AB0C4EAD}|NewApointmentApplication\\NewApointmentApplication.csproj|solutionrelative:newapointmentapplication\\models\\doctorspeciality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0FBB685-D6C2-44F5-BCD3-82C5AB0C4EAD}|NewApointmentApplication\\NewApointmentApplication.csproj|c:\\gensparktraining\\day 17\\newapointmentapplication\\newapointmentapplication\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0FBB685-D6C2-44F5-BCD3-82C5AB0C4EAD}|NewApointmentApplication\\NewApointmentApplication.csproj|solutionrelative:newapointmentapplication\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0FBB685-D6C2-44F5-BCD3-82C5AB0C4EAD}|NewApointmentApplication\\NewApointmentApplication.csproj|c:\\gensparktraining\\day 17\\newapointmentapplication\\newapointmentapplication\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0FBB685-D6C2-44F5-BCD3-82C5AB0C4EAD}|NewApointmentApplication\\NewApointmentApplication.csproj|solutionrelative:newapointmentapplication\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0FBB685-D6C2-44F5-BCD3-82C5AB0C4EAD}|NewApointmentApplication\\NewApointmentApplication.csproj|c:\\gensparktraining\\day 17\\newapointmentapplication\\newapointmentapplication\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0FBB685-D6C2-44F5-BCD3-82C5AB0C4EAD}|NewApointmentApplication\\NewApointmentApplication.csproj|solutionrelative:newapointmentapplication\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0FBB685-D6C2-44F5-BCD3-82C5AB0C4EAD}|NewApointmentApplication\\NewApointmentApplication.csproj|c:\\gensparktraining\\day 17\\newapointmentapplication\\newapointmentapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0FBB685-D6C2-44F5-BCD3-82C5AB0C4EAD}|NewApointmentApplication\\NewApointmentApplication.csproj|solutionrelative:newapointmentapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 17\\NewApointmentApplication\\NewApointmentApplication\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "NewApointmentApplication\\Models\\Patient.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 17\\NewApointmentApplication\\NewApointmentApplication\\Models\\Patient.cs",
+              "RelativeToolTip": "NewApointmentApplication\\Models\\Patient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T06:32:20.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 17\\NewApointmentApplication\\NewApointmentApplication\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "NewApointmentApplication\\Models\\Appointment.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 17\\NewApointmentApplication\\NewApointmentApplication\\Models\\Appointment.cs",
+              "RelativeToolTip": "NewApointmentApplication\\Models\\Appointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T06:31:19.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Speciality.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 17\\NewApointmentApplication\\NewApointmentApplication\\Models\\Speciality.cs",
+              "RelativeDocumentMoniker": "NewApointmentApplication\\Models\\Speciality.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 17\\NewApointmentApplication\\NewApointmentApplication\\Models\\Speciality.cs",
+              "RelativeToolTip": "NewApointmentApplication\\Models\\Speciality.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T06:30:19.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DoctorSpeciality.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 17\\NewApointmentApplication\\NewApointmentApplication\\Models\\DoctorSpeciality.cs",
+              "RelativeDocumentMoniker": "NewApointmentApplication\\Models\\DoctorSpeciality.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 17\\NewApointmentApplication\\NewApointmentApplication\\Models\\DoctorSpeciality.cs",
+              "RelativeToolTip": "NewApointmentApplication\\Models\\DoctorSpeciality.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T06:29:42.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 17\\NewApointmentApplication\\NewApointmentApplication\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "NewApointmentApplication\\Models\\Doctor.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 17\\NewApointmentApplication\\NewApointmentApplication\\Models\\Doctor.cs",
+              "RelativeToolTip": "NewApointmentApplication\\Models\\Doctor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T06:28:52.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 17\\NewApointmentApplication\\NewApointmentApplication\\Program.cs",
+              "RelativeDocumentMoniker": "NewApointmentApplication\\Program.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 17\\NewApointmentApplication\\NewApointmentApplication\\Program.cs",
+              "RelativeToolTip": "NewApointmentApplication\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T06:27:41.663Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

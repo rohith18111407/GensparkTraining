@@ -1,0 +1,248 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Day 16\\FirstAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|c:\\day 16\\firstapi\\firstapi\\contexts\\cliniccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|solutionrelative:firstapi\\contexts\\cliniccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|c:\\day 16\\firstapi\\firstapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|solutionrelative:firstapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|c:\\day 16\\firstapi\\firstapi\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|solutionrelative:firstapi\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|c:\\day 16\\firstapi\\firstapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|solutionrelative:firstapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|c:\\day 16\\firstapi\\firstapi\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|solutionrelative:firstapi\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|c:\\day 16\\firstapi\\firstapi\\repository\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|solutionrelative:firstapi\\repository\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|c:\\day 16\\firstapi\\firstapi\\interfaces\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|solutionrelative:firstapi\\interfaces\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|c:\\day 16\\firstapi\\firstapi\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|solutionrelative:firstapi\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|c:\\day 16\\firstapi\\firstapi\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|solutionrelative:firstapi\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|c:\\day 16\\firstapi\\firstapi\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|solutionrelative:firstapi\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|c:\\day 16\\firstapi\\firstapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|solutionrelative:firstapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|c:\\day 16\\firstapi\\firstapi\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|solutionrelative:firstapi\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|c:\\day 16\\firstapi\\firstapi\\controllers\\samplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|solutionrelative:firstapi\\controllers\\samplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|c:\\day 16\\firstapi\\firstapi\\firstapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{217F457F-A07F-4DBC-BE16-309AE67078A5}|FirstAPI\\FirstAPI.csproj|solutionrelative:firstapi\\firstapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IAppointmentRepository.cs",
+              "DocumentMoniker": "C:\\Day 16\\FirstAPI\\FirstAPI\\Interfaces\\IAppointmentRepository.cs",
+              "RelativeDocumentMoniker": "FirstAPI\\Interfaces\\IAppointmentRepository.cs",
+              "ToolTip": "C:\\Day 16\\FirstAPI\\FirstAPI\\Interfaces\\IAppointmentRepository.cs",
+              "RelativeToolTip": "FirstAPI\\Interfaces\\IAppointmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:23:32.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Day 16\\FirstAPI\\FirstAPI\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "FirstAPI\\Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Day 16\\FirstAPI\\FirstAPI\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "FirstAPI\\Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAgwDkAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:45:46.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "C:\\Day 16\\FirstAPI\\FirstAPI\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "FirstAPI\\Controllers\\DoctorController.cs",
+              "ToolTip": "C:\\Day 16\\FirstAPI\\FirstAPI\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "FirstAPI\\Controllers\\DoctorController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAADwvzAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T09:08:30.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Day 16\\FirstAPI\\FirstAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "FirstAPI\\appsettings.json",
+              "ToolTip": "C:\\Day 16\\FirstAPI\\FirstAPI\\appsettings.json",
+              "RelativeToolTip": "FirstAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-26T06:04:01.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Day 16\\FirstAPI\\FirstAPI\\Program.cs",
+              "RelativeDocumentMoniker": "FirstAPI\\Program.cs",
+              "ToolTip": "C:\\Day 16\\FirstAPI\\FirstAPI\\Program.cs",
+              "RelativeToolTip": "FirstAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T06:05:28.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClinicContext.cs",
+              "DocumentMoniker": "C:\\Day 16\\FirstAPI\\FirstAPI\\Contexts\\ClinicContext.cs",
+              "RelativeDocumentMoniker": "FirstAPI\\Contexts\\ClinicContext.cs",
+              "ToolTip": "C:\\Day 16\\FirstAPI\\FirstAPI\\Contexts\\ClinicContext.cs",
+              "RelativeToolTip": "FirstAPI\\Contexts\\ClinicContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:21:10.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\Day 16\\FirstAPI\\FirstAPI\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "FirstAPI\\Models\\Doctor.cs",
+              "ToolTip": "C:\\Day 16\\FirstAPI\\FirstAPI\\Models\\Doctor.cs",
+              "RelativeToolTip": "FirstAPI\\Models\\Doctor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T09:06:58.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Day 16\\FirstAPI\\FirstAPI\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "FirstAPI\\Models\\Appointment.cs",
+              "ToolTip": "C:\\Day 16\\FirstAPI\\FirstAPI\\Models\\Appointment.cs",
+              "RelativeToolTip": "FirstAPI\\Models\\Appointment.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAA2wAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:20:08.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppointmentRepository.cs",
+              "DocumentMoniker": "C:\\Day 16\\FirstAPI\\FirstAPI\\Repository\\AppointmentRepository.cs",
+              "RelativeDocumentMoniker": "FirstAPI\\Repository\\AppointmentRepository.cs",
+              "ToolTip": "C:\\Day 16\\FirstAPI\\FirstAPI\\Repository\\AppointmentRepository.cs",
+              "RelativeToolTip": "FirstAPI\\Repository\\AppointmentRepository.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:29:19.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\Day 16\\FirstAPI\\FirstAPI\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "FirstAPI\\Models\\Patient.cs",
+              "ToolTip": "C:\\Day 16\\FirstAPI\\FirstAPI\\Models\\Patient.cs",
+              "RelativeToolTip": "FirstAPI\\Models\\Patient.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAcwAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:14:00.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Day 16\\FirstAPI\\FirstAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "FirstAPI\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Day 16\\FirstAPI\\FirstAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "FirstAPI\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-26T06:04:45.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "C:\\Day 16\\FirstAPI\\FirstAPI\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "FirstAPI\\Controllers\\PatientController.cs",
+              "ToolTip": "C:\\Day 16\\FirstAPI\\FirstAPI\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "FirstAPI\\Controllers\\PatientController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAgwE8AAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:12:10.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SampleController.cs",
+              "DocumentMoniker": "C:\\Day 16\\FirstAPI\\FirstAPI\\Controllers\\SampleController.cs",
+              "RelativeDocumentMoniker": "FirstAPI\\Controllers\\SampleController.cs",
+              "ToolTip": "C:\\Day 16\\FirstAPI\\FirstAPI\\Controllers\\SampleController.cs",
+              "RelativeToolTip": "FirstAPI\\Controllers\\SampleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T07:14:38.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FirstAPI.http",
+              "DocumentMoniker": "C:\\Day 16\\FirstAPI\\FirstAPI\\FirstAPI.http",
+              "RelativeDocumentMoniker": "FirstAPI\\FirstAPI.http",
+              "ToolTip": "C:\\Day 16\\FirstAPI\\FirstAPI\\FirstAPI.http",
+              "RelativeToolTip": "FirstAPI\\FirstAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-05-26T06:04:30.539Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

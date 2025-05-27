@@ -1,0 +1,16 @@
+cmd
+
+dotnet tool install --global dotnet-ef
+
+
+Nugets Packet manager
+
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Design
+Npgsql.entityframeworkcore.postgre
+
+
+Migration
+
+dotnet ef migrations add init --project FirstAPI --startup-project FirstAPI
+dotnet ef database update --project FirstAPI --startup-project FirstAPI
