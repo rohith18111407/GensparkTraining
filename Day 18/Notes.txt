@@ -1,0 +1,22 @@
+cmd
+
+dotnet tool install --global dotnet-ef
+
+
+Nugets Packet manager
+
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Design
+Npgsql.entityframeworkcore.postgre
+
+
+Migration
+
+dotnet ef migrations add init --project NewApointmentApplication --startup-project NewApointmentApplication
+dotnet ef database update --project NewApointmentApplication --startup-project NewApointmentApplication
+dotnet ef database update init --project NewApointmentApplication --startup-project NewApointmentApplication
+
+
+"ConnectionStrings": {
+    "DefaultConnection": "User ID=postgres;Password=ROHITH;Host=localhost;Port=5432;Database=DoctorPatientAppointment;"
+},

@@ -1,0 +1,501 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\repositories\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:repositories\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\models\\doctorspeciality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:models\\doctorspeciality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\interfaces\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:interfaces\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\interfaces\\idoctorspecialityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:interfaces\\idoctorspecialityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\interfaces\\idoctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:interfaces\\idoctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\services\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:services\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\services\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:services\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\repositories\\doctorspecialityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:repositories\\doctorspecialityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\models\\speciality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:models\\speciality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\repositories\\specialityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:repositories\\specialityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\contexts\\cliniccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:contexts\\cliniccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\interfaces\\ispecialityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:interfaces\\ispecialityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\interfaces\\idoctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:interfaces\\idoctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\repositories\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:repositories\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\interfaces\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:interfaces\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\interfaces\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:interfaces\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|c:\\gensparktraining\\day 18\\firsttestapi\\controllers\\samplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC458669-46ED-4AE7-A13B-9FE1E90D1567}|FirstTestAPI.csproj|solutionrelative:controllers\\samplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IDoctorSpecialityRepository.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IDoctorSpecialityRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IDoctorSpecialityRepository.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IDoctorSpecialityRepository.cs",
+              "RelativeToolTip": "Interfaces\\IDoctorSpecialityRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T08:26:17.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IPatientService.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IPatientService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IPatientService.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IPatientService.cs",
+              "RelativeToolTip": "Interfaces\\IPatientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T06:07:04.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DoctorSpeciality.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Models\\DoctorSpeciality.cs",
+              "RelativeDocumentMoniker": "Models\\DoctorSpeciality.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Models\\DoctorSpeciality.cs",
+              "RelativeToolTip": "Models\\DoctorSpeciality.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T06:30:58.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "Models\\Doctor.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Models\\Doctor.cs",
+              "RelativeToolTip": "Models\\Doctor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T08:56:14.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DoctorRepository.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Repositories\\DoctorRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\DoctorRepository.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Repositories\\DoctorRepository.cs",
+              "RelativeToolTip": "Repositories\\DoctorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T08:17:38.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IDoctorService.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IDoctorService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IDoctorService.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IDoctorService.cs",
+              "RelativeToolTip": "Interfaces\\IDoctorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T08:28:36.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DoctorController.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "Controllers\\DoctorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T08:57:08.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DoctorService.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Services\\DoctorService.cs",
+              "RelativeDocumentMoniker": "Services\\DoctorService.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Services\\DoctorService.cs",
+              "RelativeToolTip": "Services\\DoctorService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T08:29:45.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PatientService.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Services\\PatientService.cs",
+              "RelativeDocumentMoniker": "Services\\PatientService.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Services\\PatientService.cs",
+              "RelativeToolTip": "Services\\PatientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T06:07:33.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IRepository.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T04:52:27.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PatientController.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "Controllers\\PatientController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T09:20:29.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppointmentService.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Services\\AppointmentService.cs",
+              "RelativeDocumentMoniker": "Services\\AppointmentService.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Services\\AppointmentService.cs",
+              "RelativeToolTip": "Services\\AppointmentService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwCoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T05:48:14.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAuwEoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T08:00:32.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Repository.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Repositories\\Repository.cs",
+              "RelativeToolTip": "Repositories\\Repository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T06:21:57.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PatientRepository.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Repositories\\PatientRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\PatientRepository.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Repositories\\PatientRepository.cs",
+              "RelativeToolTip": "Repositories\\PatientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T06:03:15.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DoctorSpecialityRepository.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Repositories\\DoctorSpecialityRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\DoctorSpecialityRepository.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Repositories\\DoctorSpecialityRepository.cs",
+              "RelativeToolTip": "Repositories\\DoctorSpecialityRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T08:26:55.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Speciality.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Models\\Speciality.cs",
+              "RelativeDocumentMoniker": "Models\\Speciality.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Models\\Speciality.cs",
+              "RelativeToolTip": "Models\\Speciality.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T06:31:21.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "Models\\Appointment.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Models\\Appointment.cs",
+              "RelativeToolTip": "Models\\Appointment.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:12:45.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SpecialityRepository.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Repositories\\SpecialityRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\SpecialityRepository.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Repositories\\SpecialityRepository.cs",
+              "RelativeToolTip": "Repositories\\SpecialityRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T08:20:32.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ClinicContext.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Contexts\\ClinicContext.cs",
+              "RelativeDocumentMoniker": "Contexts\\ClinicContext.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Contexts\\ClinicContext.cs",
+              "RelativeToolTip": "Contexts\\ClinicContext.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAiwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T06:50:04.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ISpecialityRepository.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\ISpecialityRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ISpecialityRepository.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\ISpecialityRepository.cs",
+              "RelativeToolTip": "Interfaces\\ISpecialityRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T08:19:56.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:39:33.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-27T06:46:33.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IDoctorRepository.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IDoctorRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IDoctorRepository.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IDoctorRepository.cs",
+              "RelativeToolTip": "Interfaces\\IDoctorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T07:45:34.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AppointmentRepository.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Repositories\\AppointmentRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\AppointmentRepository.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Repositories\\AppointmentRepository.cs",
+              "RelativeToolTip": "Repositories\\AppointmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:16:55.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IAppointmentRepository.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IAppointmentRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IAppointmentRepository.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IAppointmentRepository.cs",
+              "RelativeToolTip": "Interfaces\\IAppointmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:26:50.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IPatientRepository.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IPatientRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IPatientRepository.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IPatientRepository.cs",
+              "RelativeToolTip": "Interfaces\\IPatientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T06:02:50.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IAppointmentService.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IAppointmentService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IAppointmentService.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Interfaces\\IAppointmentService.cs",
+              "RelativeToolTip": "Interfaces\\IAppointmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T05:46:21.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "Models\\Patient.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Models\\Patient.cs",
+              "RelativeToolTip": "Models\\Patient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T09:17:19.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SampleController.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Controllers\\SampleController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SampleController.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 18\\FirstTestAPI\\Controllers\\SampleController.cs",
+              "RelativeToolTip": "Controllers\\SampleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T08:01:08.699Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
