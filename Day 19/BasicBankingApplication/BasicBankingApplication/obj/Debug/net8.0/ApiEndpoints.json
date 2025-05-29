@@ -1,0 +1,102 @@
+[
+  {
+    "ContainingType": "BasicBankingApplication.Controllers.AccountsController",
+    "Method": "CreateAccount",
+    "RelativePath": "api/Accounts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountDto",
+        "Type": "BasicBankingApplication.DTOs.AccountCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BasicBankingApplication.Controllers.AccountsController",
+    "Method": "GetAllAccounts",
+    "RelativePath": "api/Accounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BasicBankingApplication.Controllers.AccountsController",
+    "Method": "GetAccountById",
+    "RelativePath": "api/Accounts/{accountId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BasicBankingApplication.Controllers.AccountsController",
+    "Method": "Deposit",
+    "RelativePath": "api/Accounts/{accountId}/deposit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "depositDto",
+        "Type": "BasicBankingApplication.DTOs.DepositDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BasicBankingApplication.Controllers.AccountsController",
+    "Method": "Withdraw",
+    "RelativePath": "api/Accounts/{accountId}/withdraw",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "withdrawDto",
+        "Type": "BasicBankingApplication.DTOs.WithdrawDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BasicBankingApplication.Controllers.AccountsController",
+    "Method": "Transfer",
+    "RelativePath": "api/Accounts/transfer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transferDto",
+        "Type": "BasicBankingApplication.DTOs.TransferDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

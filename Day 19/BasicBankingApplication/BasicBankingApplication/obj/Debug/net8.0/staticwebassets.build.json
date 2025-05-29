@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "m3cUR5GTLa9g9VmvdpeqS+tPuCvYAO3A8yW89F9pZgQ=",
+  "Source": "BasicBankingApplication",
+  "BasePath": "_content/BasicBankingApplication",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

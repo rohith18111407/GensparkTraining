@@ -1,0 +1,249 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|c:\\gensparktraining\\day 19\\basicbankingapplication\\basicbankingapplication\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|solutionrelative:basicbankingapplication\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|c:\\gensparktraining\\day 19\\basicbankingapplication\\basicbankingapplication\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|solutionrelative:basicbankingapplication\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|c:\\gensparktraining\\day 19\\basicbankingapplication\\basicbankingapplication\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|solutionrelative:basicbankingapplication\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|c:\\gensparktraining\\day 19\\basicbankingapplication\\basicbankingapplication\\contexts\\bankingcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|solutionrelative:basicbankingapplication\\contexts\\bankingcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|c:\\gensparktraining\\day 19\\basicbankingapplication\\basicbankingapplication\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|solutionrelative:basicbankingapplication\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|c:\\gensparktraining\\day 19\\basicbankingapplication\\basicbankingapplication\\dtos\\accountcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|solutionrelative:basicbankingapplication\\dtos\\accountcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|c:\\gensparktraining\\day 19\\basicbankingapplication\\basicbankingapplication\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|solutionrelative:basicbankingapplication\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|c:\\gensparktraining\\day 19\\basicbankingapplication\\basicbankingapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|solutionrelative:basicbankingapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|c:\\gensparktraining\\day 19\\basicbankingapplication\\basicbankingapplication\\dtos\\depositdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|solutionrelative:basicbankingapplication\\dtos\\depositdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|c:\\gensparktraining\\day 19\\basicbankingapplication\\basicbankingapplication\\dtos\\transferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|solutionrelative:basicbankingapplication\\dtos\\transferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|c:\\gensparktraining\\day 19\\basicbankingapplication\\basicbankingapplication\\dtos\\withdrawdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|solutionrelative:basicbankingapplication\\dtos\\withdrawdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|c:\\gensparktraining\\day 19\\basicbankingapplication\\basicbankingapplication\\exceptions\\insufficientfundsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|solutionrelative:basicbankingapplication\\exceptions\\insufficientfundsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|c:\\gensparktraining\\day 19\\basicbankingapplication\\basicbankingapplication\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|solutionrelative:basicbankingapplication\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|c:\\gensparktraining\\day 19\\basicbankingapplication\\basicbankingapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F0C96477-A57A-476F-A4F0-0E1AB89222EE}|BasicBankingApplication\\BasicBankingApplication.csproj|solutionrelative:basicbankingapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "BasicBankingApplication\\Services\\AccountService.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Services\\AccountService.cs",
+              "RelativeToolTip": "BasicBankingApplication\\Services\\AccountService.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAqwHoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:35:04.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Repositories\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "BasicBankingApplication\\Repositories\\AccountRepository.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Repositories\\AccountRepository.cs",
+              "RelativeToolTip": "BasicBankingApplication\\Repositories\\AccountRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA8wCsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:19:52.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IAccountRepository.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Interfaces\\IAccountRepository.cs",
+              "RelativeDocumentMoniker": "BasicBankingApplication\\Interfaces\\IAccountRepository.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Interfaces\\IAccountRepository.cs",
+              "RelativeToolTip": "BasicBankingApplication\\Interfaces\\IAccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:14:17.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "BasicBankingApplication\\Controllers\\AccountsController.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "BasicBankingApplication\\Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAhwGUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:40:53.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BankingContext.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Contexts\\BankingContext.cs",
+              "RelativeDocumentMoniker": "BasicBankingApplication\\Contexts\\BankingContext.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Contexts\\BankingContext.cs",
+              "RelativeToolTip": "BasicBankingApplication\\Contexts\\BankingContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:21:25.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountCreateDto.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\DTOs\\AccountCreateDto.cs",
+              "RelativeDocumentMoniker": "BasicBankingApplication\\DTOs\\AccountCreateDto.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\DTOs\\AccountCreateDto.cs",
+              "RelativeToolTip": "BasicBankingApplication\\DTOs\\AccountCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:11:34.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Account.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "BasicBankingApplication\\Models\\Account.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Models\\Account.cs",
+              "RelativeToolTip": "BasicBankingApplication\\Models\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:07:40.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Program.cs",
+              "RelativeDocumentMoniker": "BasicBankingApplication\\Program.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Program.cs",
+              "RelativeToolTip": "BasicBankingApplication\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:44:48.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DepositDto.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\DTOs\\DepositDto.cs",
+              "RelativeDocumentMoniker": "BasicBankingApplication\\DTOs\\DepositDto.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\DTOs\\DepositDto.cs",
+              "RelativeToolTip": "BasicBankingApplication\\DTOs\\DepositDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:12:28.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TransferDto.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\DTOs\\TransferDto.cs",
+              "RelativeDocumentMoniker": "BasicBankingApplication\\DTOs\\TransferDto.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\DTOs\\TransferDto.cs",
+              "RelativeToolTip": "BasicBankingApplication\\DTOs\\TransferDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:47:02.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WithdrawDto.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\DTOs\\WithdrawDto.cs",
+              "RelativeDocumentMoniker": "BasicBankingApplication\\DTOs\\WithdrawDto.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\DTOs\\WithdrawDto.cs",
+              "RelativeToolTip": "BasicBankingApplication\\DTOs\\WithdrawDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:12:56.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "InsufficientFundsException.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Exceptions\\InsufficientFundsException.cs",
+              "RelativeDocumentMoniker": "BasicBankingApplication\\Exceptions\\InsufficientFundsException.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Exceptions\\InsufficientFundsException.cs",
+              "RelativeToolTip": "BasicBankingApplication\\Exceptions\\InsufficientFundsException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:44:01.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IAccountService.cs",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Interfaces\\IAccountService.cs",
+              "RelativeDocumentMoniker": "BasicBankingApplication\\Interfaces\\IAccountService.cs",
+              "ToolTip": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\Interfaces\\IAccountService.cs",
+              "RelativeToolTip": "BasicBankingApplication\\Interfaces\\IAccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:17:02.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\appsettings.json",
+              "RelativeDocumentMoniker": "BasicBankingApplication\\appsettings.json",
+              "ToolTip": "C:\\GensparkTraining\\Day 19\\BasicBankingApplication\\BasicBankingApplication\\appsettings.json",
+              "RelativeToolTip": "BasicBankingApplication\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAB4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-29T10:44:28.237Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
