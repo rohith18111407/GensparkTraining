@@ -30,7 +30,7 @@ namespace MoodJournal.Controllers
                 Mood = request.Mood,
                 Note = request.Note,
                 Tip = await _llm.GenerateTipAsync(request.Mood, request.Note),
-                Date = DateTime.Now
+                Date = DateTime.UtcNow
             };
 
             await using var transaction = await _context.Database.BeginTransactionAsync();

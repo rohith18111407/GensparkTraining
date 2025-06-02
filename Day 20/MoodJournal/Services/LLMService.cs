@@ -28,7 +28,7 @@ namespace MoodJournal.Services
             response.EnsureSuccessStatusCode();
 
             var result = await JsonSerializer.DeserializeAsync<Dictionary<string, object>>(await response.Content.ReadAsStreamAsync());
-            return result?["response"]?.ToString() ?? "Take a deep breath and relax.";
+            return result?["response"]?.ToString() ?? "Relax, we'll get you what you need";
         }
     }
 }
