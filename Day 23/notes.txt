@@ -1,0 +1,18 @@
+Unit Testing  dotnet add package NUnit
+dotnet add package NUnit3TestAdapter
+dotnet add package Microsoft.NET.Test.Sdk
+dotnet add package Microsoft.EntityFrameworkCore.InMemory
+
+dotnet add package Moq 
+
+dotnet add package Microsoft.Extensions.Logging.Log4Net.AspNetCore
+
+dotnet add package Microsoft.AspNetCore.Authentication.Google
+
+
+dotnet restore
+
+dotnet clean
+dotnet restore
+dotnet build
+dotnet test
