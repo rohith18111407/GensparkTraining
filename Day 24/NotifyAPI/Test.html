@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Notifications</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.7/signalr.min.js"></script>
+</head>
+<body>
+    <h1>Real-time Document Notifications</h1>
+    <ul id="notifications"></ul>
+
+    <script>
+        // Create connection to SignalR hub
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("http://localhost:5235/notificationhub") 
+            .build();
+
+        // When "DocumentAdded" event received, add notification to list
+        connection.on("DocumentAdded", function(message) {
+            const li = document.createElement("li");
+            li.textContent = message;
+            document.getElementById("notifications").appendChild(li);
+        });
+
+        // Start the connection
+        connection.start()
+            .then(() => console.log("Connected to NotificationHub"))
+            .catch(err => console.error(err));
+    </script>
+</body>
+</html>

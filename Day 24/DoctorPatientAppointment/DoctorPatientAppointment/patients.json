@@ -1,0 +1,18 @@
+[
+  {
+    "HospitalName": "Doctor Patient Appointment Hospitals",
+    "CreatedAt": "2025-06-05T10:18:53.133687+05:30",
+    "PatientName": "Patient 1",
+    "PatientMobile": "1234567891",
+    "PatientAddress": "ABC Colony, Chennai, Tamil Nadu",
+    "PatientAge": 15
+  },
+  {
+    "HospitalName": "Doctor Patient Appointment Hospitals",
+    "CreatedAt": "2025-06-05T10:20:28.538814+05:30",
+    "PatientName": "Patient 2",
+    "PatientMobile": "9876543211",
+    "PatientAddress": "EFGH Colony, Bangalore, Karnataka",
+    "PatientAge": 29
+  }
+]
