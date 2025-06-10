@@ -1,0 +1,13 @@
+<div class="card">
+    <h2> Customer Details</h2>
+    <p><strong>Name: </strong> {{customer.name}}</p>
+    <p><strong>Email: </strong> {{customer.email}}</p>
+    <p><strong>Location: </strong> {{customer.location}}</p>
+</div>
+
+<div class="feedback">
+    <button (click)="like()"><i class="bi bi-hand-thumbs-up-fill"></i></button>
+    <span>{{ likes }}</span>
+    <button (click)="dislike()"><i class="bi bi-hand-thumbs-down-fill"></i></button>
+    <span>{{ dislikes }}</span>
+</div>
