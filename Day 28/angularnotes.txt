@@ -1,0 +1,29 @@
+Angular
+
+npm install -g @angular/cli
+
+https://angular.dev/installation
+
+https://angular.dev/guide/templates/pipes
+
+ng new <project-name>
+
+cd my-first-angular-app
+
+npm i bootstrap
+
+@import url('bootstrap/dist/css/bootstrap.css');
+
+https://getbootstrap.com/docs/4.0/components/card/
+
+npm i bootstrap-icons
+
+@import url('bootstrap-icons/font/bootstrap-icons.css');
+
+https://icons.getbootstrap.com
+
+ng g c <ComponentName>
+
+ng serve
+
+ 

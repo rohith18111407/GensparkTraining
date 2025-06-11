@@ -1,0 +1,14 @@
+<div class="recipe-card">
+  <img class="recipe-img" [src]="recipe?.image" alt="{{ recipe?.name }}" />
+  <div class="recipe-body">
+    <h3 class="recipe-title">{{ recipe?.name }}</h3>
+    <p class="recipe-meta"><strong>Cuisine:</strong> {{ recipe?.cuisine }}</p>
+    <p class="recipe-meta"><strong>Cooking Time:</strong> {{ recipe?.cookTimeMinutes }} minutes</p>
+    <p class="recipe-meta"><strong>Ingredients:</strong></p>
+    <ul class="recipe-ingredients">
+      @for (item of recipe?.ingredients; track $index) {
+        <li>{{ item }}</li>
+      }
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.recipes-wrapper {
+  padding: 1.5rem;
+  background-color: white;
+  min-height: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.no-recipes {
+  font-size: 1.2rem;
+  color: red;
+  padding: 2rem;
+  text-align: center;
+  background-color: whitesmoke;
+  border: 1px solid gray;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
