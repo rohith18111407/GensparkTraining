@@ -1,0 +1,7 @@
+<app-citysearch></app-citysearch>
+<ng-container *ngIf="weather$ | async as weather; else errorTpl">
+  <app-weathercard [data]="weather"></app-weathercard>
+</ng-container>
+<ng-template #errorTpl>
+  <p *ngIf="error">Could not fetch weather data. Please try again.</p>
+</ng-template>
