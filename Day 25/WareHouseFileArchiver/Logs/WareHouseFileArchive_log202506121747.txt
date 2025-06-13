@@ -1,0 +1,122 @@
+2025-06-12 17:47:03.199 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/test.html - null null
+2025-06-12 17:47:03.324 +05:30 [INF] The file /test.html was not modified
+2025-06-12 17:47:03.325 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/test.html - 304 null text/html 127.3496ms
+2025-06-12 17:47:03.338 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null 0
+2025-06-12 17:47:03.344 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:47:03.344 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:47:03.359 +05:30 [INF] Executing endpoint '/notificationhub/negotiate'
+2025-06-12 17:47:03.369 +05:30 [INF] Executed endpoint '/notificationhub/negotiate'
+2025-06-12 17:47:03.369 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 200 316 application/json 30.5198ms
+2025-06-12 17:47:03.371 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/notificationhub?id=cw8TN5AkjVfeQqp8VzLW-A - null null
+2025-06-12 17:47:03.372 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:47:03.372 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:47:03.374 +05:30 [INF] Executing endpoint '/notificationhub'
+2025-06-12 17:47:03.394 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/test.html - null null
+2025-06-12 17:47:03.395 +05:30 [INF] The file /test.html was not modified
+2025-06-12 17:47:03.396 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/test.html - 304 null text/html 1.273ms
+2025-06-12 17:47:03.412 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null 0
+2025-06-12 17:47:03.437 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:47:03.437 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:47:03.438 +05:30 [INF] Executing endpoint '/notificationhub/negotiate'
+2025-06-12 17:47:03.439 +05:30 [INF] Executed endpoint '/notificationhub/negotiate'
+2025-06-12 17:47:03.439 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 200 316 application/json 32.5175ms
+2025-06-12 17:47:03.451 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/notificationhub?id=HDovwB2wSomc8ACmMcW1Dw - null null
+2025-06-12 17:47:03.452 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:47:03.452 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:47:03.452 +05:30 [INF] Executing endpoint '/notificationhub'
+2025-06-12 17:47:03.467 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-06-12 17:47:03.469 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=cw8TN5AkjVfeQqp8VzLW-A - 101 null null 97.7323ms
+2025-06-12 17:47:03.572 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/test.html - null null
+2025-06-12 17:47:03.573 +05:30 [INF] The file /test.html was not modified
+2025-06-12 17:47:03.573 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/test.html - 304 null text/html 0.991ms
+2025-06-12 17:47:03.580 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-06-12 17:47:03.580 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=HDovwB2wSomc8ACmMcW1Dw - 101 null null 129.08ms
+2025-06-12 17:47:03.586 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null 0
+2025-06-12 17:47:03.587 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:47:03.587 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:47:03.587 +05:30 [INF] Executing endpoint '/notificationhub/negotiate'
+2025-06-12 17:47:03.587 +05:30 [INF] Executed endpoint '/notificationhub/negotiate'
+2025-06-12 17:47:03.588 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 200 316 application/json 1.3196ms
+2025-06-12 17:47:03.592 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/notificationhub?id=w3Cc2BqvmL_2oSJJKBQc1g - null null
+2025-06-12 17:47:03.592 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:47:03.592 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:47:03.593 +05:30 [INF] Executing endpoint '/notificationhub'
+2025-06-12 17:47:03.737 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/test.html - null null
+2025-06-12 17:47:03.738 +05:30 [INF] The file /test.html was not modified
+2025-06-12 17:47:03.738 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/test.html - 304 null text/html 0.7015ms
+2025-06-12 17:47:03.744 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-06-12 17:47:03.744 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=w3Cc2BqvmL_2oSJJKBQc1g - 101 null null 152.3685ms
+2025-06-12 17:47:03.749 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null 0
+2025-06-12 17:47:03.749 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:47:03.749 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:47:03.749 +05:30 [INF] Executing endpoint '/notificationhub/negotiate'
+2025-06-12 17:47:03.749 +05:30 [INF] Executed endpoint '/notificationhub/negotiate'
+2025-06-12 17:47:03.750 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 200 316 application/json 1.2626ms
+2025-06-12 17:47:03.756 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/notificationhub?id=RzCRCV3GQ-dsSYxab4hnUg - null null
+2025-06-12 17:47:03.756 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:47:03.756 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:47:03.756 +05:30 [INF] Executing endpoint '/notificationhub'
+2025-06-12 17:47:03.897 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/test.html - null null
+2025-06-12 17:47:03.898 +05:30 [INF] The file /test.html was not modified
+2025-06-12 17:47:03.898 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/test.html - 304 null text/html 0.6424ms
+2025-06-12 17:47:03.902 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-06-12 17:47:03.902 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=RzCRCV3GQ-dsSYxab4hnUg - 101 null null 146.0544ms
+2025-06-12 17:47:03.909 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null 0
+2025-06-12 17:47:03.909 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:47:03.909 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:47:03.910 +05:30 [INF] Executing endpoint '/notificationhub/negotiate'
+2025-06-12 17:47:03.910 +05:30 [INF] Executed endpoint '/notificationhub/negotiate'
+2025-06-12 17:47:03.910 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 200 316 application/json 0.9066ms
+2025-06-12 17:47:03.914 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/notificationhub?id=-XKo_qV_x9-tOrJfn8ebxg - null null
+2025-06-12 17:47:03.915 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:47:03.915 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:47:03.915 +05:30 [INF] Executing endpoint '/notificationhub'
+2025-06-12 17:47:28.306 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/api/v1/auth/login - application/json 66
+2025-06-12 17:47:28.318 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:47:28.318 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:47:28.326 +05:30 [INF] Executing endpoint 'WareHouseFileArchiver.Controllers.AuthController.Login (WareHouseFileArchiver)'
+2025-06-12 17:47:28.349 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(WareHouseFileArchiver.Models.DTOs.LoginRequestDto) on controller WareHouseFileArchiver.Controllers.AuthController (WareHouseFileArchiver).
+2025-06-12 17:47:29.918 +05:30 [INF] Executed DbCommand (63ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2025-06-12 17:47:30.147 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2025-06-12 17:47:30.184 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-06-12 17:47:30.274 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p16='?', @p0='?' (DbType = Int32), @p1='?', @p17='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?' (DbType = Boolean), @p11='?', @p12='?' (DbType = DateTime), @p13='?', @p14='?' (DbType = Boolean), @p15='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "NormalizedEmail" = @p6, "NormalizedUserName" = @p7, "PasswordHash" = @p8, "PhoneNumber" = @p9, "PhoneNumberConfirmed" = @p10, "RefreshToken" = @p11, "RefreshTokenExpiryTime" = @p12, "SecurityStamp" = @p13, "TwoFactorEnabled" = @p14, "UserName" = @p15
+WHERE "Id" = @p16 AND "ConcurrencyStamp" = @p17;
+2025-06-12 17:47:30.289 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[WareHouseFileArchiver.Models.DTOs.LoginResponseDto, WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 17:47:30.303 +05:30 [INF] Executed action WareHouseFileArchiver.Controllers.AuthController.Login (WareHouseFileArchiver) in 1950.2956ms
+2025-06-12 17:47:30.303 +05:30 [INF] Executed endpoint 'WareHouseFileArchiver.Controllers.AuthController.Login (WareHouseFileArchiver)'
+2025-06-12 17:47:30.310 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/api/v1/auth/login - 200 null application/json; charset=utf-8 2003.9993ms
+2025-06-12 17:47:58.776 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/api/v1/users?pageNumber=1&pageSize=10&sortBy=username&sortOrder=asc - null null
+2025-06-12 17:47:58.832 +05:30 [INF] Executing endpoint 'WareHouseFileArchiver.Controllers.UserController.GetAll (WareHouseFileArchiver)'
+2025-06-12 17:47:58.838 +05:30 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32, System.String, System.String, System.String) on controller WareHouseFileArchiver.Controllers.UserController (WareHouseFileArchiver).
+2025-06-12 17:47:58.899 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+ORDER BY a."UserName"
+LIMIT @__p_1 OFFSET @__p_0
+2025-06-12 17:47:58.902 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2025-06-12 17:47:58.904 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2025-06-12 17:47:58.905 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType11`5[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[WareHouseFileArchiver.Models.DTOs.UserDto, WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType14`2[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 17:47:58.915 +05:30 [INF] Executed action WareHouseFileArchiver.Controllers.UserController.GetAll (WareHouseFileArchiver) in 77.4ms
+2025-06-12 17:47:58.915 +05:30 [INF] Executed endpoint 'WareHouseFileArchiver.Controllers.UserController.GetAll (WareHouseFileArchiver)'
+2025-06-12 17:47:58.915 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/api/v1/users?pageNumber=1&pageSize=10&sortBy=username&sortOrder=asc - 200 null application/json; charset=utf-8 144.2847ms

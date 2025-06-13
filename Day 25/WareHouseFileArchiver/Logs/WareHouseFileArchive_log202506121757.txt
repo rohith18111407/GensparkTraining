@@ -1,0 +1,76 @@
+2025-06-12 17:57:25.493 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/api/v1/files/upload - multipart/form-data; boundary=----WebKitFormBoundaryg2lYr6iLFIrKXQkA 547
+2025-06-12 17:57:25.494 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:57:25.494 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:57:25.494 +05:30 [INF] Executing endpoint 'WareHouseFileArchiver.Controllers.FilesController.Upload (WareHouseFileArchiver)'
+2025-06-12 17:57:25.494 +05:30 [INF] Route matched with {action = "Upload", controller = "Files"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Upload(WareHouseFileArchiver.Models.DTOs.UploadArchiveFileRequestDto) on controller WareHouseFileArchiver.Controllers.FilesController (WareHouseFileArchiver).
+2025-06-12 17:57:25.496 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Items" AS i
+    WHERE i."Id" = @__itemId_0)
+2025-06-12 17:57:25.497 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__itemId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "Items" AS i
+WHERE i."Id" = @__itemId_0
+LIMIT 1
+2025-06-12 17:57:25.499 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__p_0
+LIMIT 1
+2025-06-12 17:57:25.500 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__fileName_0='?', @__itemId_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Category", a."CreatedAt", a."CreatedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."ItemId", a."UpdatedAt", a."UpdatedBy", a."VersionNumber"
+FROM "ArchiveFiles" AS a
+WHERE a."FileName" = @__fileName_0 AND a."ItemId" = @__itemId_1
+ORDER BY a."VersionNumber" DESC
+LIMIT 1
+2025-06-12 17:57:25.501 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__archiveFile_FileName_0='?', @__archiveFile_Category_1='?', @__version_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "ArchiveFiles" AS a
+    WHERE a."FileName" = @__archiveFile_FileName_0 AND a."Category" = @__archiveFile_Category_1 AND a."VersionNumber" = @__version_2)
+2025-06-12 17:57:25.503 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = DateTime), @p3='?', @p4='?', @p5='?', @p6='?', @p7='?', @p8='?' (DbType = Int64), @p9='?' (DbType = Guid), @p10='?' (DbType = DateTime), @p11='?', @p12='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ArchiveFiles" ("Id", "Category", "CreatedAt", "CreatedBy", "Description", "FileExtension", "FileName", "FilePath", "FileSizeInBytes", "ItemId", "UpdatedAt", "UpdatedBy", "VersionNumber")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2025-06-12 17:57:25.504 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[WareHouseFileArchiver.Models.DTOs.ArchiveFileResponseDto, WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 17:57:25.504 +05:30 [INF] Executed action WareHouseFileArchiver.Controllers.FilesController.Upload (WareHouseFileArchiver) in 9.6846ms
+2025-06-12 17:57:25.504 +05:30 [INF] Executed endpoint 'WareHouseFileArchiver.Controllers.FilesController.Upload (WareHouseFileArchiver)'
+2025-06-12 17:57:25.516 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/api/v1/files/upload - 200 null application/json; charset=utf-8 23.2592ms
+2025-06-12 17:57:42.300 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/api/v1/files/upload - multipart/form-data; boundary=----WebKitFormBoundary15VBbW3OU99aVz79 9734
+2025-06-12 17:57:42.300 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:57:42.300 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:57:42.301 +05:30 [INF] Executing endpoint 'WareHouseFileArchiver.Controllers.FilesController.Upload (WareHouseFileArchiver)'
+2025-06-12 17:57:42.301 +05:30 [INF] Route matched with {action = "Upload", controller = "Files"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Upload(WareHouseFileArchiver.Models.DTOs.UploadArchiveFileRequestDto) on controller WareHouseFileArchiver.Controllers.FilesController (WareHouseFileArchiver).
+2025-06-12 17:57:42.303 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Items" AS i
+    WHERE i."Id" = @__itemId_0)
+2025-06-12 17:57:42.304 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "Items" AS i
+WHERE i."Id" = @__itemId_0
+LIMIT 1
+2025-06-12 17:57:42.305 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__p_0
+LIMIT 1
+2025-06-12 17:57:42.306 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__fileName_0='?', @__itemId_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Category", a."CreatedAt", a."CreatedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."ItemId", a."UpdatedAt", a."UpdatedBy", a."VersionNumber"
+FROM "ArchiveFiles" AS a
+WHERE a."FileName" = @__fileName_0 AND a."ItemId" = @__itemId_1
+ORDER BY a."VersionNumber" DESC
+LIMIT 1
+2025-06-12 17:57:42.307 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__archiveFile_FileName_0='?', @__archiveFile_Category_1='?', @__version_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "ArchiveFiles" AS a
+    WHERE a."FileName" = @__archiveFile_FileName_0 AND a."Category" = @__archiveFile_Category_1 AND a."VersionNumber" = @__version_2)
+2025-06-12 17:57:42.309 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = DateTime), @p3='?', @p4='?', @p5='?', @p6='?', @p7='?', @p8='?' (DbType = Int64), @p9='?' (DbType = Guid), @p10='?' (DbType = DateTime), @p11='?', @p12='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ArchiveFiles" ("Id", "Category", "CreatedAt", "CreatedBy", "Description", "FileExtension", "FileName", "FilePath", "FileSizeInBytes", "ItemId", "UpdatedAt", "UpdatedBy", "VersionNumber")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2025-06-12 17:57:42.309 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[WareHouseFileArchiver.Models.DTOs.ArchiveFileResponseDto, WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 17:57:42.310 +05:30 [INF] Executed action WareHouseFileArchiver.Controllers.FilesController.Upload (WareHouseFileArchiver) in 8.5077ms
+2025-06-12 17:57:42.310 +05:30 [INF] Executed endpoint 'WareHouseFileArchiver.Controllers.FilesController.Upload (WareHouseFileArchiver)'
+2025-06-12 17:57:42.310 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/api/v1/files/upload - 200 null application/json; charset=utf-8 9.7951ms

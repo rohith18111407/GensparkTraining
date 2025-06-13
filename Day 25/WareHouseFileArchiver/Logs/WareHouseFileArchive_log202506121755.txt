@@ -1,0 +1,124 @@
+2025-06-12 17:55:07.493 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/api/v1/files/upload - multipart/form-data; boundary=----WebKitFormBoundaryfOweMEehesdTt9v7 9405
+2025-06-12 17:55:07.494 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:55:07.494 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:55:07.509 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/06/2025 12:19:30 PM', Current time (UTC): '12/06/2025 12:25:07 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-06-12 17:55:07.542 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/06/2025 12:19:30 PM', Current time (UTC): '12/06/2025 12:25:07 PM'.
+2025-06-12 17:55:07.543 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2025-06-12 17:55:07.548 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-12 17:55:07.548 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/api/v1/files/upload - 401 0 null 55.2508ms
+2025-06-12 17:55:13.930 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/api/v1/auth/login - application/json 66
+2025-06-12 17:55:13.931 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:55:13.931 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:55:13.932 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/06/2025 12:19:30 PM', Current time (UTC): '12/06/2025 12:25:13 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-06-12 17:55:13.933 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/06/2025 12:19:30 PM', Current time (UTC): '12/06/2025 12:25:13 PM'.
+2025-06-12 17:55:13.933 +05:30 [INF] Executing endpoint 'WareHouseFileArchiver.Controllers.AuthController.Login (WareHouseFileArchiver)'
+2025-06-12 17:55:13.933 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(WareHouseFileArchiver.Models.DTOs.LoginRequestDto) on controller WareHouseFileArchiver.Controllers.AuthController (WareHouseFileArchiver).
+2025-06-12 17:55:13.935 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2025-06-12 17:55:14.013 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2025-06-12 17:55:14.014 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-06-12 17:55:14.016 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p16='?', @p0='?' (DbType = Int32), @p1='?', @p17='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?' (DbType = Boolean), @p11='?', @p12='?' (DbType = DateTime), @p13='?', @p14='?' (DbType = Boolean), @p15='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "NormalizedEmail" = @p6, "NormalizedUserName" = @p7, "PasswordHash" = @p8, "PhoneNumber" = @p9, "PhoneNumberConfirmed" = @p10, "RefreshToken" = @p11, "RefreshTokenExpiryTime" = @p12, "SecurityStamp" = @p13, "TwoFactorEnabled" = @p14, "UserName" = @p15
+WHERE "Id" = @p16 AND "ConcurrencyStamp" = @p17;
+2025-06-12 17:55:14.016 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[WareHouseFileArchiver.Models.DTOs.LoginResponseDto, WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 17:55:14.016 +05:30 [INF] Executed action WareHouseFileArchiver.Controllers.AuthController.Login (WareHouseFileArchiver) in 83.0344ms
+2025-06-12 17:55:14.016 +05:30 [INF] Executed endpoint 'WareHouseFileArchiver.Controllers.AuthController.Login (WareHouseFileArchiver)'
+2025-06-12 17:55:14.017 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/api/v1/auth/login - 200 null application/json; charset=utf-8 86.4227ms
+2025-06-12 17:55:35.332 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/api/v1/files/upload - multipart/form-data; boundary=----WebKitFormBoundaryLrvj6mRVIZr4AFec 9405
+2025-06-12 17:55:35.337 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:55:35.362 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:55:35.363 +05:30 [INF] Executing endpoint 'WareHouseFileArchiver.Controllers.FilesController.Upload (WareHouseFileArchiver)'
+2025-06-12 17:55:35.363 +05:30 [INF] Route matched with {action = "Upload", controller = "Files"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Upload(WareHouseFileArchiver.Models.DTOs.UploadArchiveFileRequestDto) on controller WareHouseFileArchiver.Controllers.FilesController (WareHouseFileArchiver).
+2025-06-12 17:55:35.365 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__itemId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Items" AS i
+    WHERE i."Id" = @__itemId_0)
+2025-06-12 17:55:35.367 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__itemId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "Items" AS i
+WHERE i."Id" = @__itemId_0
+LIMIT 1
+2025-06-12 17:55:35.368 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__p_0
+LIMIT 1
+2025-06-12 17:55:35.370 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__fileName_0='?', @__itemId_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Category", a."CreatedAt", a."CreatedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."ItemId", a."UpdatedAt", a."UpdatedBy", a."VersionNumber"
+FROM "ArchiveFiles" AS a
+WHERE a."FileName" = @__fileName_0 AND a."ItemId" = @__itemId_1
+ORDER BY a."VersionNumber" DESC
+LIMIT 1
+2025-06-12 17:55:35.371 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__archiveFile_FileName_0='?', @__archiveFile_Category_1='?', @__version_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "ArchiveFiles" AS a
+    WHERE a."FileName" = @__archiveFile_FileName_0 AND a."Category" = @__archiveFile_Category_1 AND a."VersionNumber" = @__version_2)
+2025-06-12 17:55:35.373 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = DateTime), @p3='?', @p4='?', @p5='?', @p6='?', @p7='?', @p8='?' (DbType = Int64), @p9='?' (DbType = Guid), @p10='?' (DbType = DateTime), @p11='?', @p12='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ArchiveFiles" ("Id", "Category", "CreatedAt", "CreatedBy", "Description", "FileExtension", "FileName", "FilePath", "FileSizeInBytes", "ItemId", "UpdatedAt", "UpdatedBy", "VersionNumber")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2025-06-12 17:55:35.374 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[WareHouseFileArchiver.Models.DTOs.ArchiveFileResponseDto, WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 17:55:35.374 +05:30 [INF] Executed action WareHouseFileArchiver.Controllers.FilesController.Upload (WareHouseFileArchiver) in 10.7319ms
+2025-06-12 17:55:35.374 +05:30 [INF] Executed endpoint 'WareHouseFileArchiver.Controllers.FilesController.Upload (WareHouseFileArchiver)'
+2025-06-12 17:55:35.374 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/api/v1/files/upload - 200 null application/json; charset=utf-8 41.7959ms
+2025-06-12 17:55:47.407 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/api/v1/files/upload - multipart/form-data; boundary=----WebKitFormBoundaryAKXCTHAHQNDcLPCL 13769
+2025-06-12 17:55:47.407 +05:30 [INF] CORS policy execution failed.
+2025-06-12 17:55:47.407 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-12 17:55:47.408 +05:30 [INF] Executing endpoint 'WareHouseFileArchiver.Controllers.FilesController.Upload (WareHouseFileArchiver)'
+2025-06-12 17:55:47.408 +05:30 [INF] Route matched with {action = "Upload", controller = "Files"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Upload(WareHouseFileArchiver.Models.DTOs.UploadArchiveFileRequestDto) on controller WareHouseFileArchiver.Controllers.FilesController (WareHouseFileArchiver).
+2025-06-12 17:55:47.411 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__itemId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Items" AS i
+    WHERE i."Id" = @__itemId_0)
+2025-06-12 17:55:47.419 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__itemId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "Items" AS i
+WHERE i."Id" = @__itemId_0
+LIMIT 1
+2025-06-12 17:55:47.423 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__p_0
+LIMIT 1
+2025-06-12 17:55:47.425 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__fileName_0='?', @__itemId_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Category", a."CreatedAt", a."CreatedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."ItemId", a."UpdatedAt", a."UpdatedBy", a."VersionNumber"
+FROM "ArchiveFiles" AS a
+WHERE a."FileName" = @__fileName_0 AND a."ItemId" = @__itemId_1
+ORDER BY a."VersionNumber" DESC
+LIMIT 1
+2025-06-12 17:55:47.426 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__archiveFile_FileName_0='?', @__archiveFile_Category_1='?', @__version_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "ArchiveFiles" AS a
+    WHERE a."FileName" = @__archiveFile_FileName_0 AND a."Category" = @__archiveFile_Category_1 AND a."VersionNumber" = @__version_2)
+2025-06-12 17:55:47.428 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = DateTime), @p3='?', @p4='?', @p5='?', @p6='?', @p7='?', @p8='?' (DbType = Int64), @p9='?' (DbType = Guid), @p10='?' (DbType = DateTime), @p11='?', @p12='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ArchiveFiles" ("Id", "Category", "CreatedAt", "CreatedBy", "Description", "FileExtension", "FileName", "FilePath", "FileSizeInBytes", "ItemId", "UpdatedAt", "UpdatedBy", "VersionNumber")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2025-06-12 17:55:47.429 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[WareHouseFileArchiver.Models.DTOs.ArchiveFileResponseDto, WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 17:55:47.429 +05:30 [INF] Executed action WareHouseFileArchiver.Controllers.FilesController.Upload (WareHouseFileArchiver) in 21.5118ms
+2025-06-12 17:55:47.430 +05:30 [INF] Executed endpoint 'WareHouseFileArchiver.Controllers.FilesController.Upload (WareHouseFileArchiver)'
+2025-06-12 17:55:47.430 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/api/v1/files/upload - 200 null application/json; charset=utf-8 22.5777ms
