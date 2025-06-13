@@ -1,0 +1,8 @@
+<mat-card *ngIf="data">
+  <mat-card-title>{{ data.name }}</mat-card-title>
+  <img [src]="'https://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png'" alt="Weather icon" />
+  <p>Temp: {{ data.main.temp }} °C</p>
+  <p>Condition: {{ data.weather[0].description }}</p>
+  <p>Humidity: {{ data.main.humidity }}%</p>
+  <p>Wind Speed: {{ data.wind.speed }} m/s</p>
+</mat-card>
