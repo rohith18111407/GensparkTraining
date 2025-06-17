@@ -1,0 +1,18 @@
+@if (product) {
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" [src]="product?.thumbnail" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{product?.title}}</h5>
+    <p class="card-text">{{product?.description}}</p>
+    <p class="card-text">Price : {{product?.price | currency:'INR'}}</p>
+  </div>
+</div>
+
+}
+@else {
+    <div class="text-center mt-5">
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+}

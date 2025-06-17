@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" [src]="product?.thumbnail" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{product?.title}}</h5>
+    <!-- <p class="card-text">{{product?.description}}</p> -->
+    
+    <button class="btn btn-primary" (click)="handleBuyClick(product?.id)">
+      Buy for {{product?.price | currency:'INR'}}
+    </button>
+    <button class="btn btn-secondary mt-2" (click)="showInfo(product?.id)">
+      More Info
+    </button>
+  </div>
+</div>
