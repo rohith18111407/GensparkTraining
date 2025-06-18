@@ -1,0 +1,89 @@
+<div class="dashboard">
+    <h2>MY USER DASHBOARD</h2>
+    
+    <div class="add-user-form">
+        <h3>Add User</h3>
+        <h3>Add New User</h3>
+        <form [formGroup]="addUserForm" (ngSubmit)="onAddUser()">
+            <input type="text" placeholder="First Name" formControlName="firstName" />
+            @if (firstName?.touched && firstName?.errors) {
+                <span class="alert alert-danger">First Name is required</span>
+            }
+
+            <input type="text" placeholder="Last Name" formControlName="lastName" />
+            @if (lastName?.touched && lastName?.errors) {
+                <span class="alert alert-danger">Last Name is required</span>
+            }
+
+            <input type="number" placeholder="Age" formControlName="age" />
+            @if (age?.touched && age?.errors) {
+                @if (age?.errors?.['required']) {
+                    <span class="alert alert-danger">Age is required</span>
+                }
+                @if (age?.errors?.['min']) {
+                    <span class="alert alert-danger">Age must be positive</span>
+                }
+            }
+
+            <input type="text" placeholder="Company Role" formControlName="company_title_role" />
+            @if (company_title_role?.touched && company_title_role?.errors) {
+                <span class="alert alert-danger">Role is required</span>
+            }
+
+            <input type="text" placeholder="State" formControlName="state" />
+            @if (state?.touched && state?.errors) {
+                <span class="alert alert-danger">State is required</span>
+            }
+
+            <select formControlName="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <button type="submit" [disabled]="addUserForm.invalid">Add</button>
+        </form>
+    </div>
+
+    <input [(ngModel)]="filterText" (input)="applyFilter()" placeholder="Filter Users ..."/>
+
+    <div class="user-list">
+    <h3>Filtered Users ({{ filteredUsers.length }})</h3>
+    <div class="user-cards">
+      <div class="user-card" *ngFor="let user of filteredUsers">
+        <p><strong>{{ user.firstName }} {{ user.lastName }}</strong></p>
+        <p>Age: {{ user.age }}</p>
+        <p>Gender: {{ user.gender }}</p>
+        <p>Company Role: {{ user.company_title_role }}</p>
+        <p>State: {{ user.state }}</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Gender</h3>
+            <canvas baseChart
+                [data]="genderChartData"
+                [type]="'pie'">
+            </canvas>
+        </div>
+
+        <div class="card">
+            <h3>Company Role Title</h3>
+            <canvas baseChart 
+                [data]="roleChartData"
+                [type]="'bar'">
+            </canvas>
+        </div>
+    </div>
+
+    <div class="card full">
+        <h3>State</h3>
+        <div class="states">
+        <div *ngFor="let state of statesList" class="state-box">
+            {{ state }}
+        </div>
+        </div>
+    </div>
+
+</div>

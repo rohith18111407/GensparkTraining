@@ -1,0 +1,82 @@
+.dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.full {
+  width: 100%;
+}
+
+.states {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.state-box {
+  background: #ddd;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.add-user-form {
+  margin-bottom: 20px;
+}
+
+.add-user-form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.add-user-form input,
+.add-user-form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.add-user-form button {
+  padding: 8px 16px;
+  background: #4e79a7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 👇 New styles for filtered users */
+.user-list {
+  margin: 20px 0;
+}
+
+.user-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.user-card {
+  background: #e9f0f7;
+  border: 1px solid #cbd6e2;
+  border-radius: 8px;
+  padding: 10px 15px;
+  width: 200px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
