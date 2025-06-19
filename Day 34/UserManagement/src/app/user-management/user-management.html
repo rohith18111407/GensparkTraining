@@ -1,0 +1,69 @@
+<div class="user-management-container">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <input formControlName="username" placeholder="Username" />
+    @if (userForm.get('username')?.touched && userForm.get('username')?.errors) {
+        <div>
+        @if (userForm.get('username')?.errors?.['required']) {
+            <span class="alert">Username is required</span>
+        }
+        @if (userForm.get('username')?.errors?.['bannedWord']) {
+            <span class="alert">Username contains banned words</span>
+        }
+        </div>
+    }
+
+    <input formControlName="email" placeholder="Email" />
+    @if (userForm.get('email')?.touched && userForm.get('email')?.errors) {
+        <div>
+        @if (userForm.get('email')?.errors?.['required']) {
+            <span class="alert">Email is required</span>
+        }
+        @if (userForm.get('email')?.errors?.['email']) {
+            <span class="alert">Invalid email</span>
+        }
+        </div>
+    }
+
+    <input type="password" formControlName="password" placeholder="Password" />
+    @if (userForm.get('password')?.touched && userForm.get('password')?.errors) {
+        <div>
+        @if (userForm.get('password')?.errors?.['required']) {
+            <span class="alert">Password required</span>
+        }
+        @if (userForm.get('password')?.errors?.['weakPassword']) {
+            <span class="alert">Weak password: Min 6 chars, 1 number, 1 symbol</span>
+        }
+        </div>
+    }
+
+    <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" />
+    @if (userForm.get('confirmPassword')?.touched && userForm.errors?.['mismatch']) {
+        <div><span class="alert">Passwords do not match</span></div>
+    }
+
+    <select formControlName="role">
+        <option value="Admin">Admin</option>
+        <option value="User">User</option>
+        <option value="Guest">Guest</option>
+    </select>
+
+    <button type="submit" [disabled]="userForm.invalid">Add User</button>
+    </form>
+
+    <input type="text" placeholder="Search by username or role" (input)="onSearchInput($event)" />
+    <select (change)="onRoleChange($event)">
+    <option value="All">All</option>
+    <option value="Admin">Admin</option>
+    <option value="User">User</option>
+    <option value="Guest">Guest</option>
+    </select>
+
+    <ul>
+    @for ((user of filteredUsers); track user.username) {
+        <li>{{ user.username }} - {{ user.role }} - {{ user.email }}</li>
+    }
+    </ul>
+
+</div>
+
+
