@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WareHouseFileArchiver.Interfaces;
@@ -103,6 +104,19 @@ namespace WareHouseFileArchiver.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update([FromRoute] string id, [FromBody] UpdateUserDto dto)
         {
+            var currentUserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (id == currentUserId)
+            {
+                return BadRequest(new
+                {
+                    success = false,
+                    message = "You cannot update your own account details or roles while logged in.",
+                    data = (object?)null,
+                    errors = new { Id = new[] { "Self-update is not permitted while logged in." } }
+                });
+            }
+
             var result = await userRepository.UpdateAsync(id, dto);
             if (result == null)
                 // return BadRequest("Update failed or invalid roles.");
@@ -126,6 +140,20 @@ namespace WareHouseFileArchiver.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete([FromRoute] string id)
         {
+            // Get current user ID from JWT token
+            var currentUserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (id == currentUserId)
+            {
+                return BadRequest(new
+                {
+                    success = false,
+                    message = "You cannot delete your own account while logged in.",
+                    data = (object?)null,
+                    errors = new { Id = new[] { "Self-deletion is not permitted while logged in." } }
+                });
+            }
+
             var result = await userRepository.DeleteAsync(id);
             if (result == null)
                 // return NotFound("User not found.");

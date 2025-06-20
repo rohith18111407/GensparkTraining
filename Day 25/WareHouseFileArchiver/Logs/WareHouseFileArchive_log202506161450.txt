@@ -1,0 +1,12 @@
+2025-06-16 14:50:34.951 +05:30 [INF] User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-16 14:50:35.151 +05:30 [INF] Now listening on: http://localhost:5239
+2025-06-16 14:50:35.153 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 14:50:35.153 +05:30 [INF] Hosting environment: Development
+2025-06-16 14:50:35.154 +05:30 [INF] Content root path: /Users/presidio/Desktop/Day 25/WareHouseFileArchiver
+2025-06-16 14:50:51.108 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/ - null null
+2025-06-16 14:50:51.259 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/ - 404 0 null 153.3774ms
+2025-06-16 14:50:51.292 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5239/, Response status code: 404
+2025-06-16 14:50:53.148 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/ - null null
+2025-06-16 14:50:53.154 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/ - 404 0 null 6.7022ms
+2025-06-16 14:50:53.155 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5239/, Response status code: 404
+2025-06-16 14:50:58.477 +05:30 [INF] Application is shutting down...

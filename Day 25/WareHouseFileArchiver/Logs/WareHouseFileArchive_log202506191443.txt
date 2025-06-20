@@ -1,0 +1,37 @@
+2025-06-19 14:43:37.866 +05:30 [INF] User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-19 14:43:38.150 +05:30 [INF] Now listening on: http://localhost:5239
+2025-06-19 14:43:38.153 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-19 14:43:38.153 +05:30 [INF] Hosting environment: Development
+2025-06-19 14:43:38.154 +05:30 [INF] Content root path: /Users/presidio/Desktop/Day 25/WareHouseFileArchiver
+2025-06-19 14:43:38.642 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/swagger/index.js - null null
+2025-06-19 14:43:38.643 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/swagger/swagger-ui-bundle.js - null null
+2025-06-19 14:43:38.643 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/swagger/swagger-ui.css - null null
+2025-06-19 14:43:38.643 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/swagger/index.css - null null
+2025-06-19 14:43:38.643 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/swagger/swagger-ui-standalone-preset.js - null null
+2025-06-19 14:43:38.837 +05:30 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2025-06-19 14:43:38.881 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-06-19 14:43:38.881 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-06-19 14:43:38.889 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-06-19 14:43:38.885 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/swagger/swagger-ui.css - 200 154949 text/css 244.5581ms
+2025-06-19 14:43:38.889 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/swagger/swagger-ui-bundle.js - 200 1484234 text/javascript 249.9981ms
+2025-06-19 14:43:38.856 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/swagger/index.css - 200 202 text/css 214.9318ms
+2025-06-19 14:43:38.885 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/swagger/swagger-ui-standalone-preset.js - 200 229223 text/javascript 244.5117ms
+2025-06-19 14:43:38.931 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/swagger/index.js - 200 null application/javascript;charset=utf-8 292.3323ms
+2025-06-19 14:43:39.057 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/swagger/v1/swagger.json - null null
+2025-06-19 14:43:39.258 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 200.9573ms
+2025-06-19 14:43:52.682 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/test.html - null null
+2025-06-19 14:43:52.842 +05:30 [INF] The file /test.html was not modified
+2025-06-19 14:43:52.842 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/test.html - 304 null text/html 160.209ms
+2025-06-19 14:43:52.873 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null 0
+2025-06-19 14:43:52.877 +05:30 [INF] CORS policy execution failed.
+2025-06-19 14:43:52.878 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-19 14:43:52.882 +05:30 [INF] Executing endpoint '/notificationhub/negotiate'
+2025-06-19 14:43:52.890 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/favicon.ico - null null
+2025-06-19 14:43:52.894 +05:30 [INF] Executed endpoint '/notificationhub/negotiate'
+2025-06-19 14:43:52.894 +05:30 [INF] The file /favicon.ico was not modified
+2025-06-19 14:43:52.894 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 200 316 application/json 20.6052ms
+2025-06-19 14:43:52.894 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/favicon.ico - 304 null image/x-icon 4.2231ms
+2025-06-19 14:43:52.898 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/notificationhub?id=wtDlKi2EifSt2lNXGxwtrA - null null
+2025-06-19 14:43:52.898 +05:30 [INF] CORS policy execution failed.
+2025-06-19 14:43:52.899 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-19 14:43:52.899 +05:30 [INF] Executing endpoint '/notificationhub'

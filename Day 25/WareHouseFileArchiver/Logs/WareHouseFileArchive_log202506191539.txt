@@ -1,0 +1,20 @@
+2025-06-19 15:39:51.190 +05:30 [INF] User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-19 15:39:51.473 +05:30 [INF] Now listening on: http://localhost:5239
+2025-06-19 15:39:51.476 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-19 15:39:51.476 +05:30 [INF] Hosting environment: Development
+2025-06-19 15:39:51.476 +05:30 [INF] Content root path: /Users/presidio/Desktop/Day 25/WareHouseFileArchiver
+2025-06-19 15:39:51.729 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/swagger/v1/swagger.json - null null
+2025-06-19 15:39:51.987 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 264.5723ms
+2025-06-19 15:39:58.977 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/test.html - null null
+2025-06-19 15:39:59.125 +05:30 [INF] The file /test.html was not modified
+2025-06-19 15:39:59.126 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/test.html - 304 null text/html 149.8662ms
+2025-06-19 15:39:59.142 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null 0
+2025-06-19 15:39:59.148 +05:30 [INF] CORS policy execution failed.
+2025-06-19 15:39:59.149 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-19 15:39:59.164 +05:30 [INF] Executing endpoint '/notificationhub/negotiate'
+2025-06-19 15:39:59.174 +05:30 [INF] Executed endpoint '/notificationhub/negotiate'
+2025-06-19 15:39:59.175 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 200 316 application/json 33.0802ms
+2025-06-19 15:39:59.177 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/notificationhub?id=DZyIdXNe3rvw5I4YhibV2A - null null
+2025-06-19 15:39:59.177 +05:30 [INF] CORS policy execution failed.
+2025-06-19 15:39:59.177 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-19 15:39:59.180 +05:30 [INF] Executing endpoint '/notificationhub'

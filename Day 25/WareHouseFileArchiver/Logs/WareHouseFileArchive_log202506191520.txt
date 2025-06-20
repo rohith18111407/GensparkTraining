@@ -1,0 +1,32 @@
+2025-06-19 15:20:45.472 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/api/v1/items - application/json 97
+2025-06-19 15:20:45.474 +05:30 [INF] CORS policy execution failed.
+2025-06-19 15:20:45.474 +05:30 [INF] Request origin http://localhost:5239 does not have permission to access the resource.
+2025-06-19 15:20:45.476 +05:30 [INF] Executing endpoint 'WareHouseFileArchiver.Controllers.ItemsController.Create (WareHouseFileArchiver)'
+2025-06-19 15:20:45.480 +05:30 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(WareHouseFileArchiver.Models.DTOs.CreateItemRequestDto) on controller WareHouseFileArchiver.Controllers.ItemsController (WareHouseFileArchiver).
+2025-06-19 15:20:45.692 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__ToLower_0='?', @__ToLower_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Items" AS i
+    WHERE lower(i."Name") = @__ToLower_0 AND lower(i."Category") = @__ToLower_1)
+2025-06-19 15:20:45.757 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = DateTime), @p3='?', @p4='?', @p5='?', @p6='?' (DbType = DateTime), @p7='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Id", "Category", "CreatedAt", "CreatedBy", "Description", "Name", "UpdatedAt", "UpdatedBy")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-06-19 15:20:45.759 +05:30 [INF] Executing CreatedResult, writing value of type '<>f__AnonymousType0`4[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[WareHouseFileArchiver.Models.DTOs.ItemDto, WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-19 15:20:45.778 +05:30 [INF] Executed action WareHouseFileArchiver.Controllers.ItemsController.Create (WareHouseFileArchiver) in 297.8894ms
+2025-06-19 15:20:45.778 +05:30 [INF] Executed endpoint 'WareHouseFileArchiver.Controllers.ItemsController.Create (WareHouseFileArchiver)'
+2025-06-19 15:20:45.778 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/api/v1/items - 201 null application/json; charset=utf-8 306.0301ms
+2025-06-19 15:20:54.329 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/api/v1/items?isDescending=false&pageNumber=1&pageSize=10 - null null
+2025-06-19 15:20:54.331 +05:30 [INF] Executing endpoint 'WareHouseFileArchiver.Controllers.ItemsController.GetAll (WareHouseFileArchiver)'
+2025-06-19 15:20:54.336 +05:30 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.String, Boolean, Int32, Int32) on controller WareHouseFileArchiver.Controllers.ItemsController (WareHouseFileArchiver).
+2025-06-19 15:20:54.359 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "Items" AS i
+ORDER BY i."Id"
+LIMIT @__p_1 OFFSET @__p_0
+2025-06-19 15:20:54.386 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Items" AS i
+2025-06-19 15:20:54.390 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType11`5[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[WareHouseFileArchiver.Models.DTOs.ItemDto, WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType12`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-19 15:20:54.396 +05:30 [INF] Executed action WareHouseFileArchiver.Controllers.ItemsController.GetAll (WareHouseFileArchiver) in 60.4729ms
+2025-06-19 15:20:54.396 +05:30 [INF] Executed endpoint 'WareHouseFileArchiver.Controllers.ItemsController.GetAll (WareHouseFileArchiver)'
+2025-06-19 15:20:54.397 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/api/v1/items?isDescending=false&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 67.5391ms
