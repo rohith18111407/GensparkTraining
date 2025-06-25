@@ -1,0 +1,8 @@
+@if (recipe) {
+    <div class="card">
+        <h3>{{ recipe.name }}</h3>
+        <img [src]="recipe.image" alt="{{ recipe.name }}" width="250" />
+        <p><strong>Cuisine:</strong> {{ recipe.cuisine }}</p>
+        <p><strong>Prep Time:</strong> {{ recipe.prepTimeMinutes }} mins</p>
+        </div>
+}

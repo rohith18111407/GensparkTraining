@@ -1,0 +1,7 @@
+<div class="all-recipes">
+    @if (recipes) {
+        @for (recipe of recipes; track recipe.id) {
+            <app-recipe [recipe]="recipe"></app-recipe>
+        }
+    }
+</div>  
