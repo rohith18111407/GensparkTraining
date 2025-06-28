@@ -1,0 +1,40 @@
+https://chmod-calculator.com/
+
+https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192
+
+
+1. You have a file with permissions -rw-r--r--, and you run chmod +x file.sh. What happens?
+- Original: -rw-r--r--
+- After chmod +x file.sh: -rwxr-xr-x
+- File becomes executable by all owner,group and others.
+
+2. What is the difference between chmod 744 file.txt and chmod u=rwx,go=r file.txt?
+- Both result in: -rwxr--r--
+- chmod 744 is octal; chmod u=rwx,go=r is more like assignment.
+
+3. What is the sticky bit, and when should you use it?
+- It is directory level.
+- Sticky bit (t) on directories allows only the file owner to delete their files.
+- Used in shared directories like /tmp.
+- Command: chmod +t /dir
+- when to use : When there are many users, enable sticky bit so that they don't accidentally delete each
+    others files.
+    
+4. You are told to give the owner full access, group only execute, and others no permissions. What symbolic command achieves this?
+- chmod u=rwx,g=x,o= file.txt → -rwx--x---
+
+5. What is umask, and why is it important?
+- umask is the default permission mask for new files and directories.
+- Subtracted from default: 666 (files), 777 (dirs)
+- Ensures secure default permissions.
+
+6. If the umask is 022, what are the default permissions for a new file and a new directory?
+- File: 666 - 022 = 644 → -rw-r--r--
+- Dir: 777 - 022 = 755 → drwxr-xr-x
+
+7. Why is umask often set to 002 in development environments but 027 or 077 in production?
+- 002: Collaboration (Dev) → Files: 664, Dirs: 775
+- 027: Limited (Prod) → Files: 640, Dirs: 750
+- 077: Private (Secure) → Files: 600, Dirs: 700
+
+8. useradd vs adduser
