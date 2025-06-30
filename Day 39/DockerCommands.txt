@@ -1,0 +1,95 @@
+Docker
+
+https://docs.docker.com/desktop/setup/install/mac-install/
+
+https://hub.docker.com/
+
+docker —version
+
+docker info
+
+
+nginx
+
+-d detach mode in background
+-p port mapping local port:8080, container port : 80
+
+docker run -d -p 8080:80 nginx
+ 
+Visit 
+http://localhost:8080/
+
+
+Whalesay/Cowsay
+
+docker run docker cowsay Rohith 
+
+
+Few Commands
+
+docker images
+
+docker ps
+
+docker ps -a
+
+Deleting a container
+
+docker rm <containerid> 
+
+Alpine Container
+
+-i interactive mode
+-t stands for pseudo terminal
+alpine is the image name
+/bin/sh is the place where you want to run the image
+
+docker run -it alpine /bin/sh 
+ 
+
+Inside the pseudo terminal, you can run all the linux commands
+
+pwd
+
+whoami
+
+ls
+
+exit 
+
+Provide Logs of a container
+
+docker logs <container_id> 
+
+Remove Docker Image
+
+ docker rmi <image_id>
+
+Note:
+
+1. Always stop the container if it is running.
+
+docker stop <container_id>
+
+1. Then remove the container
+ docker rm <container_id>  
+
+1. After all these steps you could remove the docker image.
+docker rmi <image_id> 
+
+Container Prune
+
+Prune - Removing everything completely.
+
+docker container prune
+
+Pruning unused images
+
+docker image prune -a
+
+Pruning every images
+
+docker image prune 
+
+
+
