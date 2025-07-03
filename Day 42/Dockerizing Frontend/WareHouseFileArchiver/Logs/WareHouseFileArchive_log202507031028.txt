@@ -1,0 +1,21 @@
+2025-07-03 10:28:04.637 +05:30 [INF] Connection id "0HNDPTHOVT2UM", Request id "0HNDPTHOVT2UM:00000001": the application aborted the connection.
+2025-07-03 10:28:04.637 +05:30 [INF] Connection id "0HNDPTHOVT2V5", Request id "0HNDPTHOVT2V5:00000001": the application aborted the connection.
+2025-07-03 10:28:04.637 +05:30 [INF] Connection id "0HNDPTHOVT2VB", Request id "0HNDPTHOVT2VB:00000001": the application aborted the connection.
+2025-07-03 10:28:04.637 +05:30 [INF] Connection id "0HNDPTHOVT2V8", Request id "0HNDPTHOVT2V8:00000001": the application aborted the connection.
+2025-07-03 10:28:04.637 +05:30 [INF] Connection id "0HNDPTHOVT2VE", Request id "0HNDPTHOVT2VE:00000001": the application aborted the connection.
+2025-07-03 10:28:04.637 +05:30 [INF] Connection id "0HNDPTHOVT2UQ", Request id "0HNDPTHOVT2UQ:00000001": the application aborted the connection.
+2025-07-03 10:28:04.637 +05:30 [INF] Connection id "0HNDPTHOVT2V2", Request id "0HNDPTHOVT2V2:00000001": the application aborted the connection.
+2025-07-03 10:28:04.639 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-07-03 10:28:04.639 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-07-03 10:28:04.639 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-07-03 10:28:04.639 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=nqrJ8yQZBm1kTdakw9h5aQ - 101 null null 194314.4087ms
+2025-07-03 10:28:04.639 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=jPyO07bASAbaxLppveNLLA - 101 null null 378053.9325ms
+2025-07-03 10:28:04.639 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-07-03 10:28:04.639 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=j-77BrhQ8zgoL2D0vgXO_w - 101 null null 133037.737ms
+2025-07-03 10:28:04.639 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=_6G7g8vBWkdFV_aTYbk0iw - 101 null null 401938.5961ms
+2025-07-03 10:28:04.639 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-07-03 10:28:04.639 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-07-03 10:28:04.639 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-07-03 10:28:04.644 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=xYFxXOt-ktjsWs80YBGMew - 101 null null 243993.5655ms
+2025-07-03 10:28:04.649 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=RDKtAh9F0koEr1CepT-8Ww - 101 null null 301084.0863ms
+2025-07-03 10:28:04.644 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=M1k5Rvpk7oRQzzpY-QmY9A - 101 null null 333849.0783ms

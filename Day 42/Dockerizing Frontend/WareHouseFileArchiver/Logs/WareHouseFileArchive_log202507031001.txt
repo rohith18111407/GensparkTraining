@@ -1,0 +1,32 @@
+2025-07-03 10:01:10.403 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-07-03 10:01:10.717 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2025-07-03 10:01:10.726 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-07-03 10:01:10.732 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+2025-07-03 10:01:10.733 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-07-03 10:01:10.742 +05:30 [INF] Applying migration '20250703043039_AddFileDownloadLog'.
+2025-07-03 10:01:10.786 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "FileDownloadLogs" (
+    "Id" uuid NOT NULL,
+    "ArchiveFileId" uuid NOT NULL,
+    "DownloadedBy" text NOT NULL,
+    "DownloadedAt" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_FileDownloadLogs" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_FileDownloadLogs_ArchiveFiles_ArchiveFileId" FOREIGN KEY ("ArchiveFileId") REFERENCES "ArchiveFiles" ("Id") ON DELETE CASCADE
+);
+2025-07-03 10:01:10.788 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_FileDownloadLogs_ArchiveFileId" ON "FileDownloadLogs" ("ArchiveFileId");
+2025-07-03 10:01:10.789 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250703043039_AddFileDownloadLog', '9.0.5');
