@@ -1,0 +1,76 @@
+<div class="container py-5">
+  <div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h4 class="mb-0"><i class="bi bi-credit-card"></i> UPI Payment Form</h4>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="paymentForm" (ngSubmit)="pay()">
+        <div class="form-group mb-3">
+          <label>Amount (INR)</label>
+          <input type="number" class="form-control" formControlName="amount" />
+          @if(amount?.touched && amount?.errors) {
+            <div class="text-danger">Amount must be greater than 0</div>
+          }
+        </div>
+        <div class="form-group mb-3">
+          <label>Name</label>
+          <input type="text" class="form-control" formControlName="name" />
+          @if(name?.touched && name?.errors) {
+            <div class="text-danger">Name is required</div>
+          }
+        </div>
+        <div class="form-group mb-3">
+          <label>Email</label>
+          <input type="email" class="form-control" formControlName="email" />
+          @if(email?.touched && email?.errors) {
+            @if(email?.errors?.['required']) {
+              <div class="text-danger">Email is required</div>
+            }
+            @if(email?.errors?.['email']) {
+              <div class="text-danger">Invalid email format</div>
+            }
+          }
+        </div>
+        <div class="form-group mb-4">
+          <label>Contact Number</label>
+          <input type="text" class="form-control" formControlName="contact" />
+          @if(contact?.touched && contact?.errors) {
+            @if(contact?.errors?.['required']) {
+              <div class="text-danger">Contact is required</div>
+            }
+            @if(contact?.errors?.['pattern']) {
+              <div class="text-danger">Contact must be exactly 10 digits</div>
+            }
+          }
+        </div>
+        <button class="btn btn-success w-100" type="submit" [disabled]="paymentForm.invalid">
+          <i class="bi bi-lightning-fill"></i> Pay with Razorpay
+        </button>
+      </form>
+
+      <div *ngIf="paymentStatus === 'success'" class="alert alert-success mt-4">
+        <i class="bi bi-check-circle-fill"></i> Payment Successful! Payment ID: {{ paymentId }}
+      </div>
+      <div *ngIf="paymentStatus === 'cancelled'" class="alert alert-warning mt-4">
+        <i class="bi bi-x-circle-fill"></i> Payment was cancelled.
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-5">
+    <h5><i class="bi bi-clock-history"></i> Payment History</h5>
+    <div *ngIf="paymentHistory.length === 0" class="text-muted">No payments yet.</div>
+    <div *ngFor="let record of paymentHistory" class="card my-2">
+      <div class="card-body d-flex justify-content-between align-items-center">
+        <div>
+          <div><strong>Amount:</strong> ₹{{ record.amount }}</div>
+          <div><strong>Status:</strong> <span [class]="record.status === 'success' ? 'text-success' : 'text-warning'">{{ record.status }}</span></div>
+          <div><strong>Time:</strong> {{ record.date | date:'short' }}</div>
+        </div>
+        <div>
+          <strong>ID:</strong><br /> {{ record.id }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
