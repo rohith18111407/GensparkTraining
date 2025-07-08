@@ -1,0 +1,65 @@
+2025-07-08 19:11:28.518 +05:30 [ERR] An error occurred using the connection to database 'WareHouseArchiveDb' on server 'tcp://74.235.191.75:5432'.
+2025-07-08 19:11:32.324 +05:30 [INF] Executed DbCommand (459ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE DATABASE "WareHouseArchiveDb";
+2025-07-08 19:11:36.489 +05:30 [INF] Executed DbCommand (292ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2025-07-08 19:11:36.498 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-07-08 19:11:36.773 +05:30 [INF] Executed DbCommand (274ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+2025-07-08 19:11:37.040 +05:30 [INF] Executed DbCommand (265ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-07-08 19:11:37.054 +05:30 [INF] Applying migration '20250708133840_InitialCreate'.
+2025-07-08 19:11:37.391 +05:30 [INF] Executed DbCommand (295ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Items" (
+    "Id" uuid NOT NULL,
+    "Name" text NOT NULL,
+    "Description" text,
+    "Category" text NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "CreatedBy" text NOT NULL,
+    "UpdatedAt" timestamp with time zone,
+    "UpdatedBy" text,
+    CONSTRAINT "PK_Items" PRIMARY KEY ("Id")
+);
+2025-07-08 19:11:37.695 +05:30 [INF] Executed DbCommand (303ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ArchiveFiles" (
+    "Id" uuid NOT NULL,
+    "FileName" text NOT NULL,
+    "Category" text NOT NULL,
+    "FileExtension" text NOT NULL,
+    "FileSizeInBytes" bigint NOT NULL,
+    "FilePath" text NOT NULL,
+    "VersionNumber" integer NOT NULL,
+    "Description" text,
+    "ItemId" uuid,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "CreatedBy" text,
+    "UpdatedAt" timestamp with time zone,
+    "UpdatedBy" text,
+    CONSTRAINT "PK_ArchiveFiles" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ArchiveFiles_Items_ItemId" FOREIGN KEY ("ItemId") REFERENCES "Items" ("Id") ON DELETE CASCADE
+);
+2025-07-08 19:11:37.983 +05:30 [INF] Executed DbCommand (287ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "FileDownloadLogs" (
+    "Id" uuid NOT NULL,
+    "ArchiveFileId" uuid NOT NULL,
+    "DownloadedBy" text NOT NULL,
+    "DownloadedAt" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_FileDownloadLogs" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_FileDownloadLogs_ArchiveFiles_ArchiveFileId" FOREIGN KEY ("ArchiveFileId") REFERENCES "ArchiveFiles" ("Id") ON DELETE CASCADE
+);
+2025-07-08 19:11:38.278 +05:30 [INF] Executed DbCommand (294ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ArchiveFiles_FileName_Category_VersionNumber" ON "ArchiveFiles" ("FileName", "Category", "VersionNumber");
+2025-07-08 19:11:38.597 +05:30 [INF] Executed DbCommand (319ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ArchiveFiles_ItemId" ON "ArchiveFiles" ("ItemId");
+2025-07-08 19:11:38.890 +05:30 [INF] Executed DbCommand (292ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_FileDownloadLogs_ArchiveFileId" ON "FileDownloadLogs" ("ArchiveFileId");
+2025-07-08 19:11:39.211 +05:30 [INF] Executed DbCommand (321ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250708133840_InitialCreate', '9.0.5');

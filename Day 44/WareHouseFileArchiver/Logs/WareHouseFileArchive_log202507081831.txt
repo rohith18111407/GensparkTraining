@@ -1,0 +1,1 @@
+2025-07-08 18:31:13.797 +05:30 [ERR] An error occurred using the connection to database 'WareHouseArchiveAuthDb' on server 'tcp://74.235.191.75:5432'.
