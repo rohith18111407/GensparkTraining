@@ -1,0 +1,36 @@
+2025-07-11 16:19:00.001 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css
+2025-07-11 16:19:00.426 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map
+2025-07-11 16:19:00.973 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css
+2025-07-11 16:19:01.510 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map
+2025-07-11 16:19:01.931 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map
+2025-07-11 16:19:02.360 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css
+2025-07-11 16:19:02.752 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css
+2025-07-11 16:19:03.124 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css
+2025-07-11 16:19:03.698 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map
+2025-07-11 16:19:04.101 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css
+2025-07-11 16:19:04.415 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css
+2025-07-11 16:19:04.833 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map
+2025-07-11 16:19:05.229 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css
+2025-07-11 16:19:05.653 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map
+2025-07-11 16:19:06.051 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js
+2025-07-11 16:19:06.476 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js
+2025-07-11 16:19:07.005 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js
+2025-07-11 16:19:07.753 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map
+2025-07-11 16:19:08.674 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map
+2025-07-11 16:19:09.385 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map
+2025-07-11 16:19:09.882 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/js/bootstrap.js
+2025-07-11 16:19:10.279 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js
+2025-07-11 16:19:10.701 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/js/bootstrap.min.js
+2025-07-11 16:19:11.252 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map
+2025-07-11 16:19:11.895 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/js/bootstrap.js.map
+2025-07-11 16:19:12.409 +05:30 [INF] Uploaded project file: wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map
+2025-07-11 16:19:12.717 +05:30 [INF] Uploaded project file: bin/Debug/net9.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+2025-07-11 16:19:12.878 +05:30 [INF] User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-07-11 16:19:12.973 +05:30 [INF] Now listening on: http://localhost:5239
+2025-07-11 16:19:12.974 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-11 16:19:12.974 +05:30 [INF] Hosting environment: Development
+2025-07-11 16:19:12.974 +05:30 [INF] Content root path: /Users/presidio/Desktop/GensparkTraining/Day 47/WareHouseFileArchiver
+2025-07-11 16:19:46.321 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/swagger/index.html - null null
+2025-07-11 16:19:46.430 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/swagger/index.html - 200 null text/html;charset=utf-8 113.2723ms
+2025-07-11 16:19:46.526 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/swagger/v1/swagger.json - null null
+2025-07-11 16:19:46.670 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 144.0438ms
