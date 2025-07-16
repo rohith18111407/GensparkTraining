@@ -1,0 +1,6 @@
+
+# User secrets
+**/client_secret_*.json
+**/appsettings.json
+**/appsettings.*.json
+**/local.settings.json

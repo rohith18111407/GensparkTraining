@@ -1,0 +1,175 @@
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
+using Azure.Storage;
+using Azure.Storage.Blobs;
+using Azure.Storage.Sas;
+using Microsoft.Azure.Functions.Worker;
+using Microsoft.Azure.Functions.Worker.Http;
+using Microsoft.Extensions.Logging;
+using System.Net;
+
+namespace Company.FunctionApp2;
+
+public class Function
+{
+    private readonly ILogger<Function> _logger;
+
+    public Function(ILogger<Function> logger)
+    {
+        _logger = logger;
+    }
+
+    [Function("Function")]
+    public async Task<HttpResponseData> Run(
+        [HttpTrigger(AuthorizationLevel.Function, "get", Route = "generate-sas/{blobName}")] HttpRequestData req,
+        string blobName)
+    {
+        _logger.LogInformation($"Generating SAS for blob: {blobName}");
+
+        string connectionString = Environment.GetEnvironmentVariable("AzureStorageConnectionString");
+        string containerName = Environment.GetEnvironmentVariable("ContainerName");
+        string keyVaultUri = Environment.GetEnvironmentVariable("KeyVaultUri");
+
+        if (string.IsNullOrEmpty(connectionString) || string.IsNullOrEmpty(containerName) || string.IsNullOrEmpty(keyVaultUri))
+        {
+            var errorResponse = req.CreateResponse(HttpStatusCode.InternalServerError);
+            await errorResponse.WriteStringAsync("Missing required configuration settings.");
+            return errorResponse;
+        }
+
+        // Create BlobServiceClient from connection string
+        var blobServiceClient = new BlobServiceClient(connectionString);
+
+        // Get account name from BlobServiceClient
+        var accountName = blobServiceClient.AccountName;
+
+        // Parse AccountKey safely by splitting (safe if you validate existence)
+        string accountKey = null;
+        foreach (var part in connectionString.Split(';'))
+        {
+            if (part.StartsWith("AccountKey=", StringComparison.OrdinalIgnoreCase))
+            {
+                accountKey = part.Substring("AccountKey=".Length);
+                break;
+            }
+        }
+
+        if (string.IsNullOrEmpty(accountKey))
+        {
+            var errorResponse = req.CreateResponse(HttpStatusCode.InternalServerError);
+            await errorResponse.WriteStringAsync("AccountKey not found in connection string.");
+            return errorResponse;
+        }
+
+        // Create credential
+        var credential = new StorageSharedKeyCredential(accountName, accountKey);
+
+        // Create BlobClient
+        var blobClient = blobServiceClient.GetBlobContainerClient(containerName).GetBlobClient(blobName);
+
+        // Build SAS
+        DateTimeOffset expiresOn = DateTimeOffset.UtcNow.AddHours(1);
+        var sasBuilder = new BlobSasBuilder
+        {
+            BlobContainerName = containerName,
+            BlobName = blobName,
+            Resource = "b",
+            ExpiresOn = expiresOn
+        };
+        sasBuilder.SetPermissions(BlobSasPermissions.Read | BlobSasPermissions.Write);
+
+        var sasUri = blobClient.GenerateSasUri(sasBuilder);
+
+        // Store SAS URL in Key Vault
+        var secretClient = new SecretClient(new Uri(keyVaultUri), new DefaultAzureCredential());
+        string secretName = "myblobgayathri";
+
+        var secretToStore = new KeyVaultSecret(secretName, sasUri.ToString())
+        {
+            Properties =
+            {
+                Tags = { { "ExpiresOn", expiresOn.UtcDateTime.ToString("o") } }
+            }
+        };
+
+        await secretClient.SetSecretAsync(secretToStore);
+
+        // Return SAS URL
+        var response = req.CreateResponse(HttpStatusCode.OK);
+        await response.WriteAsJsonAsync(new
+        {
+            sasUrl = sasUri.ToString(),
+            expiresOn
+        });
+
+        return response;
+    }
+}
+---------------------------------------
+{
+    "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "AzureWebJobsSecretStorageType": "files",
+    "AzureStorageConnectionString": "DefaultEndpointsProtocol=https;AccountName=myblobgayathri;AccountKey=yTZPVePn4QqPKBednsAqbxUMyOLS+CP/Ix8lEhhr+ZRM6b9kJ2tyQWftcXpXPHBW3PXhrS9WhDxS+ASt+VcEWw==;EndpointSuffix=core.windows.net",
+    "KeyVaultUri": "https://blobconnectiong3.vault.azure.net/",
+    "ContainerName": "images"
+  }
+}
+
+
+
+
+az login 
+-------------------------------------
+
+az version
+-------------------------------------
+az group create --name Rohith_GenSparkTraining --location eastus
+-------------------------------------
+
+az storage account create --name rohithazureblob --location eastus --resource-group Rohith_GenSparkTraining --sku Standard_LRS
+
+-------------------------------------
+
+az functionapp create --resource-group Rohith_GenSparkTraining --consumption-plan-location eastus --name rohithdotnetfunc --storage-account rohithazureblob --runtime dotnet-isolated --functions-version 4
+
+  ------------------------------- 
+az functionapp config appsettings set  --name rohithdotnetfunc --resource-group Rohith_GenSparkTraining --settings AzureStorageConnectionString="DefaultEndpointsProtocol=https;AccountName=rohithazureblob;AccountKey=wsD2DWCF1cUfQ4RqVqthy4MnTfY4v6/L3KrO6FvnBH4Zs2RFiakvpFiM8Dx8HoG3/mJs5M16rVwI+AStDFruMw==;EndpointSuffix=core.windows.net" ContainerName="container1" KeyVaultUri="https://rohith-key.vault.azure.net/"
+-------------------------------------
+
+
+--- Look into readme.md
+
+
+az functionapp function keys list --resource-group Rohith_GenSparkTraining --name rohithdotnetfunc --function-name Function
+
+
+
+https://mydotnetfunc20250715.azurewebsites.net/api/generate-sas/1.mp4?code=ysVkEFx3YkCxKFVOnFfPNE0vcxg9n3pMBZxGKFgzs6C6AzFur6QlTA==
+
+
+ysVkEFx3YkCxKFVOnFfPNE0vcxg9n3pMBZxGKFgzs6C6AzFur6QlTA==
+
+
+func azure functionapp logstream mydotnetfunc20250715 --output json
+
+
+-- add the function to vault
+-- enable identity in function
+
+
+ https://mydotnetfunc20250715.azurewebsites.net/api/generate-sas/1.mp4?code=_EYlv6M1syaQR5pt14nY808JMgkzzU5l-CmwrD6J1OUFAzFuclY6kA==
+
+
+
+
+
+
+
+
+
+
+
+
