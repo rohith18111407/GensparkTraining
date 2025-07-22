@@ -1,0 +1,11 @@
+/Users/presidio/Desktop/GensparkTraining/Day 51/SampleAppForDeployment/SampleAppForDeployment/publish/SampleAppForDeployment
+/Users/presidio/Desktop/GensparkTraining/Day 51/SampleAppForDeployment/SampleAppForDeployment/publish/appsettings.Development.json
+/Users/presidio/Desktop/GensparkTraining/Day 51/SampleAppForDeployment/SampleAppForDeployment/publish/appsettings.json
+/Users/presidio/Desktop/GensparkTraining/Day 51/SampleAppForDeployment/SampleAppForDeployment/publish/SampleAppForDeployment.dll
+/Users/presidio/Desktop/GensparkTraining/Day 51/SampleAppForDeployment/SampleAppForDeployment/publish/SampleAppForDeployment.deps.json
+/Users/presidio/Desktop/GensparkTraining/Day 51/SampleAppForDeployment/SampleAppForDeployment/publish/SampleAppForDeployment.runtimeconfig.json
+/Users/presidio/Desktop/GensparkTraining/Day 51/SampleAppForDeployment/SampleAppForDeployment/publish/SampleAppForDeployment.pdb
+/Users/presidio/Desktop/GensparkTraining/Day 51/SampleAppForDeployment/SampleAppForDeployment/publish/Docker.DotNet.dll
+/Users/presidio/Desktop/GensparkTraining/Day 51/SampleAppForDeployment/SampleAppForDeployment/publish/Microsoft.AspNetCore.OpenApi.dll
+/Users/presidio/Desktop/GensparkTraining/Day 51/SampleAppForDeployment/SampleAppForDeployment/publish/Microsoft.OpenApi.dll
+/Users/presidio/Desktop/GensparkTraining/Day 51/SampleAppForDeployment/SampleAppForDeployment/publish/Newtonsoft.Json.dll
