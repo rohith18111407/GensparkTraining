@@ -1,23 +1,65 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { App } from './app';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AuthService } from './services/auth.service';
+import { Router } from '@angular/router';
 
-describe('App', () => {
+describe('App Component', () => {
+  let component: App;
+  let fixture: ComponentFixture<App>;
+  let mockAuthService: any;
+  let router: Router;
+
   beforeEach(async () => {
+    mockAuthService = {
+      isLoggedIn: jasmine.createSpy('isLoggedIn'),
+      setupTokenMonitor: jasmine.createSpy('setupTokenMonitor'),
+      getAccessToken: jasmine.createSpy('getAccessToken'),
+      logout: jasmine.createSpy('logout')
+    };
+
     await TestBed.configureTestingModule({
-      imports: [App],
+      imports: [App, RouterTestingModule],
+      providers: [
+        { provide: AuthService, useValue: mockAuthService }
+      ]
     }).compileComponents();
+
+    fixture = TestBed.createComponent(App);
+    component = fixture.componentInstance;
+    router = TestBed.inject(Router);
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(App);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  it('should create the App component', () => {
+    expect(component).toBeTruthy();
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(App);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, WareHouseFileArchiverFrontend');
+  it('should call setupTokenMonitor if logged in on init', () => {
+    mockAuthService.isLoggedIn.and.returnValue(true);
+    component.ngOnInit();
+    expect(mockAuthService.setupTokenMonitor).toHaveBeenCalled();
+  });
+
+  it('should NOT call setupTokenMonitor if not logged in on init', () => {
+    mockAuthService.isLoggedIn.and.returnValue(false);
+    component.ngOnInit();
+    expect(mockAuthService.setupTokenMonitor).not.toHaveBeenCalled();
+  });
+
+  it('should return true from isLoggedIn if access token exists', () => {
+    mockAuthService.getAccessToken.and.returnValue('abc123');
+    expect(component.isLoggedIn()).toBeTrue();
+  });
+
+  it('should return false from isLoggedIn if no access token', () => {
+    mockAuthService.getAccessToken.and.returnValue(null);
+    expect(component.isLoggedIn()).toBeFalse();
+  });
+
+  it('should call logout and navigate to login', () => {
+    spyOn(router, 'navigate');
+    component.logout();
+    expect(mockAuthService.logout).toHaveBeenCalled();
+    expect(router.navigate).toHaveBeenCalledWith(['/login']);
   });
 });

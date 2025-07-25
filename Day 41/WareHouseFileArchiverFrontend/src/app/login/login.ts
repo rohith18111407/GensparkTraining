@@ -3,7 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { textValidator } from '../validators/text-validator';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../services/auth.service';
-import { Router, RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login',

@@ -18,6 +18,7 @@ using Serilog.Exceptions;
 using Serilog.Events;
 using WareHouseFileArchiver.SignalRHub;
 using System.Threading.RateLimiting;
+using WareHouseFileArchiver.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -147,11 +148,11 @@ builder.Services.AddRateLimiter(options =>
     options.AddPolicy("PerUserPolicy", context =>
     {
         var username = context.User.Identity?.Name ?? context.Request.Headers["X-UserId"].FirstOrDefault() ?? "anonymous";
- 
+
         return RateLimitPartition.GetTokenBucketLimiter(username, _ => new TokenBucketRateLimiterOptions
         {
-            TokenLimit = 1000,        
-            TokensPerPeriod = 10,      
+            TokenLimit = 1000,
+            TokensPerPeriod = 10,
             ReplenishmentPeriod = TimeSpan.FromHours(1),
             AutoReplenishment = true,
             QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
@@ -159,6 +160,9 @@ builder.Services.AddRateLimiter(options =>
         });
     });
 });
+
+builder.Services.AddScoped<IStatisticsRepository, StatisticsRepository>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 var app = builder.Build();
 

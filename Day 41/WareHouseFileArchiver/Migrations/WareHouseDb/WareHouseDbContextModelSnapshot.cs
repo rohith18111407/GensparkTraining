@@ -78,6 +78,29 @@ namespace WareHouseFileArchiver.Migrations.WareHouseDb
                     b.ToTable("ArchiveFiles");
                 });
 
+            modelBuilder.Entity("WareHouseFileArchiver.Models.Domains.FileDownloadLog", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ArchiveFileId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("DownloadedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("DownloadedBy")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ArchiveFileId");
+
+                    b.ToTable("FileDownloadLogs");
+                });
+
             modelBuilder.Entity("WareHouseFileArchiver.Models.Domains.Item", b =>
                 {
                     b.Property<Guid>("Id")
@@ -121,6 +144,17 @@ namespace WareHouseFileArchiver.Migrations.WareHouseDb
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Item");
+                });
+
+            modelBuilder.Entity("WareHouseFileArchiver.Models.Domains.FileDownloadLog", b =>
+                {
+                    b.HasOne("WareHouseFileArchiver.Models.Domains.ArchiveFile", "ArchiveFile")
+                        .WithMany()
+                        .HasForeignKey("ArchiveFileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ArchiveFile");
                 });
 
             modelBuilder.Entity("WareHouseFileArchiver.Models.Domains.Item", b =>

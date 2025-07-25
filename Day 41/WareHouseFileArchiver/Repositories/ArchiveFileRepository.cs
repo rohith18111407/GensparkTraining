@@ -102,10 +102,17 @@ namespace WareHouseFileArchiver.Repositories
 
         public async Task DeleteAsync(ArchiveFile file)
         {
+            var logs = dbContext.FileDownloadLogs.Where(log => log.ArchiveFileId == file.Id);
+            dbContext.FileDownloadLogs.RemoveRange(logs); // Remove associated logs
             dbContext.ArchiveFiles.Remove(file);
             await dbContext.SaveChangesAsync();
         }
 
+        public async Task LogDownloadAsync(FileDownloadLog log)
+        {
+            await dbContext.FileDownloadLogs.AddAsync(log);
+            await dbContext.SaveChangesAsync();
+        }
 
 
     }

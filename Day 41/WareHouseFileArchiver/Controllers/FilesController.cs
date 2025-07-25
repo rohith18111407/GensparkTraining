@@ -7,6 +7,7 @@ using WareHouseFileArchiver.Interfaces;
 using WareHouseFileArchiver.Models.Domains;
 using WareHouseFileArchiver.Models.DTOs;
 using WareHouseFileArchiver.SignalRHub;
+using WareHouseFileArchiver.Services;
 
 namespace WareHouseFileArchiver.Controllers
 {
@@ -19,18 +20,21 @@ namespace WareHouseFileArchiver.Controllers
         private readonly IHttpContextAccessor httpContextAccessor;
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IHubContext<NotificationsHub> hubContext;
+        private readonly IEmailService emailService;
 
         public FilesController(IArchiveFileRepository archiveFileRepository,
                                IWebHostEnvironment webHostEnvironment,
                                IHttpContextAccessor httpContextAccessor,
                                UserManager<ApplicationUser> userManager,
-                               IHubContext<NotificationsHub> hubContext)
+                               IHubContext<NotificationsHub> hubContext,
+                               IEmailService emailService)
         {
             this.archiveFileRepository = archiveFileRepository;
             this.webHostEnvironment = webHostEnvironment;
             this.httpContextAccessor = httpContextAccessor;
             this.userManager = userManager;
             this.hubContext = hubContext;
+            this.emailService = emailService;
         }
 
         [Authorize(Roles = "Admin")]
@@ -110,6 +114,42 @@ namespace WareHouseFileArchiver.Controllers
 
             await archiveFileRepository.UploadAsync(archiveFile);
 
+            // Send Email
+            // var istTimeZone = TimeZoneInfo.FindSystemTimeZoneById("India Standard Time"); // For Windows Server
+            var istTimeZone =TimeZoneInfo.FindSystemTimeZoneById("Asia/Kolkata");
+
+            var createdAtIst = TimeZoneInfo.ConvertTimeFromUtc(archiveFile.CreatedAt, istTimeZone);
+            var updatedAtIst = TimeZoneInfo.ConvertTimeFromUtc(archiveFile.UpdatedAt ?? archiveFile.CreatedAt, istTimeZone);
+
+            var subject = existingFile != null ? "📁 A File Version Was Updated" : "📁 A New File Was Uploaded";
+            var message = $"""
+            Hello,
+
+            A file has just been {(existingFile != null ? "updated (new version added)" : "uploaded")} by {uploadedBy}.
+
+            File Details:
+            - File ID: {archiveFile.Id}
+            - File Name: {archiveFile.FileName}
+            - Category: {archiveFile.Category}
+            - Extension: {archiveFile.FileExtension}
+            - Size: {archiveFile.FileSizeInBytes} bytes
+            - Version: {archiveFile.VersionNumber}
+
+            Related Item:
+            - Item ID: {archiveFile.ItemId}
+            - Item Name: {archiveFile.Item?.Name}
+
+            Audit Info:
+            - Created At: {createdAtIst:dd-MM-yyyy HH:mm:ss}
+            - Created By: {archiveFile.CreatedBy}
+
+            Thanks,  
+            WareHouseFileArchiver Team
+            """;
+
+            await emailService.SendMessageToAllUsersAsync(subject, message);
+
+
             // Notify clients
             await hubContext.Clients.All.SendAsync("ReceiveNotification", new
             {
@@ -180,6 +220,21 @@ namespace WareHouseFileArchiver.Controllers
                     errors = new { File = new[] { "Physical file not found." } }
                 });
             }
+
+            //  Log download without modifying ArchiveFile
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await userManager.FindByIdAsync(userId);
+            var downloadedBy = user?.UserName ?? "Unknown";
+
+            var log = new FileDownloadLog
+            {
+                Id = Guid.NewGuid(),
+                ArchiveFileId = archiveFile.Id,
+                DownloadedBy = downloadedBy,
+                DownloadedAt = DateTime.UtcNow
+            };
+
+            await archiveFileRepository.LogDownloadAsync(log);
 
             await hubContext.Clients.All.SendAsync("ReceiveNotification", new
             {

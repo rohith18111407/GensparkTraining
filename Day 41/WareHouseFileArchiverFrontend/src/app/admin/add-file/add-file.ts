@@ -26,6 +26,8 @@ export class AddFileComponent {
   itemNames: string[] = [];
   filteredCategories: string[] = [];
 
+  uploading = false; //  loading state flag
+
   constructor(private fb: FormBuilder, private adminService: AdminService) {
     this.fileForm = this.fb.group({
       file: [null, Validators.required],
@@ -85,12 +87,18 @@ export class AddFileComponent {
     formData.append('category', formValues.category);
     formData.append('description', formValues.description);
 
+    this.uploading = true; //  Show spinner
+
     this.adminService.uploadFile(formData).subscribe({
       next: () => {
+        this.uploading = false; //  Stop spinner
         alert('File uploaded successfully!');
         this.fileUploaded.emit();
       },
-      error: () => alert('Failed to upload file.')
+      error: () => {
+        this.uploading = false; //  Stop spinner on error
+        alert('Failed to upload file.');
+      }
     });
   }
 
@@ -99,6 +107,5 @@ export class AddFileComponent {
       this.cancel.emit();
     }
   }
-
 
 }

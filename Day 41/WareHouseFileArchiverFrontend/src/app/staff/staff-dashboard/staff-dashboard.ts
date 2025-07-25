@@ -12,10 +12,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './staff-dashboard.css'
 })
 export class StaffDashboardComponent {
-  selectedView: 'dashboard' | 'files' | 'items' | 'users' = 'dashboard';
+  selectedView: 'dashboard' | 'files' | 'items' | 'users' | 'statistics' = 'dashboard';
   adminService = inject(StaffService);
 
-  setView(view: 'dashboard' | 'files' | 'items' | 'users') {
+  setView(view: 'dashboard' | 'files' | 'items' | 'users' | 'statistics') {
     this.selectedView = view;
   }
 }

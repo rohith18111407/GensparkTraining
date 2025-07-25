@@ -43,6 +43,9 @@ namespace WareHouseFileArchiver.Repositories
                         Console.WriteLine($"Error deleting file: {file.FilePath}. Exception: {ex.Message}");
                     }
                 }
+                // Delete related download logs
+                var logs = dbContext.FileDownloadLogs.Where(log => log.ArchiveFileId == file.Id);
+                dbContext.FileDownloadLogs.RemoveRange(logs);
             }
 
             // Remove from DB

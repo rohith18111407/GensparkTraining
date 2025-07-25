@@ -10,6 +10,7 @@ import { provideHttpClient, withInterceptorsFromDi, HttpInterceptor } from '@ang
 import { DashboardService } from './services/dashboard.service';
 import { NotificationService } from './services/notification.service';
 import { StaffService } from './services/staff.service';
+import { StatisticsService } from './services/statistics.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -21,6 +22,7 @@ export const appConfig: ApplicationConfig = {
     AdminService, 
     DashboardService,
     NotificationService,
-    StaffService
+    StaffService,
+    StatisticsService
   ]
 };

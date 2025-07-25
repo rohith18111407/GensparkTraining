@@ -11,6 +11,8 @@ namespace WareHouseFileArchiver.Data
 
         public DbSet<ArchiveFile> ArchiveFiles { get; set; }
         public DbSet<Item> Items { get; set; }
+        public DbSet<FileDownloadLog> FileDownloadLogs { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

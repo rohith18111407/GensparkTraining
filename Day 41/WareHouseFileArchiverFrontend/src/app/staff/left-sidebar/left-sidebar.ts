@@ -9,11 +9,11 @@ import { RouterModule } from '@angular/router';
   styleUrl: './left-sidebar.css'
 })
 export class StaffLeftSidebarComponent {
-  @Output() viewChange = new EventEmitter<'dashboard' | 'files' | 'items' | 'users'>();
-  setView(view: 'dashboard' | 'files' | 'items' | 'users') {
+  @Output() viewChange = new EventEmitter<'dashboard' | 'files' | 'items' | 'users' | 'statistics'>();
+  setView(view: 'dashboard' | 'files' | 'items' | 'users' | 'statistics') {
     this.viewChange.emit(view);
   }
-  change(view: 'dashboard' | 'files' | 'items' | 'users') {
+  change(view: 'dashboard' | 'files' | 'items' | 'users' | 'statistics') {
     this.viewChange.emit(view);
   }
 }

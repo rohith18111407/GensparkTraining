@@ -2,15 +2,16 @@ import { Component, Input, OnChanges } from '@angular/core';
 import { StaffService } from '../../services/staff.service';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from "../../dashboard/dashboard";
+import { StatisticsComponent } from '../../statistics/statistics';
 
 @Component({
   selector: 'app-staff-center-content',
-  imports: [CommonModule, DashboardComponent],
+  imports: [CommonModule, DashboardComponent, StatisticsComponent],
   templateUrl: './center-content.html',
   styleUrl: './center-content.css'
 })
 export class StaffCenterContentComponent implements OnChanges {
-  @Input() view: 'dashboard' | 'files' | 'items' | 'users' = 'dashboard';
+  @Input() view: 'dashboard' | 'files' | 'items' | 'users' | 'statistics' = 'dashboard';
 
   items: any[] = [];
   loading = false;

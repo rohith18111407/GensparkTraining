@@ -1,0 +1,24 @@
+2025-07-24 18:26:37.489 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null null
+2025-07-24 18:26:37.491 +05:30 [INF] CORS policy execution failed.
+2025-07-24 18:26:37.491 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-24 18:26:37.492 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 204 null null 2.2527ms
+2025-07-24 18:26:37.495 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/api/v1/files - null null
+2025-07-24 18:26:37.495 +05:30 [INF] CORS policy execution failed.
+2025-07-24 18:26:37.495 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/api/v1/Items?isDescending=false&pageNumber=1&pageSize=100&sortBy=createdAt - null null
+2025-07-24 18:26:37.495 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-24 18:26:37.496 +05:30 [INF] CORS policy execution failed.
+2025-07-24 18:26:37.496 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/api/v1/files - 204 null null 0.7484ms
+2025-07-24 18:26:37.496 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-24 18:26:37.496 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/api/v1/Items?isDescending=false&pageNumber=1&pageSize=100&sortBy=createdAt - 204 null null 0.7123ms
+2025-07-24 18:26:37.993 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null null
+2025-07-24 18:26:37.994 +05:30 [INF] CORS policy execution failed.
+2025-07-24 18:26:37.994 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-24 18:26:37.994 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 204 null null 0.3596ms
+2025-07-24 18:26:38.004 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null null
+2025-07-24 18:26:38.005 +05:30 [INF] CORS policy execution failed.
+2025-07-24 18:26:38.005 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-24 18:26:38.005 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 204 null null 0.989ms
+2025-07-24 18:26:38.035 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null null
+2025-07-24 18:26:38.035 +05:30 [INF] CORS policy execution failed.
+2025-07-24 18:26:38.035 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-24 18:26:38.035 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 204 null null 0.418ms

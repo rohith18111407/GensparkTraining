@@ -14,6 +14,7 @@ namespace WareHouseFileArchiver.Interfaces
         Task<IEnumerable<ArchiveFile>> GetAllFilesAsync();
         Task<ArchiveFile?> GetFileByIdAsync(Guid id);
         Task DeleteAsync(ArchiveFile file);
+        Task LogDownloadAsync(FileDownloadLog log);
 
     }
 }

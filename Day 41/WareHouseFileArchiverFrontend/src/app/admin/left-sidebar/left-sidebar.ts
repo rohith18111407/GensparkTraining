@@ -7,11 +7,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './left-sidebar.css'
 })
 export class LeftSidebarComponent {
-  @Output() viewChange = new EventEmitter<'dashboard' | 'files' | 'items' | 'users'>();
-  setView(view: 'dashboard' | 'files' | 'items' | 'users') {
+  @Output() viewChange = new EventEmitter<'dashboard' | 'files' | 'items' | 'users' | 'statistics'>();
+  setView(view: 'dashboard' | 'files' | 'items' | 'users' | 'statistics') {
     this.viewChange.emit(view);
   }
-  change(view: 'dashboard' | 'files' | 'items' | 'users') {
+  change(view: 'dashboard' | 'files' | 'items' | 'users' | 'statistics') {
     this.viewChange.emit(view);
   }
 }
