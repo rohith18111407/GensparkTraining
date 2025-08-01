@@ -1,0 +1,50 @@
+2025-08-01 17:08:00.133 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null null
+2025-08-01 17:08:00.135 +05:30 [INF] CORS policy execution failed.
+2025-08-01 17:08:00.135 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-08-01 17:08:00.135 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 204 null null 2.3553ms
+2025-08-01 17:08:00.142 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null null
+2025-08-01 17:08:00.142 +05:30 [INF] CORS policy execution failed.
+2025-08-01 17:08:00.142 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-08-01 17:08:00.142 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 204 null null 0.6595ms
+2025-08-01 17:08:00.467 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null null
+2025-08-01 17:08:00.467 +05:30 [INF] CORS policy execution failed.
+2025-08-01 17:08:00.467 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-08-01 17:08:00.468 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 204 null null 0.5734ms
+2025-08-01 17:08:00.469 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/api/v1/files - null null
+2025-08-01 17:08:00.470 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/api/v1/Items?isDescending=false&pageNumber=1&pageSize=100&sortBy=createdAt - null null
+2025-08-01 17:08:00.470 +05:30 [INF] CORS policy execution failed.
+2025-08-01 17:08:00.470 +05:30 [INF] CORS policy execution failed.
+2025-08-01 17:08:00.470 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-08-01 17:08:00.471 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-08-01 17:08:00.471 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/api/v1/files - 204 null null 1.6697ms
+2025-08-01 17:08:00.471 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/api/v1/Items?isDescending=false&pageNumber=1&pageSize=100&sortBy=createdAt - 204 null null 1.3847ms
+2025-08-01 17:08:17.974 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Category", a."CreatedAt", a."CreatedBy", a."DeletedAt", a."DeletedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."IsDeleted", a."IsProcessed", a."IsScheduled", a."ItemId", a."OriginalFilePath", a."UpdatedAt", a."UpdatedBy", a."VersionNumber", i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "ArchiveFiles" AS a
+LEFT JOIN "Items" AS i ON a."ItemId" = i."Id"
+WHERE a."IsScheduled" AND NOT (a."IsProcessed") AND a."CreatedAt" <= now()
+2025-08-01 17:08:34.975 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null null
+2025-08-01 17:08:34.976 +05:30 [INF] CORS policy execution failed.
+2025-08-01 17:08:34.976 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-08-01 17:08:34.976 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 204 null null 0.8125ms
+2025-08-01 17:08:34.987 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null null
+2025-08-01 17:08:34.988 +05:30 [INF] CORS policy execution failed.
+2025-08-01 17:08:34.988 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-08-01 17:08:34.988 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 204 null null 1.149ms
+2025-08-01 17:08:35.262 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null null
+2025-08-01 17:08:35.263 +05:30 [INF] CORS policy execution failed.
+2025-08-01 17:08:35.263 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-08-01 17:08:35.263 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 204 null null 0.6886ms
+2025-08-01 17:08:35.265 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/api/v1/files - null null
+2025-08-01 17:08:35.265 +05:30 [INF] CORS policy execution failed.
+2025-08-01 17:08:35.265 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-08-01 17:08:35.265 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/api/v1/Items?isDescending=false&pageNumber=1&pageSize=100&sortBy=createdAt - null null
+2025-08-01 17:08:35.266 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/api/v1/files - 204 null null 0.7248ms
+2025-08-01 17:08:35.266 +05:30 [INF] CORS policy execution failed.
+2025-08-01 17:08:35.266 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-08-01 17:08:35.267 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/api/v1/Items?isDescending=false&pageNumber=1&pageSize=100&sortBy=createdAt - 204 null null 1.0646ms
+2025-08-01 17:08:47.978 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Category", a."CreatedAt", a."CreatedBy", a."DeletedAt", a."DeletedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."IsDeleted", a."IsProcessed", a."IsScheduled", a."ItemId", a."OriginalFilePath", a."UpdatedAt", a."UpdatedBy", a."VersionNumber", i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "ArchiveFiles" AS a
+LEFT JOIN "Items" AS i ON a."ItemId" = i."Id"
+WHERE a."IsScheduled" AND NOT (a."IsProcessed") AND a."CreatedAt" <= now()

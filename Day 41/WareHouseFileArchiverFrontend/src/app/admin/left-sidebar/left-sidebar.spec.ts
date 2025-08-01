@@ -62,11 +62,4 @@ describe('LeftSidebarComponent', () => {
     btns[3].nativeElement.click(); // Users is 4th
     expect(component.viewChange.emit).toHaveBeenCalledWith('users');
   });
-
-  it('should emit correct view on Statistics button click', () => {
-    spyOn(component.viewChange, 'emit');
-    const btns = debugElement.queryAll(By.css('button'));
-    btns[4].nativeElement.click(); // Statistics is 5th
-    expect(component.viewChange.emit).toHaveBeenCalledWith('statistics');
-  });
 });

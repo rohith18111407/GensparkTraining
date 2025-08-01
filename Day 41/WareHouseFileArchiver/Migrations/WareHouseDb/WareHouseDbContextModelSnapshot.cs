@@ -38,6 +38,12 @@ namespace WareHouseFileArchiver.Migrations.WareHouseDb
                     b.Property<string>("CreatedBy")
                         .HasColumnType("text");
 
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("text");
+
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
@@ -56,8 +62,20 @@ namespace WareHouseFileArchiver.Migrations.WareHouseDb
                     b.Property<long>("FileSizeInBytes")
                         .HasColumnType("bigint");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsProcessed")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsScheduled")
+                        .HasColumnType("boolean");
+
                     b.Property<Guid?>("ItemId")
                         .HasColumnType("uuid");
+
+                    b.Property<string>("OriginalFilePath")
+                        .HasColumnType("text");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");

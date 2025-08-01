@@ -1,5 +1,0 @@
-2025-07-25 10:21:27.557 +05:30 [INF] User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
-2025-07-25 10:21:27.725 +05:30 [INF] Now listening on: http://localhost:5239
-2025-07-25 10:21:27.727 +05:30 [INF] Application started. Press Ctrl+C to shut down.
-2025-07-25 10:21:27.728 +05:30 [INF] Hosting environment: Development
-2025-07-25 10:21:27.728 +05:30 [INF] Content root path: /Users/presidio/Desktop/Day 25/WareHouseFileArchiver

@@ -77,4 +77,49 @@ export class AdminService {
         const url = `${this.baseUrl}/files/${filename}/v${version}`;
         return this.http.get(url, { headers: this.getAuthHeaders(), responseType: 'blob' });
     }
+
+    bulkDownloadFiles(fileIds: string[], zipFileName?: string): Observable<Blob> {
+        const request = {
+            fileIds: fileIds,
+            zipFileName: zipFileName || `ArchiveFiles_${new Date().toISOString().slice(0, 19).replace(/:/g, '-')}`
+        };
+
+        return this.http.post(`${this.baseUrl}/files/bulk-download`, request, {
+            headers: this.getAuthHeaders(),
+            responseType: 'blob'
+        });
+    }
+
+    // New methods for scheduled uploads
+    getScheduledFiles(): Observable<any[]> {
+        return this.http.get<any>(`${this.baseUrl}/files/scheduled`, { headers: this.getAuthHeaders() })
+            .pipe(map(res => res.data));
+    }
+
+    cancelScheduledUpload(id: string): Observable<any> {
+        return this.http.delete(`${this.baseUrl}/files/scheduled/${id}`, { headers: this.getAuthHeaders() });
+    }
+
+    // Trash Management Methods
+    getTrashedFiles(): Observable<any[]> {
+        return this.http.get<any>(`${this.baseUrl}/files/trash`, { headers: this.getAuthHeaders() })
+            .pipe(map(res => res.data));
+    }
+
+    restoreFromTrash(id: string): Observable<any> {
+        return this.http.post(`${this.baseUrl}/files/trash/${id}/restore`, {}, { headers: this.getAuthHeaders() });
+    }
+
+    permanentlyDeleteFromTrash(id: string): Observable<any> {
+        return this.http.delete(`${this.baseUrl}/files/trash/${id}/permanent`, { headers: this.getAuthHeaders() });
+    }
+
+    getTrashStats(): Observable<any> {
+        return this.http.get<any>(`${this.baseUrl}/files/trash/stats`, { headers: this.getAuthHeaders() })
+            .pipe(map(res => res.data));
+    }
+
+    forceCleanupTrash(): Observable<any> {
+        return this.http.post(`${this.baseUrl}/files/trash/cleanup`, {}, { headers: this.getAuthHeaders() });
+    }
 }

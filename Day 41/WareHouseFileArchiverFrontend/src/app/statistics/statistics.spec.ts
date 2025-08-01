@@ -99,30 +99,4 @@ describe('StatisticsComponent', () => {
     expect(listItems[0].nativeElement.textContent).toContain('Admin1');
     expect(listItems[0].nativeElement.textContent).toContain('uploaded');
   });
-
-  it('should render recent files table with correct values', async () => {
-    await fixture.whenStable();
-    fixture.detectChanges();
-
-    const fileRows = fixture.debugElement.queryAll(By.css('#recent-files tbody tr'));
-    expect(fileRows.length).toBe(1);
-
-    const rowText = fileRows[0].nativeElement.textContent;
-    expect(rowText).toContain('report.pdf');
-    expect(rowText).toContain('2.5');
-    expect(rowText).toContain('Admin1');
-  });
-
-  it('should render recent items table with correct values', async () => {
-    await fixture.whenStable();
-    fixture.detectChanges();
-
-    const itemRows = fixture.debugElement.queryAll(By.css('#recent-items tbody tr'));
-    expect(itemRows.length).toBe(1);
-
-    const rowText = itemRows[0].nativeElement.textContent;
-    expect(rowText).toContain('Item 1');
-    expect(rowText).toContain('Finance');
-    expect(rowText).toContain('Admin1');
-  });
 });

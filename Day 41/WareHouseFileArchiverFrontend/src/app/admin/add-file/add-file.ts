@@ -34,7 +34,10 @@ export class AddFileComponent {
       itemName: ['', Validators.required],
       itemCategory: ['', Validators.required],
       category: ['Uncategorized', Validators.required],
-      description: ['', Validators.required]
+      description: ['', Validators.required],
+      isScheduled: [false],
+      scheduledDate: [''],
+      scheduledTime: ['']
     });
   }
 
@@ -64,6 +67,35 @@ export class AddFileComponent {
     }
   }
 
+  getTodayDate(): string {
+    const today = new Date();
+    return today.toISOString().split('T')[0];
+  }
+
+  getTodayTime(): string {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    return `${hours}:${minutes}`;
+  }
+
+  onScheduledChange(): void {
+    const isScheduled = this.fileForm.get('isScheduled')?.value;
+    if (isScheduled) {
+      // Set minimum date to today
+      this.fileForm.patchValue({
+        scheduledDate: this.getTodayDate(),
+        scheduledTime: this.getTodayTime()
+      });
+    } else {
+      // Clear scheduling fields
+      this.fileForm.patchValue({
+        scheduledDate: '',
+        scheduledTime: ''
+      });
+    }
+  }
+
   submit(): void {
     if (this.fileForm.invalid || !this.fileToUpload) {
       this.fileForm.markAllAsTouched();
@@ -72,6 +104,21 @@ export class AddFileComponent {
     }
 
     const formValues = this.fileForm.value;
+    
+    // Validate scheduled upload fields if scheduled is checked
+    if (formValues.isScheduled) {
+      if (!formValues.scheduledDate || !formValues.scheduledTime) {
+        alert('Please select both date and time for scheduled upload.');
+        return;
+      }
+      
+      const scheduledDateTime = new Date(`${formValues.scheduledDate}T${formValues.scheduledTime}`);
+      if (scheduledDateTime <= new Date()) {
+        alert('Scheduled time must be in the future.');
+        return;
+      }
+    }
+
     const matchedItem = this.allItems.find(
       i => i.name === formValues.itemName && i.categories.includes(formValues.itemCategory)
     );
@@ -87,16 +134,24 @@ export class AddFileComponent {
     formData.append('category', formValues.category);
     formData.append('description', formValues.description);
 
+    // Add scheduling information if provided
+    if (formValues.isScheduled && formValues.scheduledDate && formValues.scheduledTime) {
+      const scheduledDateTime = new Date(`${formValues.scheduledDate}T${formValues.scheduledTime}`);
+      formData.append('scheduledUploadDate', scheduledDateTime.toISOString());
+    }
+
     this.uploading = true; //  Show spinner
 
     this.adminService.uploadFile(formData).subscribe({
-      next: () => {
+      next: (response) => {
         this.uploading = false; //  Stop spinner
-        alert('File uploaded successfully!');
+        const message = formValues.isScheduled ? 'File upload scheduled successfully!' : 'File uploaded successfully!';
+        alert(message);
         this.fileUploaded.emit();
       },
-      error: () => {
+      error: (error) => {
         this.uploading = false; //  Stop spinner on error
+        console.error('Upload error:', error);
         alert('Failed to upload file.');
       }
     });
@@ -107,5 +162,6 @@ export class AddFileComponent {
       this.cancel.emit();
     }
   }
+
 
 }

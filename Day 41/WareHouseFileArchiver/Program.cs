@@ -11,6 +11,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using WareHouseFileArchiver.Interfaces;
 using WareHouseFileArchiver.Repositories;
+using WareHouseFileArchiver.Services;
 using WareHouseFileArchiver.Models.Domains;
 using System.Text.Json.Serialization;
 using Serilog;
@@ -18,7 +19,6 @@ using Serilog.Exceptions;
 using Serilog.Events;
 using WareHouseFileArchiver.SignalRHub;
 using System.Threading.RateLimiting;
-using WareHouseFileArchiver.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -116,6 +116,7 @@ builder.Services.AddDbContext<WareHouseDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IArchiveFileRepository, ArchiveFileRepository>();
+builder.Services.AddScoped<IFileManagementService, FileManagementService>();
 
 // To prevet enum shown as numbers
 builder.Services.AddControllers()
@@ -126,6 +127,12 @@ builder.Services.AddControllers()
     });
 
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
+
+// Schedule upload Background Service
+builder.Services.AddHostedService<ScheduledUploadProcessorService>();
+
+// Trash cleanup Background Service
+builder.Services.AddHostedService<TrashCleanupService>();
 
 builder.Services.AddSignalR();
 

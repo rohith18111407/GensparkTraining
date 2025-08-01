@@ -9,15 +9,17 @@ import { EditItemComponent } from "../edit-item/edit-item";
 import { DashboardComponent } from '../../dashboard/dashboard';
 import { AddFileComponent } from "../add-file/add-file";
 import { StatisticsComponent } from '../../statistics/statistics';
+import { ScheduledUploadsComponent } from "../scheduled-uploads/scheduled-uploads";
+import { TrashComponent } from "../trash/trash";
 
 @Component({
   selector: 'app-center-content',
-  imports: [CommonModule, AddItemComponent, AddUserComponent, EditUserComponent, EditItemComponent, DashboardComponent, AddFileComponent, StatisticsComponent],
+  imports: [CommonModule, AddItemComponent, AddUserComponent, EditUserComponent, EditItemComponent, DashboardComponent, AddFileComponent, StatisticsComponent, ScheduledUploadsComponent, TrashComponent],
   templateUrl: './center-content.html',
   styleUrl: './center-content.css'
 })
 export class CenterContentComponent implements OnChanges {
-  @Input() view: 'dashboard' | 'files' | 'items' | 'users' | 'statistics' = 'dashboard';
+  @Input() view: 'dashboard' | 'files' | 'items' | 'users' | 'statistics' | 'scheduled' | 'trash' = 'dashboard';
 
   items: any[] = [];
   loading = false;
@@ -50,6 +52,9 @@ export class CenterContentComponent implements OnChanges {
   groupedFiles: { [category: string]: any[] } = {};
 
   showAddFileForm = false;
+
+  selectedFiles: Set<string> = new Set();
+  showBulkActions = false;
 
   constructor(private adminService: AdminService) { }
 
@@ -225,6 +230,7 @@ export class CenterContentComponent implements OnChanges {
 
     this.adminService.getAllFiles().subscribe({
       next: res => {
+        // set only processed files
         this.files = res;
         this.applyFileFilters(); // Apply filters and group
         this.loading = false;
@@ -321,6 +327,78 @@ export class CenterContentComponent implements OnChanges {
         alert('Failed to download file.');
       }
     });
+  }
+
+  toggleFileSelection(fileId: string, event: any): void {
+    if (event.target.checked) {
+      this.selectedFiles.add(fileId);
+    } else {
+      this.selectedFiles.delete(fileId);
+    }
+    this.showBulkActions = this.selectedFiles.size > 0;
+  }
+
+  selectAllFiles(event: any): void {
+    if (event.target.checked) {
+      // Add all files from all categories
+      Object.values(this.groupedFiles).flat().forEach((file: any) => this.selectedFiles.add(file.id));
+    } else {
+      this.selectedFiles.clear();
+    }
+    this.showBulkActions = this.selectedFiles.size > 0;
+  }
+
+  isFileSelected(fileId: string): boolean {
+    return this.selectedFiles.has(fileId);
+  }
+
+  get allFilesSelected(): boolean {
+    const allFiles = Object.values(this.groupedFiles).flat();
+    return allFiles.length > 0 && 
+           allFiles.every((file: any) => this.selectedFiles.has(file.id));
+  }
+
+  get totalFileCount(): number {
+    return Object.values(this.groupedFiles).flat().length;
+  }
+
+  bulkDownloadFiles(): void {
+    if (this.selectedFiles.size === 0) {
+      alert('Please select at least one file to download.');
+      return;
+    }
+
+    const fileIds = Array.from(this.selectedFiles);
+    const zipFileName = `BulkDownload_${new Date().toISOString().slice(0, 19).replace(/:/g, '-')}`;
+
+    this.adminService.bulkDownloadFiles(fileIds, zipFileName).subscribe({
+      next: (blob) => {
+        // Create download link
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${zipFileName}.zip`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+
+        // Clear selection
+        this.selectedFiles.clear();
+        this.showBulkActions = false;
+
+        alert(`Successfully downloaded ${fileIds.length} files as ZIP archive.`);
+      },
+      error: (error) => {
+        console.error('Bulk download error:', error);
+        alert('Failed to download files. Please try again.');
+      }
+    });
+  }
+
+  cancelBulkSelection(): void {
+    this.selectedFiles.clear();
+    this.showBulkActions = false;
   }
 
 }

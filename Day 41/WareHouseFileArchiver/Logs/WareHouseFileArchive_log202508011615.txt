@@ -1,0 +1,91 @@
+2025-08-01 16:15:00.221 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Category", a."CreatedAt", a."CreatedBy", a."DeletedAt", a."DeletedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."IsDeleted", a."IsProcessed", a."IsScheduled", a."ItemId", a."OriginalFilePath", a."UpdatedAt", a."UpdatedBy", a."VersionNumber", i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "ArchiveFiles" AS a
+LEFT JOIN "Items" AS i ON a."ItemId" = i."Id"
+WHERE a."IsScheduled" AND NOT (a."IsProcessed") AND a."CreatedAt" <= now()
+2025-08-01 16:15:00.227 +05:30 [INF] Processing scheduled file: README
+2025-08-01 16:15:00.230 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p18='?' (DbType = Guid), @p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime), @p4='?', @p5='?', @p6='?', @p7='?', @p8='?', @p9='?' (DbType = Int64), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = Boolean), @p13='?' (DbType = Guid), @p14='?', @p15='?' (DbType = DateTime), @p16='?', @p17='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "ArchiveFiles" SET "Category" = @p0, "CreatedAt" = @p1, "CreatedBy" = @p2, "DeletedAt" = @p3, "DeletedBy" = @p4, "Description" = @p5, "FileExtension" = @p6, "FileName" = @p7, "FilePath" = @p8, "FileSizeInBytes" = @p9, "IsDeleted" = @p10, "IsProcessed" = @p11, "IsScheduled" = @p12, "ItemId" = @p13, "OriginalFilePath" = @p14, "UpdatedAt" = @p15, "UpdatedBy" = @p16, "VersionNumber" = @p17
+WHERE "Id" = @p18;
+2025-08-01 16:15:00.230 +05:30 [INF] Successfully processed scheduled file: README
+2025-08-01 16:15:02.269 +05:30 [INF] Email sent to staff1@example.com
+2025-08-01 16:15:05.872 +05:30 [INF] Email sent to admin2@example.com
+2025-08-01 16:15:09.054 +05:30 [INF] Email sent to rohith2110565@ssn.edu.in
+2025-08-01 16:15:12.113 +05:30 [INF] Email sent to admin1@example.com
+2025-08-01 16:15:12.114 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[WareHouseFileArchiver.Models.DTOs.ArchiveFileResponseDto, WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-01 16:15:12.114 +05:30 [INF] Executed action WareHouseFileArchiver.Controllers.FilesController.Upload (WareHouseFileArchiver) in 23516.2027ms
+2025-08-01 16:15:12.114 +05:30 [INF] Executed endpoint 'WareHouseFileArchiver.Controllers.FilesController.Upload (WareHouseFileArchiver)'
+2025-08-01 16:15:12.116 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/api/v1/files/upload - 200 null application/json; charset=utf-8 23518.8692ms
+2025-08-01 16:15:16.163 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/api/v1/files - null null
+2025-08-01 16:15:16.164 +05:30 [INF] CORS policy execution successful.
+2025-08-01 16:15:16.165 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/api/v1/files - 204 null null 1.6634ms
+2025-08-01 16:15:16.166 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/api/v1/files - null null
+2025-08-01 16:15:16.166 +05:30 [INF] CORS policy execution successful.
+2025-08-01 16:15:16.167 +05:30 [INF] Executing endpoint 'WareHouseFileArchiver.Controllers.FilesController.GetAllFiles (WareHouseFileArchiver)'
+2025-08-01 16:15:16.167 +05:30 [INF] Route matched with {action = "GetAllFiles", controller = "Files"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllFiles() on controller WareHouseFileArchiver.Controllers.FilesController (WareHouseFileArchiver).
+2025-08-01 16:15:16.170 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Category", a."CreatedAt", a."CreatedBy", a."DeletedAt", a."DeletedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."IsDeleted", a."IsProcessed", a."IsScheduled", a."ItemId", a."OriginalFilePath", a."UpdatedAt", a."UpdatedBy", a."VersionNumber", i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "ArchiveFiles" AS a
+LEFT JOIN "Items" AS i ON a."ItemId" = i."Id"
+WHERE NOT (a."IsDeleted") AND (NOT (a."IsScheduled") OR a."IsProcessed")
+ORDER BY a."CreatedAt" DESC
+2025-08-01 16:15:16.171 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[WareHouseFileArchiver.Models.DTOs.AllFilesResponseDto, WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-01 16:15:16.171 +05:30 [INF] Executed action WareHouseFileArchiver.Controllers.FilesController.GetAllFiles (WareHouseFileArchiver) in 3.6782ms
+2025-08-01 16:15:16.171 +05:30 [INF] Executed endpoint 'WareHouseFileArchiver.Controllers.FilesController.GetAllFiles (WareHouseFileArchiver)'
+2025-08-01 16:15:16.172 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/api/v1/files - 200 null application/json; charset=utf-8 5.7044ms
+2025-08-01 16:15:20.930 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/api/v1/files/scheduled - null null
+2025-08-01 16:15:20.930 +05:30 [INF] CORS policy execution successful.
+2025-08-01 16:15:20.930 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/api/v1/files/scheduled - 204 null null 0.3352ms
+2025-08-01 16:15:20.931 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/api/v1/files/scheduled - null null
+2025-08-01 16:15:20.931 +05:30 [INF] CORS policy execution successful.
+2025-08-01 16:15:20.932 +05:30 [INF] Executing endpoint 'WareHouseFileArchiver.Controllers.FilesController.GetScheduledFiles (WareHouseFileArchiver)'
+2025-08-01 16:15:20.932 +05:30 [INF] Route matched with {action = "GetScheduledFiles", controller = "Files"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetScheduledFiles() on controller WareHouseFileArchiver.Controllers.FilesController (WareHouseFileArchiver).
+2025-08-01 16:15:20.934 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Category", a."CreatedAt", a."CreatedBy", a."DeletedAt", a."DeletedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."IsDeleted", a."IsProcessed", a."IsScheduled", a."ItemId", a."OriginalFilePath", a."UpdatedAt", a."UpdatedBy", a."VersionNumber", i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "ArchiveFiles" AS a
+LEFT JOIN "Items" AS i ON a."ItemId" = i."Id"
+WHERE a."IsScheduled"
+ORDER BY a."CreatedAt"
+2025-08-01 16:15:20.934 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[WareHouseFileArchiver.Models.DTOs.AllFilesResponseDto, WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-01 16:15:20.934 +05:30 [INF] Executed action WareHouseFileArchiver.Controllers.FilesController.GetScheduledFiles (WareHouseFileArchiver) in 2.0785ms
+2025-08-01 16:15:20.934 +05:30 [INF] Executed endpoint 'WareHouseFileArchiver.Controllers.FilesController.GetScheduledFiles (WareHouseFileArchiver)'
+2025-08-01 16:15:20.935 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/api/v1/files/scheduled - 200 null application/json; charset=utf-8 3.5491ms
+2025-08-01 16:15:25.399 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/api/v1/files - null null
+2025-08-01 16:15:25.399 +05:30 [INF] CORS policy execution successful.
+2025-08-01 16:15:25.399 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/api/v1/files - 204 null null 0.524ms
+2025-08-01 16:15:25.400 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/api/v1/files - null null
+2025-08-01 16:15:25.400 +05:30 [INF] CORS policy execution successful.
+2025-08-01 16:15:25.401 +05:30 [INF] Executing endpoint 'WareHouseFileArchiver.Controllers.FilesController.GetAllFiles (WareHouseFileArchiver)'
+2025-08-01 16:15:25.401 +05:30 [INF] Route matched with {action = "GetAllFiles", controller = "Files"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllFiles() on controller WareHouseFileArchiver.Controllers.FilesController (WareHouseFileArchiver).
+2025-08-01 16:15:25.403 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Category", a."CreatedAt", a."CreatedBy", a."DeletedAt", a."DeletedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."IsDeleted", a."IsProcessed", a."IsScheduled", a."ItemId", a."OriginalFilePath", a."UpdatedAt", a."UpdatedBy", a."VersionNumber", i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "ArchiveFiles" AS a
+LEFT JOIN "Items" AS i ON a."ItemId" = i."Id"
+WHERE NOT (a."IsDeleted") AND (NOT (a."IsScheduled") OR a."IsProcessed")
+ORDER BY a."CreatedAt" DESC
+2025-08-01 16:15:25.403 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[WareHouseFileArchiver.Models.DTOs.AllFilesResponseDto, WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-01 16:15:25.403 +05:30 [INF] Executed action WareHouseFileArchiver.Controllers.FilesController.GetAllFiles (WareHouseFileArchiver) in 2.1132ms
+2025-08-01 16:15:25.403 +05:30 [INF] Executed endpoint 'WareHouseFileArchiver.Controllers.FilesController.GetAllFiles (WareHouseFileArchiver)'
+2025-08-01 16:15:25.404 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/api/v1/files - 200 null application/json; charset=utf-8 3.5057ms
+2025-08-01 16:15:27.329 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/api/v1/files/scheduled - null null
+2025-08-01 16:15:27.330 +05:30 [INF] CORS policy execution successful.
+2025-08-01 16:15:27.330 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/api/v1/files/scheduled - 204 null null 0.3968ms
+2025-08-01 16:15:27.331 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/api/v1/files/scheduled - null null
+2025-08-01 16:15:27.331 +05:30 [INF] CORS policy execution successful.
+2025-08-01 16:15:27.332 +05:30 [INF] Executing endpoint 'WareHouseFileArchiver.Controllers.FilesController.GetScheduledFiles (WareHouseFileArchiver)'
+2025-08-01 16:15:27.332 +05:30 [INF] Route matched with {action = "GetScheduledFiles", controller = "Files"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetScheduledFiles() on controller WareHouseFileArchiver.Controllers.FilesController (WareHouseFileArchiver).
+2025-08-01 16:15:27.333 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Category", a."CreatedAt", a."CreatedBy", a."DeletedAt", a."DeletedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."IsDeleted", a."IsProcessed", a."IsScheduled", a."ItemId", a."OriginalFilePath", a."UpdatedAt", a."UpdatedBy", a."VersionNumber", i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "ArchiveFiles" AS a
+LEFT JOIN "Items" AS i ON a."ItemId" = i."Id"
+WHERE a."IsScheduled"
+ORDER BY a."CreatedAt"
+2025-08-01 16:15:27.334 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[WareHouseFileArchiver.Models.DTOs.AllFilesResponseDto, WareHouseFileArchiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-01 16:15:27.334 +05:30 [INF] Executed action WareHouseFileArchiver.Controllers.FilesController.GetScheduledFiles (WareHouseFileArchiver) in 2.235ms
+2025-08-01 16:15:27.334 +05:30 [INF] Executed endpoint 'WareHouseFileArchiver.Controllers.FilesController.GetScheduledFiles (WareHouseFileArchiver)'
+2025-08-01 16:15:27.334 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/api/v1/files/scheduled - 200 null application/json; charset=utf-8 3.692ms
+2025-08-01 16:15:30.233 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Category", a."CreatedAt", a."CreatedBy", a."DeletedAt", a."DeletedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."IsDeleted", a."IsProcessed", a."IsScheduled", a."ItemId", a."OriginalFilePath", a."UpdatedAt", a."UpdatedBy", a."VersionNumber", i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "ArchiveFiles" AS a
+LEFT JOIN "Items" AS i ON a."ItemId" = i."Id"
+WHERE a."IsScheduled" AND NOT (a."IsProcessed") AND a."CreatedAt" <= now()

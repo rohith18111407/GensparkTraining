@@ -16,5 +16,18 @@ namespace WareHouseFileArchiver.Interfaces
         Task DeleteAsync(ArchiveFile file);
         Task LogDownloadAsync(FileDownloadLog log);
 
+        // Scheduled File upload methods
+        Task<IEnumerable<ArchiveFile>> GetScheduledFilesAsync();
+        Task<IEnumerable<ArchiveFile>> GetPendingScheduledFilesAsync();
+        Task<ArchiveFile?> GetScheduledFileByIdAsync(Guid id);
+        Task UpdateScheduledFileAsync(ArchiveFile archiveFile);
+        Task DeleteScheduledFileAsync(Guid id);
+
+        // Trash/Soft Delete methods
+        Task<IEnumerable<ArchiveFile>> GetTrashedFilesAsync();
+        Task MoveToTrashAsync(ArchiveFile file, string deletedBy, string trashFilePath);
+        Task RestoreFromTrashAsync(Guid fileId, string newFilePath);
+        Task PermanentlyDeleteAsync(Guid fileId);
+        Task<IEnumerable<ArchiveFile>> GetExpiredTrashedFilesAsync(int daysOld = 7);
     }
 }

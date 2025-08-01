@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { LeftSidebarComponent } from "../left-sidebar/left-sidebar";
 import { CenterContentComponent } from "../center-content/center-content";
+import { RightSidebarCompponent } from "../right-sidebar/right-sidebar";
 import { AdminService } from '../../services/admin.service';
-import { RightSidebarCompponent } from '../right-sidebar/right-sidebar';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -12,10 +12,10 @@ import { RightSidebarCompponent } from '../right-sidebar/right-sidebar';
   styleUrl: './admin-dashboard.css'
 })
 export class AdminDashboardComponent {
-  selectedView: 'dashboard' | 'files' | 'items' | 'users' | 'statistics' = 'dashboard';
+  selectedView: 'dashboard' | 'files' | 'items' | 'users' | 'statistics' | 'scheduled' | 'trash' = 'dashboard';
   adminService = inject(AdminService);
 
-  setView(view: 'dashboard' | 'files' | 'items' | 'users' | 'statistics') {
+  setView(view: 'dashboard' | 'files' | 'items' | 'users' | 'statistics' | 'scheduled' | 'trash') {
     this.selectedView = view;
   }
 }
