@@ -1,0 +1,15 @@
+2025-08-04 10:45:06.542 +05:30 [INF] Application is shutting down...
+2025-08-04 10:45:06.544 +05:30 [INF] Connection id "0HNEJ2KBAG9T2", Request id "0HNEJ2KBAG9T2:00000001": the application aborted the connection.
+2025-08-04 10:45:06.546 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-08-04 10:45:06.547 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=CjpsRCsfvQrfZxmP_waXSw - 101 null null 110949.6346ms
+2025-08-04 10:45:06.550 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null null
+2025-08-04 10:45:06.550 +05:30 [INF] CORS policy execution successful.
+2025-08-04 10:45:06.551 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 204 null null 0.4601ms
+2025-08-04 10:45:06.552 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null 0
+2025-08-04 10:45:06.552 +05:30 [INF] CORS policy execution successful.
+2025-08-04 10:45:06.553 +05:30 [INF] Executing endpoint '/notificationhub/negotiate'
+2025-08-04 10:45:06.554 +05:30 [INF] Executed endpoint '/notificationhub/negotiate'
+2025-08-04 10:45:06.554 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 200 316 application/json 2.0725ms
+2025-08-04 10:45:06.560 +05:30 [ERR] Error occurred during trash cleanup
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at WareHouseFileArchiver.Services.TrashCleanupService.ExecuteAsync(CancellationToken stoppingToken) in /Users/presidio/Desktop/GensparkTraining/Day 41/WareHouseFileArchiver/Services/TrashCleanupService.cs:line 30

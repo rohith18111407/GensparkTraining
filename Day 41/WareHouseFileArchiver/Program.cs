@@ -190,4 +190,6 @@ app.UseStaticFiles();
 
 app.UseRateLimiter();
 app.MapControllers().RequireRateLimiting("PerUserPolicy");
+
+Console.WriteLine("Starting Warehouse File Archiver API...");
 app.Run();

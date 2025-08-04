@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { NotificationService } from '../../services/notification.service';
 import { CommonModule, DatePipe } from '@angular/common';
@@ -65,5 +65,4 @@ export class StaffRightSidebarComponent implements OnInit {
       this.notificationService.clearAllNotifications();
     }
   }
-
 }

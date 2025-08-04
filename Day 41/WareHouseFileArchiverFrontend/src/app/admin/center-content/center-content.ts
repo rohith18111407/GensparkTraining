@@ -11,6 +11,7 @@ import { AddFileComponent } from "../add-file/add-file";
 import { StatisticsComponent } from '../../statistics/statistics';
 import { ScheduledUploadsComponent } from "../scheduled-uploads/scheduled-uploads";
 import { TrashComponent } from "../trash/trash";
+import { StaffService } from '../../services/staff.service';
 
 @Component({
   selector: 'app-center-content',
@@ -21,6 +22,7 @@ import { TrashComponent } from "../trash/trash";
 export class CenterContentComponent implements OnChanges {
   @Input() view: 'dashboard' | 'files' | 'items' | 'users' | 'statistics' | 'scheduled' | 'trash' = 'dashboard';
 
+  // Items
   items: any[] = [];
   loading = false;
   error: string | null = null;
@@ -30,6 +32,12 @@ export class CenterContentComponent implements OnChanges {
   showEditItemForm = false;
   selectedItemToEdit: any = null;
 
+  sortBy: 'createdAt' | 'createdBy' | 'name' | 'category' = 'createdAt';
+  isDescending = false;
+
+  showAddItemForm = false;
+
+  // Users
   users: any[] = [];
   filteredUsers: any[] = [];
 
@@ -39,11 +47,11 @@ export class CenterContentComponent implements OnChanges {
   showEditUserForm = false;
   selectedUserToEdit: any = null;
 
+  showAddUserForm = false;
 
-  sortBy: 'createdAt' | 'createdBy' | 'name' | 'category' = 'createdAt';
-  isDescending = false;
-
-  showAddItemForm = false;
+  // User sorting properties for login information
+  userSortBy: 'username' | 'lastlogin' | 'role' = 'username';
+  userSortDescending = false;
 
   // Files
   files: any[] = [];
@@ -53,10 +61,26 @@ export class CenterContentComponent implements OnChanges {
 
   showAddFileForm = false;
 
+  // Bulk Download of Files
   selectedFiles: Set<string> = new Set();
   showBulkActions = false;
 
-  constructor(private adminService: AdminService) { }
+  // Archive functionality
+  archivedFiles: any[] = [];
+  showArchivedFiles = false;
+  archiveLoading = false;
+  archiveError: string | null = null;
+  groupedArchivedFiles: { [category: string]: any[] } = {};
+  currentUser: any = null;
+  isAdmin = false;
+  isStaff = false;
+
+
+  constructor(private adminService: AdminService, private staffService : StaffService) 
+  { 
+    // Initialize user profile first
+    this.loadUserProfile();
+  }
 
   ngOnChanges(): void {
     if (this.view === 'items') {
@@ -70,6 +94,8 @@ export class CenterContentComponent implements OnChanges {
       this.fetchFiles();
     }
   }
+
+  // ITEMS METHODS
 
   fetchItems() {
     this.loading = true;
@@ -85,7 +111,6 @@ export class CenterContentComponent implements OnChanges {
       }
     });
   }
-
 
   toggleAddItemForm(show: boolean) {
     this.showAddItemForm = show;
@@ -145,6 +170,8 @@ export class CenterContentComponent implements OnChanges {
     this.fetchItems();
   }
 
+  // USERS METHODS
+
   fetchUsers() {
     this.loading = true;
     this.error = null;
@@ -152,7 +179,7 @@ export class CenterContentComponent implements OnChanges {
     this.adminService.getAllUsers().subscribe({
       next: res => {
         this.users = res;
-        this.applyUserFilters(); // <- filter after fetch
+        this.applyUserFilters(); // filter after fetch
         this.loading = false;
       },
       error: () => {
@@ -163,7 +190,7 @@ export class CenterContentComponent implements OnChanges {
   }
 
   applyUserFilters() {
-    this.filteredUsers = this.users.filter(user => {
+    let filtered = this.users.filter(user => {
       const matchesUsername = user.username
         .toLowerCase()
         .includes(this.userSearchTerm.toLowerCase());
@@ -174,6 +201,40 @@ export class CenterContentComponent implements OnChanges {
 
       return matchesUsername && matchesRole;
     });
+
+    filtered = filtered.sort((a, b) => {
+      let comparison = 0;
+      
+      switch (this.userSortBy) {
+        case 'username':
+          comparison = a.username.localeCompare(b.username);
+          break;
+        case 'lastlogin':
+          const aTime = a.lastLoginAt ? new Date(a.lastLoginAt).getTime() : 0;
+          const bTime = b.lastLoginAt ? new Date(b.lastLoginAt).getTime() : 0;
+          comparison = aTime - bTime;
+          break;
+        case 'role':
+          const aRole = a.roles?.[0] || '';
+          const bRole = b.roles?.[0] || '';
+          comparison = aRole.localeCompare(bRole);
+          break;
+      }
+
+      return this.userSortDescending ? -comparison : comparison;
+    });
+
+    this.filteredUsers = filtered;
+  }
+
+  changeUserSort(field: 'username' | 'lastlogin' | 'role') {
+    if (this.userSortBy === field) {
+      this.userSortDescending = !this.userSortDescending;
+    } else {
+      this.userSortBy = field;
+      this.userSortDescending = false;
+    }
+    this.applyUserFilters();
   }
 
   onUserSearchChange(event: Event): void {
@@ -189,8 +250,6 @@ export class CenterContentComponent implements OnChanges {
     this.selectedRoleFilter = role;
     this.applyUserFilters();
   }
-
-  showAddUserForm = false;
 
   toggleAddUserForm(show: boolean) {
     this.showAddUserForm = show;
@@ -224,6 +283,7 @@ export class CenterContentComponent implements OnChanges {
     this.fetchUsers(); // Refresh user list
   }
 
+  // FILES METHODS
   fetchFiles() {
     this.loading = true;
     this.error = null;
@@ -399,6 +459,73 @@ export class CenterContentComponent implements OnChanges {
   cancelBulkSelection(): void {
     this.selectedFiles.clear();
     this.showBulkActions = false;
+  }
+
+   // Load user profile to determine role
+  loadUserProfile(): void {
+    // Try to get user info from session storage first
+    const userJson = sessionStorage.getItem('user');
+    const token = sessionStorage.getItem('jwtToken');
+    
+    if (userJson) {
+      const user = JSON.parse(userJson);
+      this.currentUser = user;
+      this.isAdmin = user.roles?.includes('Admin') || false;
+      this.isStaff = user.roles?.includes('Staff') || false;
+      
+      console.log('User loaded from session:', {
+        userName: user.userName,
+        username: user.username,
+        roles: user.roles,
+        isAdmin: this.isAdmin
+      });
+    } else if (token) {
+      // Try to decode JWT token to get user info
+      try {
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        console.log('JWT payload:', payload);
+        
+        const roles = payload.roles || payload.role || [];
+        const username = payload.sub || payload.username || payload.name;
+        
+        this.currentUser = {
+          userName: username,
+          username: username,
+          roles: Array.isArray(roles) ? roles : [roles]
+        };
+        
+        this.isAdmin = this.currentUser.roles.includes('Admin');
+        this.isStaff = this.currentUser.roles.includes('Staff');
+        
+        console.log('User loaded from JWT:', {
+          userName: this.currentUser.userName,
+          roles: this.currentUser.roles,
+          isAdmin: this.isAdmin
+        });
+      } catch (e) {
+        console.error('Failed to decode JWT:', e);
+      }
+    }
+
+    // Always try to get fresh user data from API as well
+    const service = this.isAdmin ? this.adminService : this.staffService;
+    service.getUserProfile().subscribe({
+      next: (user) => {
+        this.currentUser = user;
+        this.isAdmin = user.roles?.includes('Admin') || false;
+        this.isStaff = user.roles?.includes('Staff') || false;
+        
+        console.log('User loaded from API:', {
+          userName: user.userName,
+          username: user.username,
+          roles: user.roles,
+          isAdmin: this.isAdmin
+        });
+      },
+      error: (error) => {
+        console.error('Failed to load user profile:', error);
+      }
+    });
   }
 
 }
