@@ -388,6 +388,18 @@ namespace WareHouseFileArchiver.Controllers
                 });
             }
 
+            // Check if file is archived - only admins can download archived files
+            if (archiveFile.IsArchivedDueToInactivity && !User.IsInRole("Admin"))
+            {
+                return BadRequest(new
+                {
+                    success = false,
+                    message = "File is archived and cannot be downloaded",
+                    data = (object?)null,
+                    errors = new { File = new[] { "This file has been archived due to admin inactivity." } }
+                });
+            }
+
             if (!System.IO.File.Exists(archiveFile.FilePath))
             {
                 return NotFound(new
@@ -430,7 +442,8 @@ namespace WareHouseFileArchiver.Controllers
                 archiveFile.CreatedAt,
                 archiveFile.CreatedBy,
                 archiveFile.UpdatedAt,
-                archiveFile.UpdatedBy
+                archiveFile.UpdatedBy,
+                IsArchived = archiveFile.IsArchivedDueToInactivity
             });
 
 
@@ -596,9 +609,13 @@ namespace WareHouseFileArchiver.Controllers
 
         [Authorize(Roles = "Admin,Staff")]
         [HttpGet]
-        public async Task<IActionResult> GetAllFiles()
+        public async Task<IActionResult> GetAllFiles([FromQuery] bool includeArchived = false)
         {
-            var files = await archiveFileRepository.GetAllFilesAsync();
+            // Only admins can view archived files
+            if (includeArchived && !User.IsInRole("Admin"))
+                includeArchived = false;
+
+            var files = await archiveFileRepository.GetAllFilesAsync(includeArchived);
 
             var response = files.Select(f => new AllFilesResponseDto
             {

@@ -288,7 +288,8 @@ export class CenterContentComponent implements OnChanges {
     this.loading = true;
     this.error = null;
 
-    this.adminService.getAllFiles().subscribe({
+    const service = this.isAdmin ? this.adminService : this.staffService;
+    service.getAllFiles().subscribe({
       next: res => {
         // set only processed files
         this.files = res;
@@ -306,11 +307,17 @@ export class CenterContentComponent implements OnChanges {
     const input = event.target as HTMLInputElement;
     this.fileSearchTerm = input.value.trim().toLowerCase();
     this.applyFileFilters();
+    if (this.showArchivedFiles) {
+      this.applyArchivedFileFilters();
+    }
   }
 
   changeFileSortOrder(): void {
     this.fileSortDescending = !this.fileSortDescending;
     this.applyFileFilters();
+    if (this.showArchivedFiles) {
+      this.applyArchivedFileFilters();
+    }
   }
 
   applyFileFilters(): void {
@@ -346,6 +353,9 @@ export class CenterContentComponent implements OnChanges {
     return Object.keys(this.groupedFiles);
   }
 
+  get groupedArchivedFileCategories(): string[] {
+    return Object.keys(this.groupedArchivedFiles);
+  }
 
   toggleAddFileForm(show: boolean) {
     this.showAddFileForm = show;
@@ -526,6 +536,294 @@ export class CenterContentComponent implements OnChanges {
         console.error('Failed to load user profile:', error);
       }
     });
+  }
+
+  // ARCHIVE METHODS
+
+  /**
+   * Toggle showing archived files
+   */
+  toggleArchivedFiles(): void {
+    this.showArchivedFiles = !this.showArchivedFiles;
+     console.log('showArchivedFiles:', this.showArchivedFiles);
+    if (this.showArchivedFiles) {
+    this.fetchArchivedFiles();
+  }
+  }
+
+  /**
+   * Fetch archived files
+   */
+  fetchArchivedFiles(): void {
+    this.archiveLoading = true;
+    this.archiveError = null;
+
+    const service = this.isAdmin ? this.adminService : this.staffService;
+    
+    // If admin, get their own archived files, otherwise get all archived files
+    // Handle both possible property names for username
+    // const currentUserName = this.currentUser?.userName || this.currentUser?.username;
+    // const request = this.isAdmin && currentUserName
+    //   ? service.getArchivedFilesByAdmin(currentUserName)
+    //   : service.getArchivedFiles();
+
+    const request = service.getArchivedFiles();
+
+    request.subscribe({
+      next: (files) => {
+        this.archivedFiles = files;
+        console.log('Archived files loaded:', files.length);
+        this.applyArchivedFileFilters();
+        this.archiveLoading = false;
+        console.log('Fetched archived files:', this.archivedFiles);
+      },
+      error: () => {
+        this.archiveError = 'Failed to fetch archived files.';
+        this.archiveLoading = false;
+      }
+    });
+  }
+
+  /**
+   * Apply filters to archived files
+   */
+  applyArchivedFileFilters(): void {
+    const filtered = this.archivedFiles.filter(file => {
+      // Only show files archived within the last 2 days (temporarily visible)
+      const archivedDate = new Date(file.archivedAt);
+      const twoDaysAgo = new Date();
+      twoDaysAgo.setDate(twoDaysAgo.getDate() - 2);
+      
+      // Files that are archived in the period of last 2 days
+      // const isRecentlyArchived = archivedDate >= twoDaysAgo;
+
+      // All Files that are archived in the period of all days
+      const isRecentlyArchived = archivedDate;
+      
+      // For admins, show all their archived files regardless of date
+      const isOwnFile = this.isAdmin && this.currentUser?.username === file.createdBy;
+      
+      if (!isRecentlyArchived && !isOwnFile) {
+        return false;
+      }
+
+      // Apply search filter
+      const nameMatch = file.fileName?.toLowerCase().includes(this.fileSearchTerm);
+      const itemMatch = file.itemName?.toLowerCase().includes(this.fileSearchTerm);
+      const categoryMatch = file.category?.toLowerCase().includes(this.fileSearchTerm);
+      
+      return nameMatch || itemMatch || categoryMatch;
+    });
+
+    const sorted = filtered.sort((a, b) => {
+      const aTime = new Date(a.archivedAt).getTime();
+      const bTime = new Date(b.archivedAt).getTime();
+      return this.fileSortDescending ? bTime - aTime : aTime - bTime;
+    });
+
+    this.groupedArchivedFiles = sorted.reduce((acc: any, file: any) => {
+      const category = file.category || 'Uncategorized';
+      if (!acc[category]) acc[category] = [];
+      acc[category].push(file);
+      return acc;
+    }, {});
+
+    console.log('Grouped archived files:', this.groupedArchivedFiles);
+  }
+
+  /**
+   * Check if a file was archived within the last 2 days
+   */
+  isRecentlyArchived(file: any): boolean {
+    const archivedDate = new Date(file.archivedAt);
+    const twoDaysAgo = new Date();
+    twoDaysAgo.setDate(twoDaysAgo.getDate() - 2);
+    return archivedDate >= twoDaysAgo;
+  }
+
+  /**
+   * Check if current user can unarchive the file
+   */
+  canUnarchive(file: any): boolean {
+    if (!this.isAdmin || !this.currentUser) {
+      return false;
+    }
+
+    // Handle both possible property names for username
+    const currentUserName = this.currentUser.userName || this.currentUser.username;
+    const fileCreatedBy = file.createdBy;
+
+    // Debug log to check the comparison
+    console.log('Unarchive check:', {
+      currentUserName,
+      fileCreatedBy,
+      isAdmin: this.isAdmin,
+      canUnarchive: currentUserName === fileCreatedBy
+    });
+
+    // return currentUserName === fileCreatedBy;
+    return true;
+  }
+
+  /**
+   * Unarchive a file (Admin only)
+   */
+  confirmUnarchiveFile(file: any): void {
+    if (!this.canUnarchive(file)) {
+      alert('You can only unarchive your own files.');
+      return;
+    }
+
+    const confirmed = confirm(`Are you sure you want to unarchive "${file.fileName}${file.fileExtension}"?`);
+    if (confirmed) {
+      this.adminService.unarchiveFile(file.id).subscribe({
+        next: (response) => {
+          alert(response.message || 'File unarchived successfully!');
+          this.fetchArchivedFiles();
+          this.fetchFiles(); // Refresh active files list
+        },
+        error: (error) => {
+          alert('Failed to unarchive file.');
+          console.error('Unarchive error:', error);
+        }
+      });
+    }
+  }
+
+  /**
+   * Bulk unarchive all files (Admin only)
+   */
+  confirmBulkUnarchiveFiles(): void {
+    if (!this.isAdmin) {
+      alert('Only admins can perform bulk unarchive operations.');
+      return;
+    }
+
+    const filesToUnarchive = this.archivedFiles.filter(file => this.canUnarchive(file));
+    
+    if (filesToUnarchive.length === 0) {
+      alert('No files available for unarchiving. You can only unarchive your own files.');
+      return;
+    }
+
+    const confirmed = confirm(
+      `Are you sure you want to unarchive ${filesToUnarchive.length} file(s)? This will restore them to active status.`
+    );
+    
+    if (confirmed) {
+      this.performBulkUnarchive(filesToUnarchive);
+    }
+  }
+
+  /**
+   * Perform bulk unarchive operation
+   */
+  private performBulkUnarchive(filesToUnarchive: any[]): void {
+    let successCount = 0;
+    let errorCount = 0;
+    let processedCount = 0;
+
+    const totalFiles = filesToUnarchive.length;
+
+    filesToUnarchive.forEach(file => {
+      this.adminService.unarchiveFile(file.id).subscribe({
+        next: (response) => {
+          successCount++;
+          processedCount++;
+          
+          if (processedCount === totalFiles) {
+            this.handleBulkUnarchiveComplete(successCount, errorCount);
+          }
+        },
+        error: (error) => {
+          errorCount++;
+          processedCount++;
+          console.error(`Failed to unarchive file ${file.fileName}:`, error);
+          
+          if (processedCount === totalFiles) {
+            this.handleBulkUnarchiveComplete(successCount, errorCount);
+          }
+        }
+      });
+    });
+  }
+
+  /**
+   * Handle bulk unarchive completion
+   */
+  private handleBulkUnarchiveComplete(successCount: number, errorCount: number): void {
+    let message = '';
+    
+    if (successCount > 0 && errorCount === 0) {
+      message = `Successfully unarchived ${successCount} file(s).`;
+    } else if (successCount > 0 && errorCount > 0) {
+      message = `Unarchived ${successCount} file(s) successfully, ${errorCount} failed.`;
+    } else {
+      message = `Failed to unarchive ${errorCount} file(s).`;
+    }
+
+    alert(message);
+    
+    // Refresh both lists
+    this.fetchArchivedFiles();
+    this.fetchFiles();
+  }
+
+  /**
+   * Get count of files that can be unarchived by current admin
+   */
+  getUnarchivableFilesCount(): number {
+    return this.archivedFiles.filter(file => this.canUnarchive(file)).length;
+  }
+
+  /**
+   * Manually archive a file (Admin only)
+   */
+  confirmArchiveFile(file: any): void {
+    if (!this.isAdmin) {
+      alert('Only admins can archive files.');
+      return;
+    }
+
+    const reason = prompt('Please provide a reason for archiving this file:');
+    if (reason && reason.trim()) {
+      this.adminService.archiveFileManually(file.id, reason.trim()).subscribe({
+        next: (response) => {
+          alert(response.message || 'File archived successfully!');
+          this.fetchFiles(); // Refresh active files list
+          if (this.showArchivedFiles) {
+            this.fetchArchivedFiles(); // Refresh archived files list
+          }
+        },
+        error: (error) => {
+          alert('Failed to archive file.');
+          console.error('Archive error:', error);
+        }
+      });
+    }
+  }
+
+  /**
+   * Get formatted date for display
+   */
+  getFormattedDate(dateString: string): string {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  }
+
+  /**
+   * Get days since archived
+   */
+  getDaysSinceArchived(archivedAt: string): number {
+    const archivedDate = new Date(archivedAt);
+    const now = new Date();
+    const diffTime = Math.abs(now.getTime() - archivedDate.getTime());
+    return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   }
 
 }

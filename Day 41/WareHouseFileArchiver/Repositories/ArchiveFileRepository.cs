@@ -88,10 +88,11 @@ namespace WareHouseFileArchiver.Repositories
             return await dbContext.Items.FirstOrDefaultAsync(i => i.Id == itemId);
         }
 
-        public async Task<IEnumerable<ArchiveFile>> GetAllFilesAsync()
+        public async Task<IEnumerable<ArchiveFile>> GetAllFilesAsync(bool includedArchived = false)
         {
             return await dbContext.ArchiveFiles
                 .Include(f => f.Item)
+                .Where(f => includedArchived || !f.IsArchivedDueToInactivity)
                 .Where(f => !f.IsDeleted && (!f.IsScheduled || f.IsProcessed)) // Exclude deleted files AND show only processed scheduled files
                 .OrderByDescending(f => f.CreatedAt)
                 .ToListAsync();
@@ -205,7 +206,7 @@ namespace WareHouseFileArchiver.Repositories
                 // Remove associated download logs
                 var logs = dbContext.FileDownloadLogs.Where(log => log.ArchiveFileId == file.Id);
                 dbContext.FileDownloadLogs.RemoveRange(logs);
-                
+
                 // Remove the file record
                 dbContext.ArchiveFiles.Remove(file);
                 await dbContext.SaveChangesAsync();
@@ -220,5 +221,158 @@ namespace WareHouseFileArchiver.Repositories
                 .ToListAsync();
         }
 
+
+        public async Task<IEnumerable<ArchiveFile>> GetArchivedFilesAsync()
+        {
+            return await dbContext.ArchiveFiles
+                .Include(f => f.Item)
+                .Where(f => f.IsArchivedDueToInactivity)
+                .OrderByDescending(f => f.ArchivedAt)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<ArchiveFile>> GetArchivedFilesByAdminAsync(string adminName)
+        {
+            return await dbContext.ArchiveFiles
+                .Include(f => f.Item)
+                .Where(f => f.IsArchivedDueToInactivity && f.CreatedBy == adminName)
+                .OrderByDescending(f => f.ArchivedAt)
+                .ToListAsync();
+        }
+
+        public async Task<bool> UnarchiveFileAsync(Guid fileId, string unarchiveBy)
+        {
+            var file = await dbContext.ArchiveFiles.FindAsync(fileId);
+            if (file == null || !file.IsArchivedDueToInactivity)
+                return false;
+
+            file.IsArchivedDueToInactivity = false;
+            file.ArchivedAt = null;
+            file.ArchivedReason = null;
+            file.UpdatedAt = DateTime.UtcNow;
+            file.UpdatedBy = unarchiveBy;
+
+            await dbContext.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<bool> ArchiveFileManuallyAsync(Guid fileId, string archiveBy, string reason)
+        {
+            var file = await dbContext.ArchiveFiles.FindAsync(fileId);
+            if (file == null || file.IsArchivedDueToInactivity)
+                return false;
+
+            file.IsArchivedDueToInactivity = true;
+            file.ArchivedAt = DateTime.UtcNow;
+            file.ArchivedReason = reason;
+            file.UpdatedAt = DateTime.UtcNow;
+            file.UpdatedBy = archiveBy;
+
+            await dbContext.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<Dictionary<string, int>> GetArchivalStatsByAdminAsync()
+        {
+            var archivedFiles = await dbContext.ArchiveFiles
+                .Where(f => f.IsArchivedDueToInactivity)
+                .ToListAsync();
+
+            return archivedFiles
+                .GroupBy(f => f.CreatedBy)
+                .ToDictionary(g => g.Key ?? "Unknown", g => g.Count());
+        }
+
+        public async Task<int> ArchiveInactiveUsersFilesAsync(int inactiveDaysThreshold)
+        {
+            var cutoffDate = DateTime.UtcNow.AddDays(-inactiveDaysThreshold);
+
+            // Find files where the user's last activity (based on file operations) was before cutoff
+            var filesToArchive = await dbContext.ArchiveFiles
+                .Where(f => !f.IsArchivedDueToInactivity &&
+                        (f.UpdatedAt.HasValue ? f.UpdatedAt.Value < cutoffDate : f.CreatedAt < cutoffDate))
+                .ToListAsync();
+
+            foreach (var file in filesToArchive)
+            {
+                file.IsArchivedDueToInactivity = true;
+                file.ArchivedAt = DateTime.UtcNow;
+                file.ArchivedReason = $"Automatically archived due to {inactiveDaysThreshold} days of inactivity";
+                file.UpdatedAt = DateTime.UtcNow;
+                file.UpdatedBy = "System";
+            }
+
+            await dbContext.SaveChangesAsync();
+            return filesToArchive.Count;
+        }
+
+        public async Task<int> ArchiveInactiveAdminFilesAsync(List<string> inactiveAdminUsernames, string archiveReason = null)
+        {
+            if (!inactiveAdminUsernames.Any())
+                return 0;
+
+            // Get all active files created by inactive admins
+            var filesToArchive = await dbContext.ArchiveFiles
+                .Include(f => f.Item)
+                .Where(f => inactiveAdminUsernames.Contains(f.CreatedBy) && !f.IsArchivedDueToInactivity)
+                .ToListAsync();
+
+            if (!filesToArchive.Any())
+                return 0;
+
+            var archiveDate = DateTime.UtcNow;
+            var defaultReason = archiveReason ?? "Automatically archived due to admin inactivity";
+
+            // Archive the files
+            foreach (var file in filesToArchive)
+            {
+                file.IsArchivedDueToInactivity = true;
+                file.ArchivedAt = archiveDate;
+                file.ArchivedReason = defaultReason;
+                file.UpdatedAt = archiveDate;
+                file.UpdatedBy = "System";
+            }
+
+            await dbContext.SaveChangesAsync();
+            return filesToArchive.Count;
+        }
+
+        public async Task<IEnumerable<ArchiveFile>> GetFilesForInactiveAdminsAsync(List<string> inactiveAdminUsernames)
+        {
+            if (!inactiveAdminUsernames.Any())
+                return new List<ArchiveFile>();
+
+            return await dbContext.ArchiveFiles
+                .Include(f => f.Item)
+                .Where(f => inactiveAdminUsernames.Contains(f.CreatedBy) && !f.IsArchivedDueToInactivity)
+                .ToListAsync();
+        }
+
+       public async Task<IEnumerable<ArchiveFile>> GetFilesByItemIdAsync(Guid itemId, bool includeArchived = false)
+        {
+            var query = dbContext.ArchiveFiles
+                .Include(f => f.Item)
+                .Where(f => f.ItemId == itemId);
+
+            if (!includeArchived)
+                query = query.Where(f => !f.IsArchivedDueToInactivity);
+
+            return await query
+                .OrderByDescending(f => f.VersionNumber)
+                .ToListAsync();
+        }
+
+       public async Task<ArchiveFile?> GetLatestVersionAsync(string fileName, Guid itemId, bool includeArchived = false)
+        {
+            var query = dbContext.ArchiveFiles
+                .Where(f => f.FileName == fileName && f.ItemId == itemId);
+
+            if (!includeArchived)
+                query = query.Where(f => !f.IsArchivedDueToInactivity);
+
+            return await query
+                .OrderByDescending(f => f.VersionNumber)
+                .FirstOrDefaultAsync();
+        }
     }
 }

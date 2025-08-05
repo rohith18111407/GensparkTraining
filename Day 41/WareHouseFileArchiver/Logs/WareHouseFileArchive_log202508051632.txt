@@ -1,0 +1,23 @@
+2025-08-05 16:32:21.716 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ArchivedAt", a."ArchivedReason", a."Category", a."CreatedAt", a."CreatedBy", a."DeletedAt", a."DeletedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."IsArchivedDueToInactivity", a."IsDeleted", a."IsProcessed", a."IsScheduled", a."ItemId", a."OriginalFilePath", a."UpdatedAt", a."UpdatedBy", a."VersionNumber", i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "ArchiveFiles" AS a
+LEFT JOIN "Items" AS i ON a."ItemId" = i."Id"
+WHERE a."IsScheduled" AND NOT (a."IsProcessed") AND a."CreatedAt" <= now()
+2025-08-05 16:32:45.675 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-08-05 16:32:45.675 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=Gpc_dO6pr3eqXNRoDUIiFg - 101 null null 481990.7004ms
+2025-08-05 16:32:45.680 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null null
+2025-08-05 16:32:45.680 +05:30 [INF] CORS policy execution successful.
+2025-08-05 16:32:45.680 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 204 null null 0.3488ms
+2025-08-05 16:32:45.681 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null 0
+2025-08-05 16:32:45.681 +05:30 [INF] CORS policy execution successful.
+2025-08-05 16:32:45.682 +05:30 [INF] Executing endpoint '/notificationhub/negotiate'
+2025-08-05 16:32:45.682 +05:30 [INF] Executed endpoint '/notificationhub/negotiate'
+2025-08-05 16:32:45.682 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 200 316 application/json 0.5626ms
+2025-08-05 16:32:45.685 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/notificationhub?id=Av8iBx1RZ95xXxlAoMfqKA - null null
+2025-08-05 16:32:45.685 +05:30 [INF] CORS policy execution successful.
+2025-08-05 16:32:45.685 +05:30 [INF] Executing endpoint '/notificationhub'
+2025-08-05 16:32:51.718 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ArchivedAt", a."ArchivedReason", a."Category", a."CreatedAt", a."CreatedBy", a."DeletedAt", a."DeletedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."IsArchivedDueToInactivity", a."IsDeleted", a."IsProcessed", a."IsScheduled", a."ItemId", a."OriginalFilePath", a."UpdatedAt", a."UpdatedBy", a."VersionNumber", i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "ArchiveFiles" AS a
+LEFT JOIN "Items" AS i ON a."ItemId" = i."Id"
+WHERE a."IsScheduled" AND NOT (a."IsProcessed") AND a."CreatedAt" <= now()

@@ -1,0 +1,22 @@
+2025-08-05 16:35:15.950 +05:30 [INF] Application is shutting down...
+2025-08-05 16:35:15.953 +05:30 [INF] Connection id "0HNEK1GTS6U0O", Request id "0HNEK1GTS6U0O:00000001": the application aborted the connection.
+2025-08-05 16:35:15.958 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null null
+2025-08-05 16:35:15.958 +05:30 [INF] CORS policy execution successful.
+2025-08-05 16:35:15.958 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 204 null null 0.4779ms
+2025-08-05 16:35:15.960 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - null 0
+2025-08-05 16:35:15.960 +05:30 [INF] CORS policy execution successful.
+2025-08-05 16:35:15.960 +05:30 [INF] Executing endpoint '/notificationhub/negotiate'
+2025-08-05 16:35:15.961 +05:30 [INF] Executed endpoint '/notificationhub/negotiate'
+2025-08-05 16:35:15.961 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5239/notificationhub/negotiate?negotiateVersion=1 - 200 316 application/json 1.6481ms
+2025-08-05 16:35:15.962 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-08-05 16:35:15.963 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=Av8iBx1RZ95xXxlAoMfqKA - 101 null null 150277.7472ms
+2025-08-05 16:35:15.965 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5239/notificationhub?id=mvoU3HjeRVP1AR3JdeZH4A - null null
+2025-08-05 16:35:15.965 +05:30 [INF] CORS policy execution successful.
+2025-08-05 16:35:15.965 +05:30 [INF] Executing endpoint '/notificationhub'
+2025-08-05 16:35:21.745 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ArchivedAt", a."ArchivedReason", a."Category", a."CreatedAt", a."CreatedBy", a."DeletedAt", a."DeletedBy", a."Description", a."FileExtension", a."FileName", a."FilePath", a."FileSizeInBytes", a."IsArchivedDueToInactivity", a."IsDeleted", a."IsProcessed", a."IsScheduled", a."ItemId", a."OriginalFilePath", a."UpdatedAt", a."UpdatedBy", a."VersionNumber", i."Id", i."Category", i."CreatedAt", i."CreatedBy", i."Description", i."Name", i."UpdatedAt", i."UpdatedBy"
+FROM "ArchiveFiles" AS a
+LEFT JOIN "Items" AS i ON a."ItemId" = i."Id"
+WHERE a."IsScheduled" AND NOT (a."IsProcessed") AND a."CreatedAt" <= now()
+2025-08-05 16:35:45.957 +05:30 [INF] Executed endpoint '/notificationhub'
+2025-08-05 16:35:45.957 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5239/notificationhub?id=mvoU3HjeRVP1AR3JdeZH4A - 101 null null 29992.8891ms
